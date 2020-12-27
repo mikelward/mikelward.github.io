@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Hong Kong - Day 2";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/1049791771559806736/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>On the second day I went to the hotel's breakfast buffet.  It was delicious if a little overpriced at about 125 HKD (25 AUD).  Had bacon, eggs, baked beans, and hash browns.  Breakfast of champions!<br /><br />After breakfast, I tried to take the lift up to my room, only to discover the lift I used didn't go to my room at all.  Ended up on an observation deck in the second tower which offered superb views.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2064-740123.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2064-739685.jpg" border="0" alt="" /></a><p class="caption">The view to the north, Tseun Wan and the hills</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2067-777812.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2067-777204.jpg" border="0" alt="" /></a><p class="caption">The view to the south, the bay with Hong Kong in the distance</p></div><br /><br />Spent a couple of hours preparing plans for work and replying to emails, then walked towards the data centre, but again took a scenic route.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2080-757253.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2080-756748.jpg" border="0" alt="" /></a><p class="caption">Yeung Uk Road Municipal Building opposite the hotel</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2082-767436.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2082-766928.jpg" border="0" alt="" /></a><p class="caption">L'Hotel in the background, along with building works and an MTR train station sign</p></div><br /><br />Felt like something cheap and hearty, so I went to a Pizza Hut I found in the New Century shopping building (seems like everything is called New Century here!).<br /><br />They played very bad French accordion music.  It was in a short loop on repeat and soon became annoying, but the service was good and the prices were cheap.  All the waiters had English names.  I don't guess they use them very often, but it made my life a lot easier.  (Must learn some basic Cantonese!)<br /><br />In the rest of the shopping centre, there were lots a good few shops selling cheap clothes and jeans, a store selling jade, and a few more familiar ones like the Body Shop and a chemist called Mannings.  (Not familiar, but at least it had an English name!)<br /><br />On the way back out, back near the walled garden, I found a little store selling hardware.  They were selling screwdrivers, pliers, and other such things that I needed for work.  I picked up a couple of things and handed them to a woman standing at the front of the store.  She led me to the middle of the store, handed them to another lady behind the cash register, then pointed to the tally on the register: $14 (about $3 Australian).  Not too bad!  I handed the cashier my $20 note then attendant went to put them in a bad.  I shook my head.  Then she got angry.<br /><br />I'm still not quite sure if it was my body language, or that she somehow expected a tip for having walked me to the cash register.<br /><br />Got to the data centre around 2 and ended up working until 11.  Met Jason and Tommy who work for the data centre.  Moved one of the big file servers and all of its hard disks.  Pretty heavy.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Hong%20Kong.html">Hong Kong</a>, <a rel='tag' href="http://mikelward.com/news/labels/Travel.html">Travel</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=1049791771559806736">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

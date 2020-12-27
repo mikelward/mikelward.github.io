@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Hong Kong - Day 1";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/7091690182112113725/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>Having arrived late at night, my first day's objective (after a decent sleep) was to get to the data centre by midday.<br /><br />I looked at a map, then headed out...<br /><br />... in completely the wrong direction.<br /><br />I ended up walking to the Tsuen Wan Park to the South, rather than the data centre to the East.<br /><br />It was quite nice tho.  A little bit plasticky kiddie for the playground, a bit post-modern in an Asian way for the main park and croquette green, and then a bit that looks like the Japanese gardens I've seen on TV. :-)<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_1950-707725.jpg"><img src="http://mikelward.com/news/uploaded_images/img_1950-707249.jpg" border="0" alt="" /></a><p class="caption">View of the park facing my hotel</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_1952-739070.jpg"><img src="http://mikelward.com/news/uploaded_images/img_1952-738619.jpg" border="0" alt="" /></a><p class="caption">Another view of the park, the bit that looks most Asian to me :-)</p></div><br /><br />Just beyond the park is the bay, with some more great views.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_1960-794761.jpg"><img src="http://mikelward.com/news/uploaded_images/img_1960-794349.jpg" border="0" alt="" /></a><p class="caption">Looking towards the bay</p></div><br /><br />I thought it was interesting that they banned smoking in parks.  Even fewer people here seem to smoke than in Australia.  Compared to what I'd heard about Vietnam and Thailand, I figured all Asians smoked more.  Shows you how much I know!<br /><br />I then found my way to the Tsuen Wan West station and on to Yeung Uk Road.  Finally heading in the right direction!<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_1970-751776.jpg"><img src="http://mikelward.com/news/uploaded_images/img_1970-751339.jpg" border="0" alt="" /></a><p class="caption">Near Tseun Wan West station</p></div><br /><br />Along Yeung Uk road, first there is citywalk, an arcade with some very shiny, Western-style stores.  It's got Starbucks, KFC, and Marks & Spencer.<br /><br />Strangely enough, it was the first Marks & Spencer I'd ever seen.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_1981-710807.jpg"><img  src="http://mikelward.com/news/uploaded_images/img_1981-710271.jpg" border="0" alt="" /></a><p class="caption">citywalk arcade</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2024-790449.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2024-790020.jpg" border="0" alt="" /></a><p class="caption">Marks & Spencer</p></div><br /><br />Then there's a huge market.  Like Queen Victoria Markets or Grote Street, and yet not.  The main fresh produce and meat section is in a big building that's four or five storeys high.  It's rather smelly and looks old and grotty.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2015-795337.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2015-794656.jpg" border="0" alt="" /></a><p class="caption">Yeung Uk Road Market (just like the sign!)</p></div><br /><br />I decided to venture into the shopping area and see what seemed interesting.<br /><br />I found a Japanese burger joint.  Perhaps it sounds a little safe, but safe isn't necessarily bad!  Besides, they had some weird burgers like avocado and beef that I thought would be worth a try.<br /><br />Ended up having a "hot chicken" burger.  Somehow it felt different from McDonalds, but maybe that was just because I was in Hong Kong.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2021-793169.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2021-792750.jpg" border="0" alt="" /></a><p class="caption">Something different yet safe for lunch on day one</p></div><br /><br />The coolest bit was they had a wash basin on the main floor.<br /><br />How many times have you thought: "Hmm, that burger was nice, but my hands are all sticky and the napkin's not quite doing it".<br /><br />In my case, several!<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2022-785512.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2022-785087.jpg" border="0" alt="" /></a><p class="caption">A wash basin at a hamburger restaurant!  Eureka!</p></div><br /><br />Heading deeper into the shopping district, there are hundreds of small sidewalk stores.  Some are selling beautiful smelling tea, some are selling roots and herbs, some are selling raw food, some sell alcohol, and there's heaps of little stalls selling shark fin soup, which seems to be the Hong Kong equivalent of the Aussie meat pie.<br /><br />The wines are a mixed bag, but there's a lot of Australian stuff.  The beer is cheaper (about $2 Australian per can), but the spirits are a little more expensive.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2028-725407.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2028-724948.jpg" border="0" alt="" /></a><p class="caption">The middle of Tseun Wan shopping district</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2026-709383.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2026-708885.jpg" border="0" alt="" /></a><p class="caption">One of many small stores, note the Penfold's wine top right</p></div><br /><br />I then dug out my mobile phone for directions, and ended up walking towards a big walled garden.  After all the narrow streets and lanes I had just walked thru, I was definitely not expecting to find this!<br /><br />It was certainly very peaceful, but unfortunately I was on my way to work, so didn't stop for too long.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2041-776193.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2041-775728.jpg" border="0" alt="" /></a><p class="caption">Men play checkers in the park</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2043-791349.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2043-790874.jpg" border="0" alt="" /></a><p class="caption">Another shot from inside the park</p></div><br /><br />Along the way, you could see a lot of old apartment blocks in need of some repair like this one, and there was a pervasive sickly sweet smell like Chinese food.  I think it was coming from the sewers.  Not bad, but a bit confronting.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2046-749177.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2046-748734.jpg" border="0" alt="" /></a><p class="caption">A more typical laneway in Tseun Wan</p></div><br /><br />At this point, my GPS got confused, and so did I.<br /><br />Ended up walking every different direction before figuring out where I should be going.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2050-731748.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2050-731310.jpg" border="0" alt="" /></a><p class="caption">Ah!  So that's where I am.  I think.</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2059-788921.jpg"><img  src="http://mikelward.com/news/uploaded_images/img_2059-788235.jpg" border="0" alt="" /></a><p class="caption">Back on Yeung Uk Road</p></div><br /><br />I finally arrived at the data centre just after 4 and started moving servers around.<br /><br />Among other things, I discovered that whoever did the previous work really liked cable ties, which seemed to me to just be getting in the way.<br /><br />I ended up working until midnight.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Hong%20Kong.html">Hong Kong</a>, <a rel='tag' href="http://mikelward.com/news/labels/Travel.html">Travel</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=7091690182112113725">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Telstra FTTN Proposal";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/2569943768244651483/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I was in a waiting room the other day, so I picked up the newspaper.  Telstra had a <a href="http://www.nowwearetalking.com.au/Library/Image/BACK_Telstra/advert/BACK-Telstra-advert_16june07.pdf">full-page ad</a> comparing their fibre-to-the-node broadband proposal against the G9 proposal (a consortium made up of Australia's other major internet service providers, including Optus, AAPT, iiNet and Internode).  Telstra's side had tick marks next to each point, while G9 had crosses.  I guess that's the end of the debate then!<br /><br />There were two particular points that got my attention:<br />1) G9 is "foreign owned"<br />2) Telstra's prices are "guaranteed for 14 years"<br /><br />The first point is only partially true: AAPT is owned by Telecom New Zealand, Optus is owned by SingTel, and Primus is based in the US.  The other members are all Australian.  They include iiNet, Internode, Macquarie Telecom, PowerTel, Soul, and TransACT.  In any case, the major criteria should be speed, reliability, and price.<br /><br />The second point is true, but you wouldn't want it to be.  Telstra haven't released their full wholesale pricing, but they did let slip that <a href="http://australianit.news.com.au/story/0,24897,21868192-16123,00.html">their basic 512 kb/s service will cost $59</a>.<br /><br />Compare that to the <a href="http://www.accc.gov.au/content/item.phtml?itemId=790357&nodeId=6892203a7bac27d2f8bf3eb29c7f27e7&fn=ACCC%20discussion%20paper%20about%20FANOC%20SAU%20(21%20Jun%2007).pdf">G9 pricing</a>, where the slowest service will be three times faster (1.5 Mb/s) and will cost just $14.23.  Even their fastest plan will cost just $35.38.<br /><br />It's one thing for Telstra to be more expensive.  We expect that.  What's not acceptable is their proposal would cause prices to be higher than they are now for the same product.  That would reduce broadband adoption, reduce business competitiveness, and cripple new services such as Internet TV and movies on demand.<br /><br />For instance, I currently pay $26.95 for a home phone service and $54.95 for a 1.5 Mb/s ADSL service, which makes $81.90 together.  ADSL pricing is based on a $22 fee to access Telstra's copper phone line, plus the ISP's costs and margin, which make up the remaining $32.95.  Assuming the phone access component of the wholesale price in Telstra's proposal is $26.95 (it's likely to be less, since that the retail price rather than the wholesale price), the internet component would be $59 - $26.95 = $32.05, $10.05 more than the current wholesale price, for a service that's three times slower!<br /><br />At this point, Telstra have failed to make a case for their proposal.  The average consumer would be better off if they did nothing.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Communications.html">Communications</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Politics.html">Politics</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=2569943768244651483">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

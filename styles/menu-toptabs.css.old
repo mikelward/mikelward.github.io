@@ -1,0 +1,32 @@
+/*
+ * menu-toptabs.css
+ * StyleSheet to show main navigation menu as a row of tabs
+ *
+ * Michael Wardle
+ * November 6, 2004
+ */
+
+body { font-family: sans-serif }
+/*
+ * Menu is a row of gray tabs which become white when moused over.
+ * Currently only supports two-level menus.
+ * For some reason, Mozilla and Opera have a non-zero margin between
+ * menu items, despite it being set to zero, so use descendent rule to
+ * handle them differently from Internet Explorer.
+ */
+#menu { border-bottom: 1px solid black; margin-top: 1px }
+#menu * { display: inline }
+#menu a, #menu :link { text-decoration: none; color: black }
+#menu ul { margin: 0px; padding: 0px }
+#menu li.submenu { margin-left: 3px }
+#menu li.menuitem, #menu li.current { border: 1px solid black; padding: 0px 2px; margin: 0px 2px }
+#menu * > li.menuitem, #menu * > li.current { border: 1px solid black; padding: 0px 2px; margin: 0px 0px }
+#menu li.menuitem:hover, #menu li.current:hover { background-color: white }
+#menu li.menuitem { background-color: gainsboro; border-bottom: none }
+#menu li.current { background-color: white; border-bottom: 1px solid white }
+
+#title { padding: 0em 1em; }
+#content { padding: 0em 1em; margin: 0em 1em; }
+
+#footer { display: none; }
+

@@ -1,0 +1,25 @@
+DESIRED FEATURES
+1. show item price on library page - DONE
+2. set desired price on library page (e.g. Six Feet Under Season 2 < $30.00)
+   (using JB Hi-Fi)
+3. update prices daily
+4. send an email when price drops below desired price
+5. alert when a new product becomes available (e.g. Futurama - Bender's Big Score)
+
+6. add support for Atlantic DVD
+*. add support for other DVD stores (if I can think of any other good ones)
+
+7. add support for CDs (e.g. Zutons - any album)
+*. add support for Sanity
+*. add support for iTunes
+
+8. add support for books
+*. add support for Amazon.com
+*. add support for Dymocks
+*. add support for Angus and Robertson
+*. add support for Collins
+*. add support for McGills (probably hard since it's all Flash based)
+
+9. set rating on the library page (for existing and wishlist)
+10. automatic price algorithm
+

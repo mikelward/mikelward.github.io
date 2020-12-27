@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875");
+</style>
+
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="previous">
+      <h3>Previous Items</h3>
+      
+        <a href="http://mikelward.com/news/2008/04/better-windows-keyboard-shortcuts.html">Better Windows Keyboard Shortcuts</a><br />
+      
+        <a href="http://mikelward.com/news/2008/03/bold-shell-command-like-rails-books.html">Bold Shell Command like the Rails Books</a><br />
+      
+        <a href="http://mikelward.com/news/2008/02/australian-soccer-world-cup-stadiums.html">Australian Soccer World Cup Stadiums</a><br />
+      
+        <a href="http://mikelward.com/news/2008/01/australian-open.html">Australian Open</a><br />
+      
+        <a href="http://mikelward.com/news/2007/12/motorola-razr-v6-on-next-g.html">MOTORAZR V6 on Telstra Next G</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/new-job.html">New Job</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/finally-internet-without-paying-line.html">Finally!  Internet Without Line Rental!</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/ldp-tipped-to-win-nsw-senate-seat.html">LDP Tipped To Win NSW Senate Seat</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/changing-your-name-in-australia.html">Changing Your Name in Australia</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/name-change.html">Name Change</a><br />
+      
+    </div>
+
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">All</a><br />
+        <a href="http://mikelward.com/news/labels/Books">Books</a><br />
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Enviroment">Enviroment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Frends">Frends</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="6490316192614027759"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/12/motorola-razr-v6-on-next-g.html">MOTORAZR V6 on Telstra Next G</a>
+          
+        </h2>
+        <p class="post-date">Saturday, December 01, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I got a new phone for work yesterday, a <a href="http://direct.motorola.com/hellomoto/maxx/">Motorola MOTORAZR maxx V6</a>.  It seems to be a pretty good phone.  Much better than I was expecting.<br /><br />When I last used a Motorola several years ago, the menus were less intuitive than the Ericsson or Nokia ones.  Now I feel that both of those have taken a step or two backwards, and the Motorola is no worse.  The menu hierarchy is quite logical, and the keypad is very direct and responsive.  It's definitely better than my Sony Ericsson Z610i, which is especially good considering it's only about 1 cm thick.<br /><br />I tried to get it synchronizing my contacts and calendar with Linux.  Unfortunately, it's quite a new phone, so it's not supported yet.  Instead, I set up an account on <a href="http://www.scheduleworld.com/">ScheduleWorld</a> and transferred my contacts over the internet using a protocol called <a href="http://en.wikipedia.org/wiki/SyncML">SyncML</a>, which most new phones seem to support.  It worked well and didn't cost me anything other than the data costs.<br /><br />It's on the Telstra Next G network, which offers broadband internet access, and has much better coverage than the other 3G networks.  The phone and network also support HSDPA, which is supposed to offer download speeds of up to 14 megabits (14,000 kilobits) per second.  So far the best I've got is 400 kilobits per second, but that's still fast enuff to do my work.  I'm connecting to it as a GPRS modem over Bluetooth so I can access the internet from my laptop.<br /><br />So far so good!<br /><br /><h3>Update: December 31, 2007</h3><br />The phone stops making and receiving phone calls after a while.  A reboot makes it work again.  The dealer is sending it back to Motorola to get it fixed.  (It's running software version R26111VL-AS_U_96.66.74R.)<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Communications.html">Communications</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=6490316192614027759">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=6490316192614027759" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

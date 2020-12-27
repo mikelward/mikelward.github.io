@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Flight to Hong Kong";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/7462315241687977729/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I flew out of Melbourne at 3.30pm on Sunday with Cathay Pacific.<br /><br />Sat in economy class towards the back of the plane and spoke to a young Chinese-French man named Pascal.<br /><br />He was studying computer science in Paris, and had been in Melbourne for family reasons.  He said he was thinking about moving to Australia.  Gave him my details.<br /><br />Before the flight, I also caught up with Nalaka from work so he could give me some things to take to our Hong Kong office.<br /><br />We ended up running around trying to find each other out front of the airport.  Only just made my check-in. :-)<br /><br />(Apparently they now recommend that you check in two hours prior to departure, and I was there about 40 minutes before departure.  I was the second-last to check in.)<br /><br />Changed my Australian dollars for Hong Kong dollars.  I think I got 800 HKD from 180 AUD at 4.7:1 plus an $8 commission at the ANZ.<br /><br />On the flight, the meals were quite good.  They served lunch about an hour after take off (second lunch!).  I chose the braised beef washed down with a glass of Australian red.<br /><br />Dinner was a Chinese chicken noodle thing, which was also good.<br /><br />I ordered a whisky with my meal.  It came back about twenty minutes later.  Was delicious.  I'm not sure which it was, but the menu listed Chivas Regal and Johnnie Walker black, so I'll definitely be trying those when the opportunity arises.<br /><br />One of the options for in-flight entertainment was a Berlitz language game.  I chose Mandarin Chinese.  The first section was for numbers, which I hadn't yet studied, having only just started reading my Teach Yourself Mandarin Chinese book.<br /><br />For some reason they teach you zero first, unlike most courses.  Number 2 is really weird.  "aur" sounds like "er".<br /><br />Then I noticed they had a Cantonese option, so I tried that out.  Turns out Cantonese is more different that I thought.  Even the numbers are different.  I think their word for 2 is like the Mandarin word for 1.  Guess I'll have to pick one Chinese to suck less at. :-)<br /><br />Also started watching Body of Lies.  Had nearly finished it when they stopped it 15 minutes before landing.<br /><br />Arrived at Hong Kong airport.  It seemed fairly empty.  Took the big travelators to the middle.  They had duty free stores, but alcohol was slightly more expensive than in Australia, I guess due to the unfavorable exchange rates, so I didn't get anything.<br /><br />Took the shuttle train to the other terminal, grabbed my bags, then took the Airport Express to Tsing Yi, and finally a taxi to the hotel.<br /><br />The taxi meter showed 34.  I gave him 40 (4 x 10 HKD coins), and there was no discussion of change.  Still, it was a cheap ride, and I would have been happy to tip that amount anyway.  It only equates to about $1.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Hong%20Kong.html">Hong Kong</a>, <a rel='tag' href="http://mikelward.com/news/labels/Travel.html">Travel</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+              <dt class="comment-poster" id="c730902139970650365"><a name="c730902139970650365"></a>
+              <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="http://www.blogger.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Hey, mate. surely no change, becoz luggage charge HKD$5 per piece. Almost HKD$40.</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-1228060505"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=730902139970650365" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=7462315241687977729">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Better Windows Keyboard Shortcuts";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/9128278161072907881/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I've been using <a href="http://www.autohotkey.com/">AutoHotkey</a> for a while now.  It's made my computer much easier to use.<br /><br />You can use it to do several things, including:<br /><ul><li>Starting common programs without the mouse</li><li>Controlling your music and video programs</li><li>Making Mac shortcuts like Ctrl+Q work everywhere</li><li>Customizing application keyboard shortcuts</li></ul><br /><br /><h2>Installation</h2><br /><ol><li>Download and install <a href="http://www.autohotkey.com/download/">AutoHotkey</a><li>Create an empty file called shortcuts.ahk<li>Create a shortcut to that file and put it in the Startup folder</ol><br /><br />You can then edit the script by right clicking on the green H icon in the corner of the screen and selecting Edit This Script, saving the file, then clicking Reload This Script.<br /><br /><h2>Starting common programs</h2><br />The Windows key is used for only a few things on a normal computer, such as Win+L to lock the screen.  It's easy to add shortcuts for all your favorite programs, for example Win+F for Firefox, Win+I for iTunes, Win+N for Notepad, and so on.<br /><br />Do this by adding a line like this<br /><br /><pre class="code">#i::Run C:\Program Files\iTunes\iTunes</pre><br /><br />to your shortcuts.ahk file.<br /><br />The # means the Windows key (labeled with either a Windows symbol or the word Start), i means the I key, and C:\Program Files\iTunes\iTunes is the command to run when Windows and i are pressed together.<br /><br />Another trick is to start a program in a maximized window, e.g.<br /><br /><pre class="code">#p::<br />Run C:\Program Files\PuTTY\PuTTY <i>servername</i><br />WinWait, PuTTY<br />WinMaximize<br />return</pre><br /><br /><h2>Controlling your music and video programs</h2><br />I use AutoHotkey to simulate the media buttons that some newer keyboards have, such as back, forward, pause, mute, and so on.  I could buy a media keyboard, but I prefer a smaller keyboard that doesn't take up all my desk space.<br /><br />You can either set it up to control the program in the foreground using something like:<br /><br /><pre class="code">#Left::Send {Media_Prev}<br />#Right::Send {Media_Next}</pre><br /><br />or tell it to control iTunes (even if the current window is Windows Media Player) using something like:<br /><br /><pre class="code">#Left::SendMessage, 0x319, 0, 0xC0000, , iTunes<br />#Right::SendMessage, 0x319, 0, 0xB0000, , iTunes</pre><br /><br />I also use these to control the volume everywhere:<br /><br /><pre class="code">#Up::Send {Volume_Up}<br />#Down::Send {Volume_Down}<br />#NumpadDot::Send {Volume_Mute}<br />#NumpadDel::Send {Volume_Mute}</pre><br /><br /><h2>Making Mac shortcuts like Ctrl+Q work everywhere</h2><br />Since using Macs and Linux systems for a while, I find Ctrl+Q a more convenient shortcut to close the current program.  A few Windows programs support this, but most of them use Alt+F4.<br /><br />Adding this rule makes Ctrl+Q equivalent to Alt+F4.<br /><br /><pre class="code">^q::Send !{F4}</pre><br /><br /><h2>Customizing application keyboard shortcuts</h2><br />I was trying out the Safari web browser, and it wasn't too bad, but the keyboard shortcut to change tabs is Ctrl+Shift+[.  Firefox uses Ctrl+PageUp, which is more familiar and easier to press.  Unfortunately, Safari doesn't let me change its keyboard shortcuts.<br /><br />These rules check if the program is Safari then translate Ctrl+PageUp to Ctrl+Shift+[ and similarly for Ctrl+PageDown.<br /><br /><pre class="code">#ifWinActive ahk_class {1C03B488-D53B-4a81-97F8-754559640193}<br />^PgUp::Send ^+[<br />#ifWinActive ahk_class {1C03B488-D53B-4a81-97F8-754559640193}<br />^PgDn::Send ^+]</pre><br /><br />To find out the class id numbers, right click on the H icon, click on Spy, then click on the window you want to control.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2008.html">2008</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Hardware.html">Hardware</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=9128278161072907881">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

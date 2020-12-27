@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Goodbye iiNet, Hello Internode!";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/4925254986518610706/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>The saga of my home ADSL connection.<br /><ul><li><a href="#noadsl2">No ADSL2 for you!</a></li><li><a href="#newisp">Choosing a new plan</a></li><li><a href="#churning">The waiting game</a></li><li><a href="#modemsetup">Modem setup</a></li><li><a href="#success">Success!</a></li></ul><br /><a name="noadsl2"></a><h3>No ADSL2 for you! <small>(a.k.a. Internet in Australia sucks)</small></h3><br />When I first moved to Elsternwick in November 2005, one of my important decisions was which internet service provider to use.  I had previously been with iiNet, then Internode.  Their ADSL plans were both quite reliable, which was essential, since I run my web site (including this blog) over my ADSL connection.  The main factors in my decision were price and speed.<br /><br />Around this time, iiNet said on their <a href="http://www.iinet.net.au/products/broadband/iinetwork/">ADSL2+ coverage page</a> that they were planning to install the required equipment (an ADSL2+ capable DSLAM) in my exchange in November/December.  Their prices were very good (in fact, cheaper than most of their slower ADSL1 products), and the speeds should have been excellent.  (According to <a href="http://whereis.com/">Whereis</a>, I'm 1.43 km from the Elsternwick exchange, and this <a href="http://www.internode.on.net/adsl2/graph/">graph of ADSL2+ speeds</a> suggests I could get up to 20 Mb/s at that distance.)  iiNet also don't block ports and allow using the connection to run servers, so it seemed like a no-brainer.<br /><br />I applied for the service at the beginning of November.<br /><br />About a week later, I had an ADSL1 service.<br /><br />That was fine, since I knew they hadn't installed their DSLAM in Elsternwick yet, so I would be connected to a Telstra DSLAM, who at the time only offered ADSL1.<br /><br />At the end of November, I received an email from iiNet saying "Congratulations, your exchange has been selected for a Broadband upgrade".  This was great, and was what I was waiting to hear!<br /><br />The date came and went, and I was still on ADSL1.  Apparently the upgrade had been postponed.<br /><br />I received another message in January 2006 telling me the same thing.  Some time around the beginning of February, they actually installed their DSLAM and started migrating customers to ADSL2+.  Unfortunately I wasn't one of them.<br /><br />I contacted iiNet, and was told that I wasn't migrated because iiNet has to submit the list of customers to migrate to Telstra well in advance of the migration, and they had done so in October, before I was even a customer.  I was told to wait for the "next migration".<br /><br />Every few months, I contacted iiNet to ask when the migration would be.  I was told they only performed bulk migrations (at least twenty customers at a time), and there were no plans to do such a bulk migration (presumably because I was one of the few customers who didn't get migrated in February).<br /><br />In mid-2006, there were discussions of a single-port migration process, probably starting in September.  Telstra called this a "single service migration" or a "single service transfer", depending on whether you were staying with the same ISP or changing to another one.<br /><br />Several deadlines for single-service migration slipped, then it sounded like it might really happen in February 2007.<br /><br />It did, but not for iiNet.  For some reason, Internode and some other ISPs supported the process, but since Internode only had ADSL1, I had to wait for iiNet to get on board if I wanted ADSL2+.<br /><br />Last month, it seemed like iiNet were joining the migration process, but I contacted them and they advised I still couldn't transfer.  I would have to do a full disconnect, wait for about two weeks for the "lines codes" to be removed, then apply as a new customer and pay the full $200 connection fee.  Since I rely on this connection for my web site and email, I can't accept a two-week outage.<br /><br />The final straw was trying to watch a low-bandwidth video on YouTube the other day, and the playback kept stopping because my connection wasn't fast enuff.<br /><br /><a name="newisp"></a><br /><h3>Choosing a new ISP <small>(a.k.a. which plan sucks the least)</small></h3><br /><br />I checked out the plans on <a href="http://bc.whirlpool.net.au/">Broadband Choice</a>.  Internode were cost competitive (they're all too expensive and slow, but Internode isn't much more expensive than the other options for my usage), and they're known to be a very reliable company.  Indeed, they're ranked #1 by the users on Broadband Choice.  They also allow me to run servers and have a local mirror site where I can get my Linux downloads fast and free.  I looked at some of the other, newer ADSL2 providers such as Spin, hoping they would support single-service transfers, but they also had a long contract period and higher set-up cost, which my house mates weren't happy with, so Internode it was!<br /><br /><a name="churning"></a><br /><h3>The churn process <small>(a.k.a. I can't live without Internet)</small></h3><br /><br />To complicate things, Internode don't provide phone services like iiNet do, and Telstra (Australia's near-monopoly telco) requires we have an active landline phone service to get ADSL.  The only real option was Telstra, who provide a $20 a month plan called <a href="http://www.telstra.com.au/phones/homeservices/plans_homeline_budget.htm">HomeLine Budget</a>, but they don't let you sign up for that if you want to use another company for ADSL.  Instead I would have to go with their next-least-expensive plan, <a href="http://www.telstra.com.au/phones/homeservices/plans_homeline_comp.htm">HomeLine Complete</a>, which costs $27 a month.<br /><br />I read the forums on <a href="http://www.whirlpool.net.au/">the Whirlpool broadband user group</a> web site to figure out whether it would be better to change the phone to Telstra or the internet to Internode first, in order to minimize downtime.  I came to the conclusion that I could get my faster internet sooner if I changed my internet provider first, and that there were no downsides to doing it that way.  In Australia, the process of changing an existing ADSL connection from one ISP to another ISP is called "churning" (however most Telstra documentation calls it a "rapid transfer").<br /><br />I signed up for the Internode HOME-1500-Power-10 plan, a 1.5 Mb/s plan for $49.95 a month, and heard back from them within a couple of days.  They sent an email detailing the new plan and the process for transferring to them.  It included a PDF telling me that I should not change phone providers once my Internode plan went active, as this could remove the "ADSL line codes", causing an outage of a few days.<br /><br />I immediately called Internode to confirm this, then ended up having to cancel the process.<br /><br />I had to go to plan B: changing my phone provider to Telstra first, so I called Telstra to do so.  I was told this would take a few weeks.  It did, and in the mean time, Internode changed the price on the plan I wanted from $49.95 to $54.95.  I decided to go ahead with it anyway, since it would now cost the same as the old arrangements with iiNet ($33.36 + $49.95 versus $26.95 + $54.95).<br /><br />Two weeks later, and finally my phone was with Telstra.  I called Internode to re-apply, accepting the new plan price.<br /><br />Last night, I got an SMS telling me that the ADSL service was provisioned, i.e. was now ready to use!<br /><br /><a name="modemsetup"></a><br /><h3>Setting up my new connection <small>(a.k.a. why doesn't my Internet work?)</small></h3><br /><br />I left work around 6.15pm, eager to set up the new connection.<br /><br />I set the DNS of my web site to my backup server (on a frend's ADSL connection), pointed my Debian PPP configuration to the Internode "dsl-provider" account details, restarted PPP and crossed my fingers.  Of course, it didn't work.<br /><br />I learned two things:<br /><ul><li>On Debian, you need to change <b>three</b> files, <tt>/etc/ppp/dsl-provider</tt>,  <tt>/etc/ppp/provider</tt>, and <tt>/etc/network/interfaces</tt></li><li>My D-Link DSL-300 modem is really strange to configure in bridge mode</li></ul><br /><br />The first is because there are three sets of PPP initialization scripts.<br /><dl><dt>ppp_on_boot (dsl-provider)</dt><dd>I think this used to be called from a script in /etc/init.d.  It used <tt>dsl-provider</tt>, but is no longer referenced.</dd><dt>pon/off (provider)</dt><dd>This is used by pon and poff, the old dial-up ("dip",) scripts that allow privileged users to start and stop the PPP connection.</dd><dt>ifup (interfaces)</dt><dd>PPP devices can now be configured along with Ethernet devices in the standard Debian interfaces file.  The provider is named in that file.</dl><br /><br />In all cases, the script for each provider is stored in <tt>/etc/ppp/peers</tt>, for example <tt>/etc/ppp/peers/internode</tt>.<br /><br />The second is weirder, since there is no documentation (I never got a manual, and there's nothing helpful on the D-Link web site), so it's more a matter of trial-and-error.<br /><br />I was receiving the familiar "Timeout waiting for PADO packets" message (note that it's PADO with the letter O, not PAD0 with the number 0) which I've seen numerous times before with there were connection problems.<br /><br />The first thing I did was to add an account on the ADSL modem to test whether my iiNet or Internode account was active, and whether the username and password were correct.  I determined that my Internode account was indeed working.<br /><br />I then enabled debug mode in pppd, and noticed some other messages before the PADO timeout message, in particular "LCP: timeout sending Config-Requests".  I figured the problem would have to be that pppd couldn't set up the connection on the modem, so wondered whether the modem was in bridge mode (which it needed to be to allow my Debian server to override the address configuration and provide other services such as address translation that allow me to share the connection between multiple computers).<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/dlink-adsl-bridge1-722733.png"><img src="http://mikelward.com/news/uploaded_images/dlink-adsl-bridge1-722725.png" border="0" alt="" /><p class="caption">Account Configuration Page</p></a><br /></div><br /><br />I checked the main "account configuration" page and ensured there was no username and password entered, that on-demand connection was disabled, and that the connection was disconnected.  When I clicked OK, I let it save its settings to Flash memory and reboot.  Still nothing.<br /><br />Next, I tried setting the connection type to "RFC1483 Bridge" mode.  It still didn't work.<br /><br />Finally, I played the old game I learned from years of using Microsoft products: go thru every menu and see what settings are where they shouldn't be.  (At least with this modem, there aren't too many settings to get lost in!)<br /><br />I went to the accounts management page, and noticed there was an entry for some account.  The fields didn't give much information, but I figured the best idea was to make sure there was as little configuration on the modem itself.  (Besides, the current setup wasn't working, why not give it a try!)<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/dlink-adsl-bridge2-707284.png"><img src="http://mikelward.com/news/uploaded_images/dlink-adsl-bridge2-707279.png" border="0" alt="" /><p class="caption">Accounts Management Page</p></a></div><br /><br />After deleting the entry it still didn't work, but after powering the modem off and on, my "pon" script worked, and I had an internet connection!<br /><br /><a name="success"></a><br /><h3>Success! <small>(a.k.a. this Internet connection sucks less!)</small></h3><br />I made sure my server settings were correct, redirected my web site to my new connection, and sent a test message thru the new Internode email server.  All went well!<br /><br />The very next thing I did was enter youtube.com in my browser.  I clicked on the first link it showed me to some dodgy party with beer movie.  It played without pausing!<br /><br />Mission accomplished!<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Communications.html">Communications</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=4925254986518610706">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

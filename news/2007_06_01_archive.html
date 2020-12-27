@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875");
+</style>
+
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="previous">
+      <h3>Previous Items</h3>
+      
+        <a href="http://mikelward.com/news/2008/04/better-windows-keyboard-shortcuts.html">Better Windows Keyboard Shortcuts</a><br />
+      
+        <a href="http://mikelward.com/news/2008/03/bold-shell-command-like-rails-books.html">Bold Shell Command like the Rails Books</a><br />
+      
+        <a href="http://mikelward.com/news/2008/02/australian-soccer-world-cup-stadiums.html">Australian Soccer World Cup Stadiums</a><br />
+      
+        <a href="http://mikelward.com/news/2008/01/australian-open.html">Australian Open</a><br />
+      
+        <a href="http://mikelward.com/news/2007/12/motorola-razr-v6-on-next-g.html">MOTORAZR V6 on Telstra Next G</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/new-job.html">New Job</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/finally-internet-without-paying-line.html">Finally!  Internet Without Line Rental!</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/ldp-tipped-to-win-nsw-senate-seat.html">LDP Tipped To Win NSW Senate Seat</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/changing-your-name-in-australia.html">Changing Your Name in Australia</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/name-change.html">Name Change</a><br />
+      
+    </div>
+
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">All</a><br />
+        <a href="http://mikelward.com/news/labels/Books">Books</a><br />
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Enviroment">Enviroment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Frends">Frends</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="4925254986518610706"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/06/goodbye-iinet-hello-internode.html">Goodbye iiNet, Hello Internode!</a>
+          
+        </h2>
+        <p class="post-date">Thursday, June 28, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>The saga of my home ADSL connection.<br /><ul><li><a href="#noadsl2">No ADSL2 for you!</a></li><li><a href="#newisp">Choosing a new plan</a></li><li><a href="#churning">The waiting game</a></li><li><a href="#modemsetup">Modem setup</a></li><li><a href="#success">Success!</a></li></ul><br /><a name="noadsl2"></a><h3>No ADSL2 for you! <small>(a.k.a. Internet in Australia sucks)</small></h3><br />When I first moved to Elsternwick in November 2005, one of my important decisions was which internet service provider to use.  I had previously been with iiNet, then Internode.  Their ADSL plans were both quite reliable, which was essential, since I run my web site (including this blog) over my ADSL connection.  The main factors in my decision were price and speed.<br /><br />Around this time, iiNet said on their <a href="http://www.iinet.net.au/products/broadband/iinetwork/">ADSL2+ coverage page</a> that they were planning to install the required equipment (an ADSL2+ capable DSLAM) in my exchange in November/December.  Their prices were very good (in fact, cheaper than most of their slower ADSL1 products), and the speeds should have been excellent.  (According to <a href="http://whereis.com/">Whereis</a>, I'm 1.43 km from the Elsternwick exchange, and this <a href="http://www.internode.on.net/adsl2/graph/">graph of ADSL2+ speeds</a> suggests I could get up to 20 Mb/s at that distance.)  iiNet also don't block ports and allow using the connection to run servers, so it seemed like a no-brainer.<br /><br />I applied for the service at the beginning of November.<br /><br />About a week later, I had an ADSL1 service.<br /><br />That was fine, since I knew they hadn't installed their DSLAM in Elsternwick yet, so I would be connected to a Telstra DSLAM, who at the time only offered ADSL1.<br /><br />At the end of November, I received an email from iiNet saying "Congratulations, your exchange has been selected for a Broadband upgrade".  This was great, and was what I was waiting to hear!<br /><br />The date came and went, and I was still on ADSL1.  Apparently the upgrade had been postponed.<br /><br />I received another message in January 2006 telling me the same thing.  Some time around the beginning of February, they actually installed their DSLAM and started migrating customers to ADSL2+.  Unfortunately I wasn't one of them.<br /><br />I contacted iiNet, and was told that I wasn't migrated because iiNet has to submit the list of customers to migrate to Telstra well in advance of the migration, and they had done so in October, before I was even a customer.  I was told to wait for the "next migration".<br /><br />Every few months, I contacted iiNet to ask when the migration would be.  I was told they only performed bulk migrations (at least twenty customers at a time), and there were no plans to do such a bulk migration (presumably because I was one of the few customers who didn't get migrated in February).<br /><br />In mid-2006, there were discussions of a single-port migration process, probably starting in September.  Telstra called this a "single service migration" or a "single service transfer", depending on whether you were staying with the same ISP or changing to another one.<br /><br />Several deadlines for single-service migration slipped, then it sounded like it might really happen in February 2007.<br /><br />It did, but not for iiNet.  For some reason, Internode and some other ISPs supported the process, but since Internode only had ADSL1, I had to wait for iiNet to get on board if I wanted ADSL2+.<br /><br />Last month, it seemed like iiNet were joining the migration process, but I contacted them and they advised I still couldn't transfer.  I would have to do a full disconnect, wait for about two weeks for the "lines codes" to be removed, then apply as a new customer and pay the full $200 connection fee.  Since I rely on this connection for my web site and email, I can't accept a two-week outage.<br /><br />The final straw was trying to watch a low-bandwidth video on YouTube the other day, and the playback kept stopping because my connection wasn't fast enuff.<br /><br /><a name="newisp"></a><br /><h3>Choosing a new ISP <small>(a.k.a. which plan sucks the least)</small></h3><br /><br />I checked out the plans on <a href="http://bc.whirlpool.net.au/">Broadband Choice</a>.  Internode were cost competitive (they're all too expensive and slow, but Internode isn't much more expensive than the other options for my usage), and they're known to be a very reliable company.  Indeed, they're ranked #1 by the users on Broadband Choice.  They also allow me to run servers and have a local mirror site where I can get my Linux downloads fast and free.  I looked at some of the other, newer ADSL2 providers such as Spin, hoping they would support single-service transfers, but they also had a long contract period and higher set-up cost, which my house mates weren't happy with, so Internode it was!<br /><br /><a name="churning"></a><br /><h3>The churn process <small>(a.k.a. I can't live without Internet)</small></h3><br /><br />To complicate things, Internode don't provide phone services like iiNet do, and Telstra (Australia's near-monopoly telco) requires we have an active landline phone service to get ADSL.  The only real option was Telstra, who provide a $20 a month plan called <a href="http://www.telstra.com.au/phones/homeservices/plans_homeline_budget.htm">HomeLine Budget</a>, but they don't let you sign up for that if you want to use another company for ADSL.  Instead I would have to go with their next-least-expensive plan, <a href="http://www.telstra.com.au/phones/homeservices/plans_homeline_comp.htm">HomeLine Complete</a>, which costs $27 a month.<br /><br />I read the forums on <a href="http://www.whirlpool.net.au/">the Whirlpool broadband user group</a> web site to figure out whether it would be better to change the phone to Telstra or the internet to Internode first, in order to minimize downtime.  I came to the conclusion that I could get my faster internet sooner if I changed my internet provider first, and that there were no downsides to doing it that way.  In Australia, the process of changing an existing ADSL connection from one ISP to another ISP is called "churning" (however most Telstra documentation calls it a "rapid transfer").<br /><br />I signed up for the Internode HOME-1500-Power-10 plan, a 1.5 Mb/s plan for $49.95 a month, and heard back from them within a couple of days.  They sent an email detailing the new plan and the process for transferring to them.  It included a PDF telling me that I should not change phone providers once my Internode plan went active, as this could remove the "ADSL line codes", causing an outage of a few days.<br /><br />I immediately called Internode to confirm this, then ended up having to cancel the process.<br /><br />I had to go to plan B: changing my phone provider to Telstra first, so I called Telstra to do so.  I was told this would take a few weeks.  It did, and in the mean time, Internode changed the price on the plan I wanted from $49.95 to $54.95.  I decided to go ahead with it anyway, since it would now cost the same as the old arrangements with iiNet ($33.36 + $49.95 versus $26.95 + $54.95).<br /><br />Two weeks later, and finally my phone was with Telstra.  I called Internode to re-apply, accepting the new plan price.<br /><br />Last night, I got an SMS telling me that the ADSL service was provisioned, i.e. was now ready to use!<br /><br /><a name="modemsetup"></a><br /><h3>Setting up my new connection <small>(a.k.a. why doesn't my Internet work?)</small></h3><br /><br />I left work around 6.15pm, eager to set up the new connection.<br /><br />I set the DNS of my web site to my backup server (on a frend's ADSL connection), pointed my Debian PPP configuration to the Internode "dsl-provider" account details, restarted PPP and crossed my fingers.  Of course, it didn't work.<br /><br />I learned two things:<br /><ul><li>On Debian, you need to change <b>three</b> files, <tt>/etc/ppp/dsl-provider</tt>,  <tt>/etc/ppp/provider</tt>, and <tt>/etc/network/interfaces</tt></li><li>My D-Link DSL-300 modem is really strange to configure in bridge mode</li></ul><br /><br />The first is because there are three sets of PPP initialization scripts.<br /><dl><dt>ppp_on_boot (dsl-provider)</dt><dd>I think this used to be called from a script in /etc/init.d.  It used <tt>dsl-provider</tt>, but is no longer referenced.</dd><dt>pon/off (provider)</dt><dd>This is used by pon and poff, the old dial-up ("dip",) scripts that allow privileged users to start and stop the PPP connection.</dd><dt>ifup (interfaces)</dt><dd>PPP devices can now be configured along with Ethernet devices in the standard Debian interfaces file.  The provider is named in that file.</dl><br /><br />In all cases, the script for each provider is stored in <tt>/etc/ppp/peers</tt>, for example <tt>/etc/ppp/peers/internode</tt>.<br /><br />The second is weirder, since there is no documentation (I never got a manual, and there's nothing helpful on the D-Link web site), so it's more a matter of trial-and-error.<br /><br />I was receiving the familiar "Timeout waiting for PADO packets" message (note that it's PADO with the letter O, not PAD0 with the number 0) which I've seen numerous times before with there were connection problems.<br /><br />The first thing I did was to add an account on the ADSL modem to test whether my iiNet or Internode account was active, and whether the username and password were correct.  I determined that my Internode account was indeed working.<br /><br />I then enabled debug mode in pppd, and noticed some other messages before the PADO timeout message, in particular "LCP: timeout sending Config-Requests".  I figured the problem would have to be that pppd couldn't set up the connection on the modem, so wondered whether the modem was in bridge mode (which it needed to be to allow my Debian server to override the address configuration and provide other services such as address translation that allow me to share the connection between multiple computers).<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/dlink-adsl-bridge1-722733.png"><img src="http://mikelward.com/news/uploaded_images/dlink-adsl-bridge1-722725.png" border="0" alt="" /><p class="caption">Account Configuration Page</p></a><br /></div><br /><br />I checked the main "account configuration" page and ensured there was no username and password entered, that on-demand connection was disabled, and that the connection was disconnected.  When I clicked OK, I let it save its settings to Flash memory and reboot.  Still nothing.<br /><br />Next, I tried setting the connection type to "RFC1483 Bridge" mode.  It still didn't work.<br /><br />Finally, I played the old game I learned from years of using Microsoft products: go thru every menu and see what settings are where they shouldn't be.  (At least with this modem, there aren't too many settings to get lost in!)<br /><br />I went to the accounts management page, and noticed there was an entry for some account.  The fields didn't give much information, but I figured the best idea was to make sure there was as little configuration on the modem itself.  (Besides, the current setup wasn't working, why not give it a try!)<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/dlink-adsl-bridge2-707284.png"><img src="http://mikelward.com/news/uploaded_images/dlink-adsl-bridge2-707279.png" border="0" alt="" /><p class="caption">Accounts Management Page</p></a></div><br /><br />After deleting the entry it still didn't work, but after powering the modem off and on, my "pon" script worked, and I had an internet connection!<br /><br /><a name="success"></a><br /><h3>Success! <small>(a.k.a. this Internet connection sucks less!)</small></h3><br />I made sure my server settings were correct, redirected my web site to my new connection, and sent a test message thru the new Internode email server.  All went well!<br /><br />The very next thing I did was enter youtube.com in my browser.  I clicked on the first link it showed me to some dodgy party with beer movie.  It played without pausing!<br /><br />Mission accomplished!<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Communications.html">Communications</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=4925254986518610706">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=4925254986518610706" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="8266916331810674862"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/06/microsoft-remix-2007.html">Microsoft Remix 2007</a>
+          
+        </h2>
+        <p class="post-date">Wednesday, June 27, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I spent the past two days at <a href="http://www.microsoft.com/australia/remix07/default.aspx">Remix 2007</a>, a Microsoft web development conference.<br /><br />My main motivation was to see what Microsoft's web development tools were like, particularly for designing and building a web site using graphical tools.  At the moment, I build my web sites by hand, writing my own <a href="http://en.wikipedia.org/wiki/HTML">HTML</a> and CSS.  In theory, Microsoft's development tools such as Visual Studio should be able to create similar results much more quickly.  Remix 07 seemed like a good way to find out about the latest tools and trends.<br /><br />The event was held at the <a href="http://www.crownpromenade.com.au/">Crown Promenade Hotel</a>, which is a hotel <a href="http://maps.google.com.au/maps?f=d&hl=en&geocode=&saddr=&daddr=-37.823667,144.959106&mrsp=1&sz=16&mra=mi&sll=-37.823616,144.959192&sspn=0.009237,0.014591&ie=UTF8&ll=-37.822074,144.959192&spn=0.009238,0.014591&z=16&om=1">hidden just behind the main Crown Casino on Southbank</a>.<br /><br />According the registration email, attendees would receive a free copy of <a href="http://www.microsoft.com/expression/products/overview.aspx">Expression Web</a>, Microsoft's new web site development tool.  When I arrived there around 9am, there was a booth handing out 60-day evaluation versions, but nothing else.  Time to pick up a program and head in for the first session.<br /><br />The event started with a keynote address about Silverlight and Expression.  Silverlight is Microsoft's answer to Adobe's Flex.  It's supposed to allow developers to write more interactive web sites.  Unlike Flex, however, there didn't seem to be any real push to use Silverlight for desktop applications.<br /><br />The first interesting session was by <a href="http://leebrimelow.com/blog/">Lee Brimelow</a>.  He's a geek with a multimedia bent, somebody with a lot of Flash experience and the author of <a href="http://www.theflashblog.com/">The Flash Blog</a>.  His session on Windows Presentation Framework (WPF) showed a lot of interesting multimedia techniques implemented using Microsoft's latest graphics framework, such as rotating shapes, 3D audio visualizations, and some photo browsing applications using the <a href="http://www.flickr.com/">Flickr</a> API.  His talk was from the perspective of somebody familiar with Flash trying to do similar and interesting things with Microsoft's new stuff.  It gave the impression of something very interesting to multimedia and design peeple, but not much that couldn't be achieved using existing technologies.  That said, it was interesting from a developer's perspective.<br /><br />The next talk was from Laurence Moroney about "Building Rich Web Experiences with Silverlight and JavaScript".  It was a fairly basic talk about Microsoft's XAML mark-up language.  If you've seen HTML and SVG or perhaps Mozilla's XUL, as I have, you would have been totally bored.  Maybe it was useful for the designers.<br /><br />After lunch there was a talk by <a href="http://www.smarx.com/">Steve Marx</a> provocatively titled "PHP and Microsoft".  He said that Microsoft's IIS web server had recently become pretty good at running PHP.  The rest of the talk was about using <a href="http://www.codeplex.com/phpmsajax">a library he'd written</a> to provide a better user experience using Microsoft's AJAX library on your PHP-based web sites.  It got me thinking about a few places I could use AJAX to dynamically update parts of a web page, and introduced me to Microsoft's SourceForge equivalent, <a href="http://www.codeplex.com">CodePlex</a>.<br /><br />At 3.15, a Kiwi named John-Daniel Trask gave a talk.  If I remember rightly it showed ways of providing web site content in other formats, such as RSS and XML.  It was heavily based on an ASP.NET web site and used a lot of features of Visual Studio.  The code itself wasn't particularly memorable.<br /><br />The formalities for the first day finished with a talk about "Orcas", the version of Visual Studio that will be released as Visual Studio 2008.  The main things it proved were that Visual Studio now has some good tools for web development including a split source/page view that reminded me of <a href="http://www.getfirebug.com/">Firebug for Firefox</a> and that Visual Studio 2008 was still buggy and a long way from being ready for release!<br /><br />The end of the day was really good.  Most of us went to an event down the road at <a href="http://www.crowncasino.com.au/Content.aspx?topicID=483">Galactic Circus</a>, involving ten-pin bowling, laser force, arcade games, and free beer.  You can guess which one I focussed on. ;-)<br /><br />Day two started with lots of marketing presentations and a demo of a state-of-the-art web site that Guy Gadney's team had developed for the Discovery Channel.  The content and technology themselves weren't very interesting, but what was, was that it had only taken his team a few weeks to build the web site in question.  The site showed off the Silverlight video streaming capabilities.<br /><br />The mid-morning talk was by Russ Weakley, and was the kind of material I was used to and hoping to hear more of.  It was also good to see and meet the main guy behind <a href="http://www.maxdesign.com.au/">Max Design</a> and the <a href="http://webstandardsgroup.org/">Web Standards Group</a>.  Unfortunately, it was mostly old news for me.  His talk was about using different CSS hacks to target rules to different browsers.  They weren't traditional hacks like the Holly Hack or Voice Hack, but rather <a href="http://imfo.ru/csstest/css_hacks/import.php">import hacks</a> that used the different ways that each browser parses the style sheet include code to hide some code from older or less standards compilant browsers.  I had already used these techniques a few months ago, probably from reading Max Design's <a href="http://www.maxdesign.com.au/category/light-reading/">"Links for Light Reading"</a>, so credit where credit's due, and good that more peeple are being encouraged to use the technique (rather than using hacks or tables), but nothing new to me as a regular reader.  At the end of his talk, I mentioned a script by Dean Edwards called <a href="http://dean.edwards.name/IE7/">"IE7"</a>, since I've found it greatly reduces the number of hacks I need to use when making my CSS work in Internet Explorer.<br /><br />The last session of the morning was another one from John-Daniel Trask.  He advocated designing with standards in mind, and reminded us of accessibility (primarily thru the <a href="http://www.w3.org/TR/WAI-WEBCONTENT/">Web Content Accessibility Guidelines</a>).  Again, not too much new for me, but refreshing to hear it being discussed at a Microsoft conference.<br /><br />After lunch was a panel about "Web 2.0".  It was a bit silly, with everybody talking around the topic rather than about it, talking about startups, trends, and trying to look cool.<br /><br />Mid-afternoon was another talk from Steve Marx from Microsoft.  It was technically rather light, since Visual Studio was doing much of the work, but it demoed using Visual Studio to AJAX enable a web site, and was made much more interesting by making the whole talk about juggling ("Asynchronous Juggling and XML" rather than the traditional "Asynchronous JavaScript and XML").  You can see how peeple like Linus Torvalds win the crowd over by being self-deprecating. :-)<br /><br />The last session was another panel, discussing the differences between developers and designers.  The host asked the audience to guess which of the panelists were developers, and which designers.  It was fairly obvious: the designers had sunglasses, bad shirts and sideburns, while the developers had free polo shirts advertising technology companies and otherwise no fashion sense whatsoever.  It was basically a wrap-up wishing that developers and designers worked more closely together, and reminding us to purchase their Expression software suite.<br /><br />During the whole event, one recurring thought was that this new technology was largely futile, since nobody has the Silverlight runtime on their computer.  Flash sites are only now coming into their own, and that's with an <a href="http://www.adobe.com/products/player_census/flashplayer/version_penetration.html">installed base of over 95%</a>, it's hard to see how Microsoft would overtake Flash and Flex.  Perhaps the one niche Silverlight might find is for intranet applications where the developers can specify a standard operating enviroment and target only one platform.  For anything that has to be usable by everyone, HTML and JavaScript or Flash still seem like the only real options.  (It was interesting to meet some peeple who were doing some marketing work for Microsoft who were attending.  They, like many designers, were familiar with Adobe/Macromedia's tool suite, but were trying to move to Microsoft's products since they figured they had better use their client's own stuff.)<br /><br />Otherwise, I'm left with a mildly positive impression.  It was more informative than Sun or IBM events I've attended in the past, quite frank about what Microsoft could help you do while also acknowledging weaknesses, and rather more focussed on the developer.<br /><br />After handing in my evaluation form, I was rather pleased to get a free copy of Expression Web!<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Design.html">Design</a>, <a rel='tag' href="http://mikelward.com/news/labels/Melbourne.html">Melbourne</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=8266916331810674862">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=8266916331810674862" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="2569943768244651483"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/06/telstra-fttn-proposal.html">Telstra FTTN Proposal</a>
+          
+        </h2>
+        <p class="post-date">Sunday, June 24, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I was in a waiting room the other day, so I picked up the newspaper.  Telstra had a <a href="http://www.nowwearetalking.com.au/Library/Image/BACK_Telstra/advert/BACK-Telstra-advert_16june07.pdf">full-page ad</a> comparing their fibre-to-the-node broadband proposal against the G9 proposal (a consortium made up of Australia's other major internet service providers, including Optus, AAPT, iiNet and Internode).  Telstra's side had tick marks next to each point, while G9 had crosses.  I guess that's the end of the debate then!<br /><br />There were two particular points that got my attention:<br />1) G9 is "foreign owned"<br />2) Telstra's prices are "guaranteed for 14 years"<br /><br />The first point is only partially true: AAPT is owned by Telecom New Zealand, Optus is owned by SingTel, and Primus is based in the US.  The other members are all Australian.  They include iiNet, Internode, Macquarie Telecom, PowerTel, Soul, and TransACT.  In any case, the major criteria should be speed, reliability, and price.<br /><br />The second point is true, but you wouldn't want it to be.  Telstra haven't released their full wholesale pricing, but they did let slip that <a href="http://australianit.news.com.au/story/0,24897,21868192-16123,00.html">their basic 512 kb/s service will cost $59</a>.<br /><br />Compare that to the <a href="http://www.accc.gov.au/content/item.phtml?itemId=790357&nodeId=6892203a7bac27d2f8bf3eb29c7f27e7&fn=ACCC%20discussion%20paper%20about%20FANOC%20SAU%20(21%20Jun%2007).pdf">G9 pricing</a>, where the slowest service will be three times faster (1.5 Mb/s) and will cost just $14.23.  Even their fastest plan will cost just $35.38.<br /><br />It's one thing for Telstra to be more expensive.  We expect that.  What's not acceptable is their proposal would cause prices to be higher than they are now for the same product.  That would reduce broadband adoption, reduce business competitiveness, and cripple new services such as Internet TV and movies on demand.<br /><br />For instance, I currently pay $26.95 for a home phone service and $54.95 for a 1.5 Mb/s ADSL service, which makes $81.90 together.  ADSL pricing is based on a $22 fee to access Telstra's copper phone line, plus the ISP's costs and margin, which make up the remaining $32.95.  Assuming the phone access component of the wholesale price in Telstra's proposal is $26.95 (it's likely to be less, since that the retail price rather than the wholesale price), the internet component would be $59 - $26.95 = $32.05, $10.05 more than the current wholesale price, for a service that's three times slower!<br /><br />At this point, Telstra have failed to make a case for their proposal.  The average consumer would be better off if they did nothing.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Communications.html">Communications</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=2569943768244651483">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=2569943768244651483" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="6376031255757165472"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/06/safari-for-windows.html">Safari for Windows</a>
+          
+        </h2>
+        <p class="post-date">Tuesday, June 12, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>Apple have just released their famous <a href="http://www.apple.com/safari/">Safari web browser</a> for Windows.  Probably not everybody has heard of it, but it's famous in geek circles for being the first web browser to pass the <a href="http://www.sitepoint.com/blogs/2005/04/29/safari-passes-the-acid-test/">Acid test</a>, meaning it supports the latest web standards, and should be a good browser for web developers to test on.<br /><br />Of course, being from Apple, it should also provide a really good user experience.  I downloaded it this morning to take a look.<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/safari-website-785958.png"><img src="http://mikelward.com/news/uploaded_images/safari-website-785947.png" border="0" alt="" /></a><p class="caption">Safari on Windows</p><br /></div><br /><br />The first thing you notice is it uses the familiar Apple brushed metal look.  This is expected, but it doesn't fit in very well with the rest of the system.  That said, I tend to run my browser full screen, so it's not so important that it look identical to every other application, only that it behave like them.<br /><br />Unfortunately, this first release for Windows doesn't do that very well either.  I counted fifteen annoying differences.<br /><br />The worst ones:<br /><ul><br /><li><a href="http://www.codinghorror.com/blog/archives/000884.html">the default fonts are very dark</a><br /><li>the address gets messed up if you press Ctrl+L and try to type a new address while the home page is loading<br />   (the same thing happens in Internet Explorer and is the #1 reason I don't use it)<br /><li>the Windows task bar can't be accessed if it's in auto-hide mode<br />   (Safari doesn't leave a 1 or 2 pixel buffer at the bottom so you can move your mouse to the bottom of the screen and see what other programs are open)<br /><li><ins>new windows aren't the same size as the current one</ins><br /><li>many keyboard shortcuts don't work on Blogger<br />   (I couldn't use Ctrl+C, Left, Shift+Home, or my Alt Gr key)<br /><li>no shortcut to switch between two most recent tabs<br />   (like Ctrl+Tab in Firefox when using the <a href="https://addons.mozilla.org/en-US/firefox/addon/112">LastTab extension</a>)<br /><li>many menu items appear in the Edit menu (where they would be on Mac) rather than a Tools or Options menu (where they should be on Windows)<br /><li>you have to hold down the mouse button while selecting an item from a drop-down list<br /><li><del>no proxy support (meaning I can't use Safari at work)</del><br /><li>no way to fix any of this!  (I reported these as bugs, but who knows how long they'll take to fix; Safari isn't open source and isn't extensible like Firefox)<br /></ul><br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/safari-addressbar-786670.png"><img src="http://mikelward.com/news/uploaded_images/safari-addressbar-786667.png" border="0" alt="" /></a><p class="caption">Bug: Pressing Ctrl+L then typing too quickly</p></div><br /><br />Some of these are problems with the browser itself, some with particular web sites, and others with the user interface toolkit Apple use to make their Mac applications run on Windows.  It would also be nice if it offered to migrate my passwords from Firefox.  There's no way I'm typing in my passwords again for all the sites I go to.<br /><br />On the upside, it has some nice features such as highlighting the active text field on a form with a clearly visible blue border, and showing the page loading progress using a nifty blue bar that takes up the whole address bar (this feature inspired the <a href="https://addons.mozilla.org/en-US/firefox/addon/1951">Fission addon</a> for Firefox).  It's also nice that my web site looks fine!<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/safari-mikelwarddotcom-767288.png"><img src="http://mikelward.com/news/uploaded_images/safari-mikelwarddotcom-767284.png" border="0" alt="" /></a><p class="caption">My web site in Safari</p></div><br /><br />On the whole, the browser is quite usable, and hasn't crashed on me yet, it's just lacking several features that I want before making it my default web browser.<br /><br /><h3>Update: June 28, 2007</h3><br />I just tried Safari 3.0.2 at work behind an authenticating proxy, and it works fine.  It's just the proxy settings button is grayed out.  Apparently it uses the operating system settings (Control Panel->Internet Options).<br /><br /><h3>Update: November 20, 2007</h3><br />Safari 3.0.4 was released today.  It seems to fix the taskbar hiding bug, and new windows are now the right size.  There's now a Ctrl+Tab shortcut.  It doesn't work the way I want, but at least it's there.  Blogger also seems to work, but it crashed the first time I tried.  The Ctrl+L bug isn't fixed, and sometimes Ctrl+L doesn't do anything.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Apple.html">Apple</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=6376031255757165472">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=6376031255757165472" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="7350385136976790149"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/06/software-engineering-exam.html">Software Engineering Exam</a>
+          
+        </h2>
+        <p class="post-date">Friday, June 08, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I had my Software Engineering (<a href="http://www.monash.edu.au/pubs/handbooks/units/CSE3308.html">CSE3308</a>) exam this morning.<br /><br />I left around 8.30am to ensure I got there on time.  Ended up parking a few blocks away from the racecourse on <a href="http://maps.google.com.au/maps?f=q&hl=en&q=balaclava+road,+caulfield+north&sll=-37.894244,145.031054&sspn=0.008992,0.01457&ie=UTF8&ll=-37.871127,145.023565&spn=0.035977,0.058279&z=14&iwloc=addr&om=1">Balaclava Road</a> as I figured a walk would be a good idea to relax and clear my mind.  It also helped that parking there was free, while the uni were charging $6 to park at the exam venue.<br /><br />The exam was easier than expected.  There was a fairly standard question on object-oriented design, one on data-flow diagrams, one on entity-relationship diagrams, one on process specifications, and a few on various aspects quality.  The only thing that surprised me was there was no question about user interfaces.  Still, that was fine, since that part of the course focussed too much on regurgitating words from lecture slides (e.g. <a href="http://www.mit.edu/~jtidwell/language/sovereign_posture.html">sovereign versus transient versus parisitic</a>) rather than designing a good user interface (a la <a href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">Joel Spolsky</a> and <a href="http://www.useit.com/">Jakob Nielsen</a>).<br /><br />I finished all the questions in about two hours, so I had an hour to spare.  I went over my answers, but decided I couldn't add any more, so I left early.<br /><br />I decided to treat myself and get the keyboard I had been wanting for a while.  A <a href="http://www.yamaha-europe.com/yamaha_europe/uk/10_musical_instruments/60_portable_keyboards/10_keyboards/10_portatone_psr_series/20_e_series/20_PSR-E303/index.html">Yamaha PSR-E303</a>.  It's a fairly cheap portable electronic piano keyboard ($280 Australian) that's touch sensitive (i.e. the harder you press, the louder the notes are) and sounds like a piano.<br /><br />When I go shopping for music (which isn't nearly as often as I'd like), I usually go to <a href="http://www.allans.com.au/">Allan's Music</a> in Kew.  Since my brother Chris lives nearby in Hawthorn, I decided to drop in on him first.<br /><br />We had a chat about life, love, the universe, and everything, and went to get lunch at <a href="http://www.grilld.com.au/cpa/">Grill'd</a>, a gourmet hamburger shop on Glenferrie Road.  I had the Garden Vegetable burger, which tasted great.  Chris had the Hot Mama!  Mmm...<br /><br />Ended up at Allan's around 4.30pm.  Had a quick look at a Casio for the same price, but decided to get the Yamaha because it sounded more like a piano.  Including a stand and a power adapter, it cost $350.<br /><br />I got home around 5.15 and had a bit of a play.  The main music I'd been wanting to play was some <a href="http://www.thewhitlams.com/">Whitlams</a> song books I bought at their gig a few months back at the Corner Hotel.  Most peeple know their songs from Eternal Nightcap, such as No Aphrodisiac, but I think their stuff off Torch the Moon (Royal in the Afternoon, I Will Not Go Quietly, Ease of the Midnight Visit) is even better piano music.  Had a bit of a play and realized I desperately needed practice!<br /><br />Jodie noticed the keyboard and decided she needed to lend me her headphones.  Don't think I was playing too loudly, but she's studying for her pilot's license, and it's only fair to try not to bother her.<br /><br />Megan also noticed the keyboard.  I expect it won't be too long until we're fighting over who gets to play it! :-)<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Family.html">Family</a>, <a rel='tag' href="http://mikelward.com/news/labels/Food.html">Food</a>, <a rel='tag' href="http://mikelward.com/news/labels/House.html">House</a>, <a rel='tag' href="http://mikelward.com/news/labels/Music.html">Music</a>, <a rel='tag' href="http://mikelward.com/news/labels/Transport.html">Transport</a>, <a rel='tag' href="http://mikelward.com/news/labels/University.html">University</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=7350385136976790149">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=7350385136976790149" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

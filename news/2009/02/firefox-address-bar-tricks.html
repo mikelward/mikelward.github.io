@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Firefox Address Bar Tricks";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/3601392564852968232/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>This is how I use Firefox.<br /><br />I think that doing these things makes Firefox much quicker and easier to use.<br /><br /><h3>Getting to the Address Bar</h3><br /><br />Press Ctrl+L to go to the address bar from anywhere.<br /><br />You start out in the address bar when you open a new tab, so you can just press Ctrl+T to open a new tab and start typing the address.<br /><br />I also like to set my home page to about:blank, so the same thing happens when I open new Firefox windows.<br /><br /><h3>Automatic Address Completion</h3><br /><br />If you go to about:config and turn on the <a href="http://kb.mozillazine.org/Firefox_:_FAQs_:_Enable_Inline_Autocomplete">browser.urlBar.autoFill setting</a> you can start typing the address or name of your most frequently used web sites, then press Enter, and it will go straight there.<br /><br />(In more detail: press Ctrl+L, type about:config then Enter, type browser.urlBar, then double click on browser.urlBar.autoFill in the list below to change its value to true.)<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/firefox-inline-completion-706430.png"><img src="http://mikelward.com/news/uploaded_images/firefox-inline-completion-706428.png" border="0" alt="" /></a><p class="caption">Address bar autocompletion - Firefox has filled out the blue text automatically</p></div><br /><br /><h3>Address Bar Searching</h3><br /><br />Go to a web page with a search box (e.g. <a href="http://www.wikipedia.org/">Wikipedia</a>).  Right click in a search box on the web page, and choose Add a Keyword for this Search....  Type a description in the Name box (e.g. Wikipedia Search) and a short name in the Keyword field (e.g. "wikipedia") and press OK.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/firefox-keyword-search-766052.png"><img src="http://mikelward.com/news/uploaded_images/firefox-keyword-search-766048.png" border="0" alt="" /></a><p class="caption">Setting up a keyword search</p></div><br /><br />Now go to the address bar and type in the keyword you chose (e.g. wikipedia), a space, then the name of something to search for (e.g. China) and press Enter.  You will be taken straight to the search results page (the Wikipedia page for China in this example).<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/firefox-keyword-searching-795071.png"><img src="http://mikelward.com/news/uploaded_images/firefox-keyword-searching-795068.png" border="0" alt="" /></a><p class="caption">Starting a keyword search</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/firefox-keyword-searching-2-755524.png"><img src="http://mikelward.com/news/uploaded_images/firefox-keyword-searching-2-755519.png" border="0" alt="" /></a><p class="caption">Where you end up after typing "wikipedia china"</p></div><br /><br />Other sites that I create keyword searches for include Google, Amazon, IMDb, and Dictionary.com.<br /><br />At that point, you can even remove the search box from your toolbar because it's redundant.  Right click in the gray area just to the left of the search box, choose Customize... and drag the search box off the toolbar.<br /><br /><h3>Other Thoughts</h3><br /><br />There's also a feature called <a href="http://www.squarefree.com/2004/09/09/googles-browse-by-name-in-firefox/">browse by name</a>.  I'm not sure whether you need this if you're using keyword searching, but you might still like to check it out.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=3601392564852968232">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

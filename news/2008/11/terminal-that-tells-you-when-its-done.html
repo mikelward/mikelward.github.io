@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Terminal That Tells You When It's Done";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/5417516534074810343/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I spend a lot of my day waiting for my computer to finish doing what it's doing.  For example, I might be waiting for a backup, a file copy, or a build to finish.<br /><br />In the mean time, I usually read my email, do some other work, or browse the web, but I want to come back to that job as soon as the computer's ready.<br /><br />Now I can, and so can you if you run Linux.<br /><br />First, check out, compile, and install the <a href="http://svn.gnome.org/svn/vte/trunk/src">latest version of VTE</a>.<br /><br />Next, check out the <a href="http://svn.gnome.org/svn/gnome-terminal/tags/GNOME_TERMINAL_2_24_1_1">source code for GNOME Terminal 2.24</a>, apply <a href="http://bugzilla.gnome.org/attachment.cgi?id=122001">the latest patch</a> from <a href="http://bugzilla.gnome.org/show_bug.cgi?id=557593">GNOME Bug 557593</a>, run autogen.sh, make, make install, and you should be done.<br /><br />Finally, make your shell output a bell character (Ctrl+G) when it prints the prompt.  For example, in bash you can put <tt>PS1="\\007$PS1"</tt> at the bottom of your ~/.bashrc.<br /><br />When you're done, you should be able to do this...<br /><br /><a href="http://mikelward.com/news/uploaded_images/window-notify-1---cropped-780655.png"><img src="http://mikelward.com/news/uploaded_images/window-notify-1---cropped-780652.png" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/window-notify-2---cropped-721621.png"><img src="http://mikelward.com/news/uploaded_images/window-notify-2---cropped-721619.png" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/window-notify-3---cropped-756041.png"><img src="http://mikelward.com/news/uploaded_images/window-notify-3---cropped-756033.png" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/window-notify-4---cropped-783470.png"><img src="http://mikelward.com/news/uploaded_images/window-notify-4---cropped-783467.png" border="0" alt="" /></a><br /><br />Technically, it works by setting the X urgency hint on the terminal window.  Your window list or task bar will know to flash the window's icon when this happens.<br /><br />The patch also makes the tab's title bold so you can tell which tab or tabs are finished.<br /><br />For Windows users, there's a similar feature in PuTTY.  Of course, it doesn't support tabs, but it should still be pretty useful.<br /><br />Go to the Bell section in your preferences and set the Taskbar/caption indication on bell option to Flashing.<br /><br /><a href="http://mikelward.com/news/uploaded_images/putty-flash-on-bell-795067.png"><img src="http://mikelward.com/news/uploaded_images/putty-flash-on-bell-795064.png" border="0" alt="" /></a><br /><br />You'll still need to add the bell to your shell prompt as above.<br /><br /><b>Terminals</b><br /><table style="border: none"><tr><td>Eterm</td><td><a href="http://trac.enlightenment.org/e/changeset/34572/trunk/eterm/Eterm">Yes</a></td></tr><tr><td>GNOME Terminal</td><td><a href="http://bugzilla.gnome.org/attachment.cgi?id=122001&action=view">Patch</a></td></tr><tr><td><a href="http://konsole.kde.org/">KDE Konsole</a></td><td><a href="http://konsole.kde.org/changelogfull.php">No?</a></td></tr><tr><td><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a></td><td><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html">Since beta 0.52</a></td></tr><tr><td><a href="http://software.schmorp.de/pkg/rxvt-unicode.html">rxvt-unicode</a></td><td><a href="http://dist.schmorp.de/rxvt-unicode/Changes">Since 8.3</a></tr><tr><td><a href="http://www.xfce.org/projects/terminal">XFCE Terminal</a></td><td><a href="http://bugzilla.gnome.org/attachment.cgi?id=116122&action=view">Patch</a></td></tr></table><br /><br /><b>Window Managers</b><br /><table style="border: none"><tr><td>dwm</td><td><a href="http://code.suckless.org/hg/dwm/file/3affae730034/dwm.c">Yes</a></td></tr><tr><td><a href="http://www.enlightenment.org/">Enlightenment</a></td><td><a href="http://trac.enlightenment.org/e/browser/trunk/e16/e/ChangeLog?rev=35421">Since 0.16.8</a></td></tr><tr><td><a href="http://www.fluxbox.org/">Fluxbox</a></td><td><a href="http://fluxbox.sourceforge.net/version-0.9.php">Since 1.0rc</a></td></tr><tr><td>GNOME Window List</td><td><a href="http://209.85.173.104/search?q=cache:iLaHdyMdtSMJ:www.gnome.org/start/2.12/+gnome+panel+urgency+hint&hl=en&ct=clnk&cd=8">Since 2.12</a></td></tr><tr><td>ion3</td><td><a href="http://www.modeemi.fi/~tuomov/ion/download/ion-3-changelog.html">Yes?</a></td></tr><tr><td>KDE Kicker</td><td><a href="http://websvn.kde.org/tags/KDE/3.2.0/kdebase/kicker/taskbar/taskcontainer.cpp?revision=229635&view=markup">Since 3.2.0?</a></td></tr><tr><td><a href="http://icculus.org/openbox/index.php/Main_Page">Openbox</a></td><td>No?</td></tr><tr><td>Windows Explorer</td><td>Yes</td></tr><tr><td><a href="http://xmonad.org/">Xmonad</a></td><td><a href="http://xmonad.org/xmonad-docs/xmonad-contrib/XMonad-Hooks-UrgencyHook.html">Yes</a></td></tr></table><br /><br />UPDATE: 2 June 2009<br /><br />Konsole in KDE 3 has the feature too, but it's broken in KDE 4 <a href="http://bugs.kde.org/show_bug.cgi?id=165193">KDE Bug 165193</a>.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2008.html">2008</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/GNOME.html">GNOME</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+              <dt class="comment-poster" id="c1858421127442150368"><a name="c1858421127442150368"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/03335511856506143551" rel="nofollow">Mikel Ward</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>I've written a <A HREF="http://mikelward.com/news/2009/05/gnome-terminal-notification-update.html" REL="nofollow">new version</A> that also shows <A HREF="http://www.markshuttleworth.com/archives/253" REL="nofollow">a desktop notification bubble</A>.</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=1858421127442150368" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c1199233319229643889"><a name="c1199233319229643889"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/05982966890883469448" rel="nofollow">zurvan2</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Hey, I&#39;m trying this with 2.24, and your last patch against that version, and nothing happens. :(<br /><br />Any suggestions?</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-1116613383"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=1199233319229643889" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c1905207570183491315"><a name="c1905207570183491315"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/05982966890883469448" rel="nofollow">zurvan2</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>nevermind... had to update to vte 0.20.2.</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-1116613383"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=1905207570183491315" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=5417516534074810343">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

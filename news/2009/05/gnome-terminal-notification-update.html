@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "GNOME Terminal Notification Update";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/8950387396299911581/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=33057956-3bba-4455-a8cd-dda2d72bc264"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>Late last year, I wrote <a href="http://mikelward.com/news/2008/11/terminal-that-tells-you-when-its-done.html">a patch for GNOME Terminal</a> to make it flash the window list icon when a command you ran in the background finished.<br /><br />The GNOME Terminal maintainer asked me to make some changes to get it accepted.<br /><br />In response, I wrote a <a href="http://bugzilla.gnome.org/attachment.cgi?id=133862">new patch</a> for GNOME Terminal 2.26.<br /><br />Then last Friday, we had a "Hackathon" day at work, a day where we get to work on any project we like.<br /><br />I figured I'd improve on this work and also display a desktop notification after seeing <a href="http://www.markshuttleworth.com/archives/265">how cool they look in Ubuntu 9.04</a> [<a href="http://www.markshuttleworth.com/wp-content/uploads/2008/12/jaunty904_notifications_example1_web_092.swf">video</a>].<br /><br />There's now <a href="http://bugzilla.gnome.org/attachment.cgi?id=134686">another patch</a> that you should apply on top of the other patch that will make it look something like this.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/terminal-notifications-756605.png"><img src="http://mikelward.com/news/uploaded_images/terminal-notifications-756601.png" border="0" alt="" /></a><p class="caption">GNOME Terminal desktop notifications in action</p></div><br /><br />Hopefully it's coming to a distribution near you!<br /><br />Until then, you can install it manually.<br /><br />You'll need VTE version 0.20 or higher, plus some other development libraries.  (Ubuntu 9.04 is recommended, but not required: it will work in Ubuntu 8.10 provided you download VTE from SVN.)<br /><br />Steps to install:<br /><ol><br /><li>Run these commands<br /><pre><br />$ sudo apt-get install gnome-devel libvte-dev libnotify-dev<br />$ mkdir gnome-terminal<br />$ cd gnome-terminal<br />$ svn co -r 3419 http://svn.gnome.org/svn/gnome-terminal/trunk<br />$ cd trunk<br />$ wget -O ~/patch1.diff http://bugzilla.gnome.org/attachment.cgi?id=133862<br />$ wget -O ~/patch2.diff http://bugzilla.gnome.org/attachment.cgi?id=134686<br />$ patch -p0 < ~/patch1.diff<br />$ patch -p1 < ~/patch2.diff<br />$ ./autogen.sh<br />$ make<br />$ sudo make install<br />$ echo -E 'PS1="\\007$PS1"' >> ~/.bashrc # or ~/.zshrc or whatever<br /></pre></li><li>Close all GNOME Terminal windows</li><li>Open GNOME Terminal</li><li>Go to Profile->Profile Preferences</li><li>Check/tick<ul><li>Flash the window list icon and bold the tab title when the terminal rings the bell</li><li>Show a desktop notification when the terminal rings the bell</li></ul><li>Run a long command (e.g. sleep 15)</li><li>Switch to another program window (e.g. Firefox, Evolution, etc.) while you're waiting</li></ol><br />Voila!<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=8950387396299911581">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

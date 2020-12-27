@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Microsoft Remix 2007";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/8266916331810674862/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I spent the past two days at <a href="http://www.microsoft.com/australia/remix07/default.aspx">Remix 2007</a>, a Microsoft web development conference.<br /><br />My main motivation was to see what Microsoft's web development tools were like, particularly for designing and building a web site using graphical tools.  At the moment, I build my web sites by hand, writing my own <a href="http://en.wikipedia.org/wiki/HTML">HTML</a> and CSS.  In theory, Microsoft's development tools such as Visual Studio should be able to create similar results much more quickly.  Remix 07 seemed like a good way to find out about the latest tools and trends.<br /><br />The event was held at the <a href="http://www.crownpromenade.com.au/">Crown Promenade Hotel</a>, which is a hotel <a href="http://maps.google.com.au/maps?f=d&hl=en&geocode=&saddr=&daddr=-37.823667,144.959106&mrsp=1&sz=16&mra=mi&sll=-37.823616,144.959192&sspn=0.009237,0.014591&ie=UTF8&ll=-37.822074,144.959192&spn=0.009238,0.014591&z=16&om=1">hidden just behind the main Crown Casino on Southbank</a>.<br /><br />According the registration email, attendees would receive a free copy of <a href="http://www.microsoft.com/expression/products/overview.aspx">Expression Web</a>, Microsoft's new web site development tool.  When I arrived there around 9am, there was a booth handing out 60-day evaluation versions, but nothing else.  Time to pick up a program and head in for the first session.<br /><br />The event started with a keynote address about Silverlight and Expression.  Silverlight is Microsoft's answer to Adobe's Flex.  It's supposed to allow developers to write more interactive web sites.  Unlike Flex, however, there didn't seem to be any real push to use Silverlight for desktop applications.<br /><br />The first interesting session was by <a href="http://leebrimelow.com/blog/">Lee Brimelow</a>.  He's a geek with a multimedia bent, somebody with a lot of Flash experience and the author of <a href="http://www.theflashblog.com/">The Flash Blog</a>.  His session on Windows Presentation Framework (WPF) showed a lot of interesting multimedia techniques implemented using Microsoft's latest graphics framework, such as rotating shapes, 3D audio visualizations, and some photo browsing applications using the <a href="http://www.flickr.com/">Flickr</a> API.  His talk was from the perspective of somebody familiar with Flash trying to do similar and interesting things with Microsoft's new stuff.  It gave the impression of something very interesting to multimedia and design peeple, but not much that couldn't be achieved using existing technologies.  That said, it was interesting from a developer's perspective.<br /><br />The next talk was from Laurence Moroney about "Building Rich Web Experiences with Silverlight and JavaScript".  It was a fairly basic talk about Microsoft's XAML mark-up language.  If you've seen HTML and SVG or perhaps Mozilla's XUL, as I have, you would have been totally bored.  Maybe it was useful for the designers.<br /><br />After lunch there was a talk by <a href="http://www.smarx.com/">Steve Marx</a> provocatively titled "PHP and Microsoft".  He said that Microsoft's IIS web server had recently become pretty good at running PHP.  The rest of the talk was about using <a href="http://www.codeplex.com/phpmsajax">a library he'd written</a> to provide a better user experience using Microsoft's AJAX library on your PHP-based web sites.  It got me thinking about a few places I could use AJAX to dynamically update parts of a web page, and introduced me to Microsoft's SourceForge equivalent, <a href="http://www.codeplex.com">CodePlex</a>.<br /><br />At 3.15, a Kiwi named John-Daniel Trask gave a talk.  If I remember rightly it showed ways of providing web site content in other formats, such as RSS and XML.  It was heavily based on an ASP.NET web site and used a lot of features of Visual Studio.  The code itself wasn't particularly memorable.<br /><br />The formalities for the first day finished with a talk about "Orcas", the version of Visual Studio that will be released as Visual Studio 2008.  The main things it proved were that Visual Studio now has some good tools for web development including a split source/page view that reminded me of <a href="http://www.getfirebug.com/">Firebug for Firefox</a> and that Visual Studio 2008 was still buggy and a long way from being ready for release!<br /><br />The end of the day was really good.  Most of us went to an event down the road at <a href="http://www.crowncasino.com.au/Content.aspx?topicID=483">Galactic Circus</a>, involving ten-pin bowling, laser force, arcade games, and free beer.  You can guess which one I focussed on. ;-)<br /><br />Day two started with lots of marketing presentations and a demo of a state-of-the-art web site that Guy Gadney's team had developed for the Discovery Channel.  The content and technology themselves weren't very interesting, but what was, was that it had only taken his team a few weeks to build the web site in question.  The site showed off the Silverlight video streaming capabilities.<br /><br />The mid-morning talk was by Russ Weakley, and was the kind of material I was used to and hoping to hear more of.  It was also good to see and meet the main guy behind <a href="http://www.maxdesign.com.au/">Max Design</a> and the <a href="http://webstandardsgroup.org/">Web Standards Group</a>.  Unfortunately, it was mostly old news for me.  His talk was about using different CSS hacks to target rules to different browsers.  They weren't traditional hacks like the Holly Hack or Voice Hack, but rather <a href="http://imfo.ru/csstest/css_hacks/import.php">import hacks</a> that used the different ways that each browser parses the style sheet include code to hide some code from older or less standards compilant browsers.  I had already used these techniques a few months ago, probably from reading Max Design's <a href="http://www.maxdesign.com.au/category/light-reading/">"Links for Light Reading"</a>, so credit where credit's due, and good that more peeple are being encouraged to use the technique (rather than using hacks or tables), but nothing new to me as a regular reader.  At the end of his talk, I mentioned a script by Dean Edwards called <a href="http://dean.edwards.name/IE7/">"IE7"</a>, since I've found it greatly reduces the number of hacks I need to use when making my CSS work in Internet Explorer.<br /><br />The last session of the morning was another one from John-Daniel Trask.  He advocated designing with standards in mind, and reminded us of accessibility (primarily thru the <a href="http://www.w3.org/TR/WAI-WEBCONTENT/">Web Content Accessibility Guidelines</a>).  Again, not too much new for me, but refreshing to hear it being discussed at a Microsoft conference.<br /><br />After lunch was a panel about "Web 2.0".  It was a bit silly, with everybody talking around the topic rather than about it, talking about startups, trends, and trying to look cool.<br /><br />Mid-afternoon was another talk from Steve Marx from Microsoft.  It was technically rather light, since Visual Studio was doing much of the work, but it demoed using Visual Studio to AJAX enable a web site, and was made much more interesting by making the whole talk about juggling ("Asynchronous Juggling and XML" rather than the traditional "Asynchronous JavaScript and XML").  You can see how peeple like Linus Torvalds win the crowd over by being self-deprecating. :-)<br /><br />The last session was another panel, discussing the differences between developers and designers.  The host asked the audience to guess which of the panelists were developers, and which designers.  It was fairly obvious: the designers had sunglasses, bad shirts and sideburns, while the developers had free polo shirts advertising technology companies and otherwise no fashion sense whatsoever.  It was basically a wrap-up wishing that developers and designers worked more closely together, and reminding us to purchase their Expression software suite.<br /><br />During the whole event, one recurring thought was that this new technology was largely futile, since nobody has the Silverlight runtime on their computer.  Flash sites are only now coming into their own, and that's with an <a href="http://www.adobe.com/products/player_census/flashplayer/version_penetration.html">installed base of over 95%</a>, it's hard to see how Microsoft would overtake Flash and Flex.  Perhaps the one niche Silverlight might find is for intranet applications where the developers can specify a standard operating enviroment and target only one platform.  For anything that has to be usable by everyone, HTML and JavaScript or Flash still seem like the only real options.  (It was interesting to meet some peeple who were doing some marketing work for Microsoft who were attending.  They, like many designers, were familiar with Adobe/Macromedia's tool suite, but were trying to move to Microsoft's products since they figured they had better use their client's own stuff.)<br /><br />Otherwise, I'm left with a mildly positive impression.  It was more informative than Sun or IBM events I've attended in the past, quite frank about what Microsoft could help you do while also acknowledging weaknesses, and rather more focussed on the developer.<br /><br />After handing in my evaluation form, I was rather pleased to get a free copy of Expression Web!<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Design.html">Design</a>, <a rel='tag' href="http://mikelward.com/news/labels/Melbourne.html">Melbourne</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=8266916331810674862">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

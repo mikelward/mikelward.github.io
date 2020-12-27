@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Beijing - Day 2";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/1504988043458362545/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>Today is freezing!<br /><br />Ventured outside around 9am, this time prepared with a t-shirt, jumper, jacket, and beanie, and still felt like my nose was going to fall off!<br /><br />Noticed a lot of people didn't have gloves or beanies or balaclavas.  Noticed lots of people had blue hands, too. :-)<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2480-737143.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2480-736380.jpg" border="0" alt="" /></a><p class="caption">A security guard at the entrance to the residential compound</p></div><br /><br />Mama suggested I check out the Buddhist Lama temple Yonggegong and the Temple of Confucius.<br /><br />I felt I had enough time, so I first headed to the Beijing olympic site to see the bird's nest stadium and the water cube.<br /><br />But when I tried to go to the subway, there were security guards, and nobody was allowed in.<br /><br />I think it was just because I was using the Silk Street entrance and the market wasn't open yet, because when I decided to walk to the next station, I ended up finding another entrance to Yonganli station and got on the train with no problems.  (The Silk Street market opens at 9.30am.)<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2481-706894.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2481-706248.jpg" border="0" alt="" /></a><p class="caption">A Western-style corner opposite the Silk Street market</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2484-787384.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2484-786685.jpg" border="0" alt="" /></a><p class="caption">A monument to the Silk Street Market</p></div><br /><br />Had to take three different lines to get to the Olympic site: 1, then 10, then 8.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2489-780300.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2489-779574.jpg" border="0" alt="" /></a><p class="caption">The subway on the way to the Olympic site</p></div><br /><br />The exit from the train station takes you up to a huge plaza still a way away from the stadiums.  I'm guessing it was all designed to cope with a huge number of people at the time of the Olympics, but today it just made for a really cold walk.  Had to pass a number of security guards and over one of the ring roads.  <br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2494-765750.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2494-765313.jpg" border="0" alt="" /></a><p class="caption">The plaza before the Olympic stadium</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2498-761158.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2498-760372.jpg" border="0" alt="" /></a><p class="caption">Passing over the ring road</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2501-774580.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2501-774171.jpg" border="0" alt="" /></a><p class="caption">The Olympic stadium!</p></div><br /><br /><div class="figugre"><a href="http://mikelward.com/news/uploaded_images/img_2519-728475.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2519-727794.jpg" border="0" alt="" /></a><p class="caption">The aquatic centre</p></div><br /><br />Could have taken a tour, but it was too cold, and it seemed like it would be better to get on and see the temples, so I took the subway (a different way) to Yonghegong.<br /><br />At one of the stations on the way, I stopped to use the toilet.  It was one of the Chinese squat toilets.  Quite an experience!  Not hard, just different.<br /><br />When I got out at Yonghegong station, I had to guess the direction and go for a bit of a walk to get there.  It was mostly obvious, but not perfectly signed.<br /><br />Found it, paid 20 RMB admission plus some more money for an audio guide, and went in.<br /><br />At first there was an archway, then a courtyard with some more tourist stores, where a woman tried to sell me a nice-looking black and white handpainting of the Great Wall (originally 480 RMB, but she came down to 80), <br /><br />The buildings were quite interesting at first, but not awe-inspiring.<br /><br />That soon changed.<br /><br />I passed thru several medium sized temples, all with burning incense, some with chanting monks.<br /><br />Much deeper in, there is an awesome, Guiness World Record, 18-metre tall sandalwood Buddha.  Unfortunately, I wasn't allowed to take a photo. :-(<br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2537-718039.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2537-717610.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2540-738307.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2540-737861.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2545-786390.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2545-785944.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2549-785522.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2549-785059.jpg" border="0" alt="" /></a><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2562-785966.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2562-785430.jpg" border="0" alt="" /></a><p class="caption">The building housing the 18-metre Buddha</p></div><br /><br />Left feeling like I'd seen something great, but a bit offended by the security guard who told me off for trying to take a photo.<br /><br />By then, I was cold, and it was about 12.30pm, so I went to grab lunch at a vegetarian restaurant that Mama had mentioned.<br /><br />They had a buffet for 68 RMB (13 AUD).  They had black tea, not green or jasmine tea, unfortunately, but the food was quite interesting.<br /><br />I could have sworn the signs said chicken, pork, and squid, but I'm assured it was all vegetarian.  Very bizarre!<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2571-702236.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2571-701507.jpg" border="0" alt="" /></a><p class="caption">Vegetarian buffet?</p></div><br /><br />After lunch, I carried on to the Temple of Confucius.<br /><br />From the outside, it seemed less interesting that the Lama Temple, and I guessed I wouldn't spend too long there.<br /><br />Two hours later... :-)<br /><br />Inside, the style was similar but different from the Lama Temple.  Less religion and incense.  The latter was a shame, because all the fires for the incense kept me warm!<br /><br />There was also some more mention of war.  Not so much in the words, and not overt, but there was a small display of swords near one of the archways, and a number of the smaller temples had been built "to commemorate the supression of the rebellion".<br /><br />Not a major theme, just a contrast compared to the Lama Temple.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2578-705633.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2578-704270.jpg" border="0" alt="" /></a><p class="caption">Statue of Confucius near the entrance</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2585-743440.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2585-742900.jpg" border="0" alt="" /></a><p class="caption">A courtyard with lots of Cypress trees</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2579-763054.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2579-762560.jpg" border="0" alt="" /></a></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2600-743341.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2600-742877.jpg" border="0" alt="" /></a></div><br /><br />What kept me awhile, however, was a section inside with lots of information about Confucius.<br /><br />It mentioned how he was the first to offer teaching to all, rather than just the upper classes, how he preached virtue and honesty, and what effect he had had on Western philosophers.  In particular, he is said to have been the first to say "do unto others as you would have them do unto you", and Voltaire is supposed to have been a strong adherent to Confucian teachings.<br /><br />There was also a scene of a Chinese shopkeeper with a description that for every 50 grams their weight was wrong, they lost another virtue (e.g. wealth, happiness, long life), and that from the time of Confucius, shopkeepers became honest.<br /><br />Another interesting thing was the balance between state control and religion.  For example, many times it sounded like Confucianism and moral purity was used as a reason for deposing other kings and taking over their territories.  Also, one section claimed that "Confucianism is the reason for the strength of the Chinese empire in the past, but also the reason for its backwardness recently".  Perhaps part true, part propaganda?<br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2602-786438.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2602-786010.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2604-762536.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2604-762113.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2607-713778.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2607-713014.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2608-757742.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2608-757289.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2616-710233.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2616-709779.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2618-701190.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2618-700740.jpg" border="0" alt="" /></a><br /><br /><a href="http://mikelward.com/news/uploaded_images/img_2621-772767.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2621-772305.jpg" border="0" alt="" /></a><br /><br />Headed back home.<br /><br />Did some shopping at a local supermarket.  They had lots of tea, not much coffee, some typical Chinese and Japanese type packaged foods, and a bit of alcohol.  Bought some basics, some oats for porridge, and a couple of Tsingtao beers.<br /><br />Paid with cash and the woman checked the notes using a UV light.<br /><br />On the way out thru the Silk Street market, I again ran the gauntlet of sales people.<br /><br />One of the managed to sell me a belt.  Apparently Armani, but who knows?  Paid 69 RMB, as that's all I had left in my wallet.  The starting price was 350.  Time will tell if I paid too much!<br /><br />Tonight while writing the blog, I realised the Temple of Confucius is also known as <a href="http://en.wikipedia.org/wiki/Qufu">Kong Miao</a>, however there are several of them in China, all with the same style and layout.  (The one in Beijing is the second largest, after the one in Qufu, Confucius's birthplace.)<br /><br />For me this is awesome, as it is something you can build in the game Civilization IV. :-)<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Beijing.html">Beijing</a>, <a rel='tag' href="http://mikelward.com/news/labels/China.html">China</a>, <a rel='tag' href="http://mikelward.com/news/labels/Travel.html">Travel</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=1504988043458362545">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

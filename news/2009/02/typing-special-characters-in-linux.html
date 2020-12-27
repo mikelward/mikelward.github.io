@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Typing Special Characters in Linux";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/1838871539541651930/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>The easiest and probably best way to type in special characters such as accented letters or mathematical symbols is to use the compose key.<br /><br />It's not turned on by default, but it's easy to set up.<br /><br /><ol><li>In your GNOME desktop, go to System->Preferences->Keyboard</li><li>Click on the Layouts tab</li><li>Click on Other Options...</li><li>Find Compose key position and click on the triangle <br />to the left to open it up</li><li>Tick the Caps Lock is Compose box</li></ol><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/compose-key---gnome-keyboard-prefs.xwd-785242.png"><img src="http://mikelward.com/news/uploaded_images/compose-key---gnome-keyboard-prefs.xwd-785228.png" border="0" alt="" /></a></li></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/compose-key---gnome-keyboard-other-options.xwd-754973.png"><img src="http://mikelward.com/news/uploaded_images/compose-key---gnome-keyboard-other-options.xwd-754970.png" border="0" alt="" /></a></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/compose-key---gnome-keyboard-compose-key-options.xwd-790093.png"><img src="http://mikelward.com/news/uploaded_images/compose-key---gnome-keyboard-compose-key-options.xwd-790089.png" border="0" alt="" /></a></div><br /><br />Now you can type lots of useful things.<br /><br />For example, Caps Lock, then ', then o, will turn into ó.<br /><br />Other examples.  Press Caps Lock, then the first key, then the second key, and it turns into the Result.<br /><br /><table><tr><th>First key</th><th>Second key</th><th>Result</th></tr><tr><td>' (single quote)</td><td>o</td><td>ó</td></tr><tr><td>" (double quote)</td><td>o</td><td>ö</td></tr><tr><td>` (under the ~)</td><td>o</td><td>ò</td></tr><tr><td>s</td><td>s</td><td>ß</td></tr><tr><td>,</td><td>c</td><td>ç</td></tr><tr><td>&lt;</td><td>&lt;</td><td>«</td></tr><td>o</td><td>c</td><td>©</td></tr><tr><td>=</td><td>e</td><td>€</td></tr><tr><td>x</td><td>x</td><td>×</td></tr><tr><td>:</td><td>-</td><td>÷</td></tr></table><br /><br />You can change the o to any other vowel to get the same accent on that letter.<br /><br />For a full list, see the <a href="http://en.wikipedia.org/wiki/Compose_key">Wikipedia article on the Compose key</a>.<br /><br />For Windows, there's a program called <a href="http://allchars.zwolnet.com/introduction.html">AllChars</a> that lets you do the same thing with Control, or any key of your choosing.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=1838871539541651930">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

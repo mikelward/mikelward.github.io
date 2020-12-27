@@ -1,0 +1,124 @@
+<database name="library" defaultIdMethod="native">
+	<!--library items-->
+	<!--this includes Item and all sub-classes, such as Book and Movie-->
+	<table name="items" phpName="Item">
+		<column name="item_id" type="INTEGER" primaryKey="true" required="true" autoIncrement="true"/>
+		<column name="class_key" type="INTEGER" inheritance="single" required="true">
+			<inheritance key="1" class="Book" extends="library.Item"/>
+			<inheritance key="2" class="Movie" extends="library.Item"/>
+			<inheritance key="3" class="Album" extends="library.Item"/>
+			<inheritance key="4" class="Software" extends="library.Item"/>
+		</column>
+		<column name="title" type="VARCHAR" size="64" required="true"/>
+		<column name="purchased_on" type="DATE"/>
+		<column name="lastused_on" type="DATE"/>
+		<column name="rating" type="INTEGER"/>
+		<column name="asin" type="VARCHAR" size="13"/>
+		
+		<!--Book attributes-->
+		<column name="author" type="VARCHAR" size="64"/>
+		<column name="isbn" type="VARCHAR" size="10"/>
+		<column name="isbn13" type="VARCHAR" size="13"/>
+		
+		<!--Album attributes-->
+		<column name="artist_id" type="INTEGER"/>
+		<foreign-key foreignTable="artists">
+			<reference local="artist_id" foreign="artist_id"/>
+		</foreign-key>
+
+		<!--Software attributes-->
+		<column name="licence_key" type="VARCHAR" size="64"/>
+		<column name="platform_id" type="INTEGER"/>
+		<foreign-key foreignTable="platforms">
+			<reference local="platform_id" foreign="platform_id"/>
+		</foreign-key>
+	</table>
+	
+	<table name="artists" phpName="Artist">
+		<column name="artist_id" type="INTEGER" primaryKey="true" required="true" autoIncrement="true"/>
+		<column name="name" type="VARCHAR" size="64" required="true"/>
+	</table>
+
+	<!--ISO 3166-1 alpha 2 country identifiers, e.g. au, de, gb, nz, us, etc.-->
+	<!--http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2-->
+	<table name="countries" phpName="Country">
+		<column name="country_id" type="INTEGER" primaryKey="true" required="true" autoIncrement="true"/>
+		<column name="name" type="VARCHAR" size="64" required="true"/>
+		<column name="code" type="VARCHAR" size="2" required="true"/>
+	</table>
+	
+	<!--ISO 639-1 language identifiers, e.g. en, de, fr, etc.-->
+	<!--http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes-->
+	<table name="languages" phpName="Language">
+		<column name="language_id" type="INTEGER" primaryKey="true" required="true" autoIncrement="true"/>
+		<column name="name" type="VARCHAR" size="64" required="true"/>
+		<column name="code" type="VARCHAR" size="2" required="true"/>
+	</table>
+		
+	<table name="item_languages">
+		<column name="item_id" type="INTEGER" required="true"/>
+		<foreign-key foreignTable="items">
+			<reference local="item_id" foreign="item_id"/>
+		</foreign-key>
+		<column name="language_id" type="INTEGER" required="true"/>
+		<foreign-key foreignTable="languages">
+			<reference local="language_id" foreign="language_id"/>
+		</foreign-key>
+		<column name="medium_id" type="INTEGER" required="true"/>
+	</table>
+	
+	<!--text, speech, subtitles, etc.-->
+	<table name="media" phpName="Medium">
+		<column name="medium_id" type="INTEGER" primaryKey="true" required="true" autoIncrement="true"/>
+		<column name="name=" type="VARCHAR" size="64" required="true"/>
+	</table>
+	
+	<!--software platform (Windows, Linux, Mac, etc.)-->
+	<table name="platforms" phpName="Platform">
+		<column name="platform_id" type="INTEGER" required="true"/>
+		<column name="name" type="VARCHAR" size="64" required="true"/>
+	</table>
+
+	<!--DVD regions codes (US = 1, Europe = 2, Australia = 4, etc.)-->
+	<!--http://en.wikipedia.org/wiki/DVD_region_code-->
+	<table name="regions" phpName="Region">
+		<column name="region_id" type="INTEGER" required="true"/>
+		<column name="code" type="CHAR" size="1" required="true"/>
+		<column name="description" type="VARCHAR" size="64"/>
+	</table>
+	
+	<!--list of countries for each DVD region -->
+	<table name="region_countries">
+		<column name="region_id" type="INTEGER" required="true"/>
+		<foreign-key foreignTable="regions">
+			<reference local="region_id" foreign="region_id"/>
+		</foreign-key>
+		<column name="country_id" type="INTEGER" required="true"/>
+		<foreign-key foreignTable="countries">
+			<reference local="country_id" foreign="country_id"/>
+		</foreign-key>
+	</table>
+		
+	<table name="stores" phpName="Store">
+		<column name="store_id" type="INTEGER" primaryKey="true" required="true" autoIncrement="true"/>
+		<column name="name" type="VARCHAR" size="64" required="true"/>
+		<column name="country_id" type="INTEGER"/>
+		<foreign-key foreignTable="countries">
+			<reference local="country_id" foreign="country_id"/>
+		</foreign-key>
+		<column name="homepage_url" type="VARCHAR" size="255"/>
+	</table>
+
+	<table name="store_items">
+		<column name="store_id" type="INTEGER" required="true"/>
+		<foreign-key foreignTable="stores">
+			<reference local="store_id" foreign="store_id"/>
+		</foreign-key>
+		<column name="item_id" type="INTEGER" required="true"/>
+		<foreign-key foreignTable="items">
+			<reference local="item_id" foreign="item_id"/>
+		</foreign-key>
+	</table>
+	
+</database>
+		

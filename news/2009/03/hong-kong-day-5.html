@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Hong Kong - Day 5";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/1611302574919377872/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>Had another early start for work.<br /><br />It was another rainy, misty day.<br /><br />Had a chicken sandwich I'd bought the night before from 7 Eleven, and a can of Nescafe rich coffee for breakfast.<br /><br />Moved more servers.  Managed to break one of the rails when I was lifting a server and it got caught.  Was starting to feel rather sore.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2133-718857.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2133-718411.jpg" border="0" alt="" /></a><p class="caption">East Tsuen Wan, facing the Panda Hotel</p></div><br /><br />When I got back to the hotel, I took some more photos.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2137-713705.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2137-713314.jpg" border="0" alt="" /></a><p class="caption">Lai King wharf with Hong Kong island in the distance</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2145-791865.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2145-790843.jpg" border="0" alt="" /></a><p class="caption">Looking out a window on the 41st floor observation deck</p></div><br /><br />Then I headed into central Hong Kong for the first time to see the work office and go out for drinks with the Hong Kong staff.<br /><br />Again, I went via the Tsuen Wan MTR station.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2149-715613.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2149-714995.jpg" border="0" alt="" /></a><p class="caption">Cake shops are everywhere</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2151-709541.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2151-709100.jpg" border="0" alt="" /></a><p class="caption">Starbucks and KFC alongside the Asian options</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2152-713143.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2152-711700.jpg" border="0" alt="" /></a><p class="caption">Intersection of Sha Tsui Road with the near ubiquitous pedestrian footbridges</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2155-765760.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2155-764273.jpg" border="0" alt="" /></a><p class="caption">Outside Tsuen Wan station, looking to the hills in the East</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2157-776176.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2157-775050.jpg" border="0" alt="" /></a><p class="caption">Boarding the train to Central</p></div><br /><br />When I got to Central, I was amazed at how big, bold, and Western it seemed.  Still Asian of course, but very London too.  Lots of fashion stores, and even red double-decker buses!<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2158-720870.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2158-720380.jpg" border="0" alt="" /></a><p class="caption">Double deckers and billboards in central Hong Kong</p></div><br /><br />Walked straight to the office.  The walk was mostly uphill.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2162-714565.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2162-714064.jpg" border="0" alt="" /></a><p class="caption">In contrast to Tsuen Wan, Hong Kong is pretty hilly</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2166-775889.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2166-775455.jpg" border="0" alt="" /></a><p class="caption">Those red taxis are everywhere in central Hong Kong too!</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2169-791755.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2169-791299.jpg" border="0" alt="" /></a><p class="caption">Aconex in the building on the right, Foreign Correspondents' Club ahead</p></div><br /><br />Met lots of people I hadn't seen for a while: Phillip, Simon, Matthew, and Carey, and met Katherine, Jim, and Sunny for the first time.  (Karen was in Japan.)<br /><br />We headed to an Irish bar, had a few drinks, and half watched the Rugby.  Spoke to Carey and his mate Kim, debating the finer points of Union versus League and the strength of the Australian cricket team.  Jim left, then Katherine, Kim, Carey and I went to a Thai and Vietnamese restaurant.<br /><br />After we had an entree, I started to feel ill, and vomited.  And vomited.  At the table, in the bathroom, outside on the footpath.<br /><br />Wasn't a good look at all.<br /><br />Not sure whether it was lack of sleep, the dodgy chicken sandwich, or too much alcohol.  I had four beers that night, which hasn't been a problem before, so I blame the sandwich.<br /><br />Katherine and Carey looked after me.  We had to leave the restaurant, so we went back to the office.<br /><br />Still wasn't feeling well, so Carey took me back to his place.  Went there in a taxi still holding a bin.<br /><br />He was really great, and sorted me out with a shower, toothbrush, and a bed.<br /><br />Slept it off.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Hong%20Kong.html">Hong Kong</a>, <a rel='tag' href="http://mikelward.com/news/labels/Travel.html">Travel</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=1611302574919377872">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Better GNOME Terminal Copy and Paste";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/386430773387310214/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>In most programs these days, you press Ctrl+C to copy to the clipboard.<br /><br />In GNOME Terminal on Linux it's Ctrl+Shift+C and in PuTTY on Windows it happens as soon as you select some text.<br /><br />This was confusing me until I found a great feature of GNOME Terminal:<br /><ol><li>Click on the Edit menu, then on Keyboard Shortcuts...</li><li>Click on Copy, then type Ctrl+C</li></ol><br />Now Ctrl+C will act as copy if some text is selected, but it still acts as the interrupt key to stop a program if there's nothing selected.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/GNOME-Terminal-edit-keys---cropped-767883.png"><img src="http://mikelward.com/news/uploaded_images/GNOME-Terminal-edit-keys---cropped-767863.png" border="0" alt="" /></a><p class="caption">The GNOME Edit Keyboard Shortcuts menu</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/GNOME-Terminal-copy-enabled---cropped-753597.png"><img src="http://mikelward.com/news/uploaded_images/GNOME-Terminal-copy-enabled---cropped-753587.png" border="0" alt="" /></a><p class="caption">Ctrl+C with something highlighted</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/GNOME-Terminal-copy-grayed-out---cropped-702543.png"><img src="http://mikelward.com/news/uploaded_images/GNOME-Terminal-copy-grayed-out---cropped-702540.png" border="0" alt="" /></a><p class="caption">Ctrl+C with nothing highlighted</p></div><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2008.html">2008</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/GNOME.html">GNOME</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+              <dt class="comment-poster" id="c2162229516711560923"><a name="c2162229516711560923"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/16738270181630530101" rel="nofollow">Till Heikamp</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>This seems to be a good idea. Anyway, selecting text in Gnome-Terminal still sucks. Why isn't there no possibility to select (or copy) everything from the terminal ?</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-1234107332"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=2162229516711560923" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c4911299797922095844"><a name="c4911299797922095844"></a>
+              <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="http://www.blogger.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Jason M</span> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Thanks for this!  Always been an issue, but never seemed to remember to look for a solution.  Now I have one.  Thanks!</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-578701830"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=4911299797922095844" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c5040229504449535591"><a name="c5040229504449535591"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/02223413922397252914" rel="nofollow">kurtdriver</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Thanks Mike, but how do I highlight the entire text of an output? gnome-terminal only scrolls so far upwards and thus doesn't let me select the whole output. Thanks, Kurt</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-669940233"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=5040229504449535591" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c4722336906140941251"><a name="c4722336906140941251"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/03335511856506143551" rel="nofollow">Mikel Ward</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Kurt,<BR/><BR/>You&#39;ll have to change your preferences and specify a very large number under Edit-&gt;Current Profile-&gt;Scrolling<BR/><BR/>See http://library.gnome.org/users/gnome-terminal/stable/gnome-terminal-prefs.html.en#gnome-terminal-prefs-scrolling for more details.<BR/><BR/>But if your program is producing a very large amount of output, it might be a better idea to redirect to a file using &gt; or even | tee, for example:<BR/><BR/>ls -l | tee ls.out<BR/><BR/>will print the output to the screen and save it in ls.out.</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=4722336906140941251" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c1485597947265614826"><a name="c1485597947265614826"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/03335511856506143551" rel="nofollow">Mikel Ward</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>This feature seems to have been removed in the latest development version of GNOME Terminal (git 2.27/svn r3419).<br /><br />Of course, it could also have been caused by a change in GTK.</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=1485597947265614826" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=386430773387310214">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

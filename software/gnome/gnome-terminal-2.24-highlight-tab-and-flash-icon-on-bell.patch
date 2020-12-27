@@ -1,0 +1,161 @@
+Index: terminal-screen.c
+===================================================================
+--- terminal-screen.c	(revision 3195)
++++ terminal-screen.c	(working copy)
+@@ -77,6 +77,8 @@
+   SHOW_POPUP_MENU,
+   MATCH_CLICKED,
+   CLOSE_SCREEN,
++  HIGHLIGHT_SCREEN,
++  UNHIGHLIGHT_SCREEN,
+   LAST_SIGNAL
+ };
+ 
+@@ -103,6 +105,8 @@
+ static void terminal_screen_class_init  (TerminalScreenClass *klass);
+ static void terminal_screen_dispose     (GObject             *object);
+ static void terminal_screen_finalize    (GObject             *object);
++static void terminal_screen_beep_cb            (TerminalScreen      *screen);
++static gboolean terminal_screen_focus_cb       (TerminalScreen      *screen);
+ static void terminal_screen_drag_data_received (GtkWidget        *widget,
+                                                 GdkDragContext   *context,
+                                                 gint              x,
+@@ -375,6 +379,10 @@
+ 
+   g_signal_connect (screen, "parent-set", G_CALLBACK (parent_set_callback), NULL);
+ 
++  g_signal_connect (screen, "beep", G_CALLBACK (terminal_screen_beep_cb), NULL);
++  g_signal_connect (screen, "focus", G_CALLBACK (terminal_screen_focus_cb), NULL);
++  g_signal_connect (screen, "focus-in-event", G_CALLBACK (terminal_screen_focus_cb), NULL);
++
+ #ifdef DEBUG_GEOMETRY
+   g_signal_connect_after (screen, "size-request", G_CALLBACK (size_request), NULL);
+   g_signal_connect_after (screen, "size-allocate", G_CALLBACK (size_allocate), NULL);
+@@ -502,6 +510,26 @@
+                   G_TYPE_NONE,
+                   0);
+ 
++  signals[HIGHLIGHT_SCREEN] =
++    g_signal_new (I_("highlight-screen"),
++                  G_OBJECT_CLASS_TYPE (object_class),
++		  G_SIGNAL_RUN_LAST,
++		  G_STRUCT_OFFSET (TerminalScreenClass, highlight_screen),
++		  NULL, NULL,
++		  g_cclosure_marshal_VOID__VOID,
++		  G_TYPE_NONE,
++		  0);
++
++  signals[UNHIGHLIGHT_SCREEN] =
++    g_signal_new (I_("unhighlight-screen"),
++                  G_OBJECT_CLASS_TYPE (object_class),
++		  G_SIGNAL_RUN_LAST,
++		  G_STRUCT_OFFSET (TerminalScreenClass, unhighlight_screen),
++		  NULL, NULL,
++		  g_cclosure_marshal_VOID__VOID,
++		  G_TYPE_NONE,
++		  0);
++
+   g_object_class_install_property
+     (object_class,
+      PROP_PROFILE,
+@@ -624,6 +652,22 @@
+   return g_object_new (TERMINAL_TYPE_SCREEN, NULL);
+ }
+ 
++void
++terminal_screen_beep_cb (TerminalScreen *screen)
++{
++  VteTerminal *terminal = VTE_TERMINAL (screen);
++  if (!GTK_WIDGET_HAS_FOCUS (terminal))
++    g_signal_emit_by_name (screen, "highlight-screen");
++}
++
++gboolean
++terminal_screen_focus_cb (TerminalScreen *screen)
++{
++  g_signal_emit_by_name (screen, "unhighlight-screen");
++
++  return FALSE;
++}
++
+ const char*
+ terminal_screen_get_raw_title (TerminalScreen *screen)
+ {
+Index: terminal-screen.h
+===================================================================
+--- terminal-screen.h	(revision 3195)
++++ terminal-screen.h	(working copy)
+@@ -70,6 +70,9 @@
+                                int flavour,
+                                guint state);
+   void (* close_screen)       (TerminalScreen *screen);
++
++  void (* highlight_screen)   (TerminalScreen *screen);
++  void (* unhighlight_screen) (TerminalScreen *screen);
+ };
+ 
+ GType terminal_screen_get_type (void) G_GNUC_CONST;
+Index: terminal-window.c
+===================================================================
+--- terminal-window.c	(revision 3195)
++++ terminal-window.c	(working copy)
+@@ -1914,6 +1914,46 @@
+   gtk_widget_set_size_request (button, w + 2, h + 2);
+ }
+ 
++static void
++highlight_screen_cb (TerminalScreen *screen, GtkLabel *label)
++{
++  GtkWidget *toplevel;
++  gboolean has_toplevel_focus;
++  PangoAttrList *attrs;
++  PangoAttribute *weight;
++ 
++  toplevel = gtk_widget_get_toplevel (GTK_WIDGET (screen));
++  g_object_get (toplevel, "has-toplevel-focus", &has_toplevel_focus, NULL);
++  if (!has_toplevel_focus)
++    gtk_window_set_urgency_hint (GTK_WINDOW (toplevel), TRUE);
++
++  attrs = gtk_label_get_attributes (label);
++  if (!attrs)
++    attrs = pango_attr_list_new ();
++  weight = pango_attr_weight_new (PANGO_WEIGHT_BOLD);
++  pango_attr_list_change (attrs, weight);
++  gtk_label_set_attributes (label, attrs);
++}
++
++static void
++unhighlight_screen_cb (TerminalScreen *screen, GtkLabel *label)
++{
++  GtkWidget *toplevel;
++  PangoAttrList *attrs;
++  PangoAttribute *weight;
++
++  /* Focusing any tab clears the urgency hint on the whole window */
++  toplevel = gtk_widget_get_toplevel (GTK_WIDGET (screen));
++  gtk_window_set_urgency_hint (GTK_WINDOW (toplevel), FALSE);
++
++  attrs = gtk_label_get_attributes (label);
++  if (!attrs)
++    attrs = pango_attr_list_new ();
++  weight = pango_attr_weight_new (PANGO_WEIGHT_NORMAL);
++  pango_attr_list_change (attrs, weight);
++  gtk_label_set_attributes (label, attrs);
++}
++
+ static GtkWidget *
+ construct_tab_label (TerminalScreen *screen, GtkWidget *screen_container)
+ {
+@@ -1950,6 +1990,12 @@
+   g_signal_connect (hbox, "style-set",
+                     G_CALLBACK (tab_label_style_set_cb), close_button);
+ 
++  g_signal_connect (screen, "highlight-screen",
++                    G_CALLBACK (highlight_screen_cb), label);
++
++  g_signal_connect (screen, "unhighlight-screen",
++                    G_CALLBACK (unhighlight_screen_cb), label);
++
+   gtk_widget_show_all (hbox);
+ 
+   return hbox;

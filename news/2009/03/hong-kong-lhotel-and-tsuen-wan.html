@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Hong Kong - L'Hotel and Tsuen Wan";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/9172681037792330387/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>My hotel is the <a href="http://www.lhotelhk.com/eng/">L'Hotel Nina</a> in Tsuen Wan.<br /><br />It's a very nice looking hotel.<br /><br />It's huge with 61 floors.  I'm on the 33rd.<br /><br />The foyer is usually crowded with people.  There are a lot of travel groups, such as school-aged Chinese, Japanese, and Korean sports teams.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_1992-785263.jpg"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 300px; height: 400px;" src="http://mikelward.com/news/uploaded_images/img_1992-784803.jpg" border="0" alt="" /></a><p class="caption">L'Hotel Nina</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_1946-779036.jpg"><img src="http://mikelward.com/news/uploaded_images/img_1946-778621.jpg" border="0" alt="" /></a><p class="caption">The view from my room</p></div><br /><br /><a href="http://en.wikipedia.org/wiki/Tsuen_Wan">Tsuen Wan</a> is a suburb of Hong Kong about 25 km north west from Hong Kong.  Hong Kong is an island, then there's Kowloon on the main land to the north.  Tsuen Wan is still further north west in a region called the New Territories, sometimes written NT.  (<a href="http://maps.google.com/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=l%27hotel+nina,+yeung+uk+rd,+tsuen+wan,+hong+kong&sll=22.38131,114.168639&sspn=0.868561,1.455688&ie=UTF8&z=17&iwloc=addr&hl=en">Google map of Tsuen Wan</a>).<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2082-755844.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2082-755071.jpg" border="0" alt="" /></a><p class="caption">View of my hotel from Yeung Uk Rd</p></div><br /><br />The location is convenient for work, because our data centre is also in Tsuen Wan and I will be doing work at all kinds of weird hours.<br /><br />My next blog will be about my first day in Hong Kong.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Hong%20Kong.html">Hong Kong</a>, <a rel='tag' href="http://mikelward.com/news/labels/Travel.html">Travel</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+              <dt class="comment-poster" id="c9151171313778251460"><a name="c9151171313778251460"></a>
+              <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="http://www.blogger.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Yeah!!! Good recommendation fr me. hehehehe. Hey, mate! I think I deserve a beer. wakakaka</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-1032699106"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=9151171313778251460" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c9194945997890879853"><a name="c9194945997890879853"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/03335511856506143551" rel="nofollow">Mikel Ward</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Is that you Kat? :-)</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=9194945997890879853" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=9172681037792330387">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

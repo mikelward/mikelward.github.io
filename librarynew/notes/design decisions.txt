@@ -1,0 +1,2 @@
+DESIGN DECISIONS
+1. JB Hi-Fi pages aren't well formed, use grep or substring matching rather than HTML DOM parsing

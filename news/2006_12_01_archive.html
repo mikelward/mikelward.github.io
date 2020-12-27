@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875");
+</style>
+
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="previous">
+      <h3>Previous Items</h3>
+      
+        <a href="http://mikelward.com/news/2008/04/better-windows-keyboard-shortcuts.html">Better Windows Keyboard Shortcuts</a><br />
+      
+        <a href="http://mikelward.com/news/2008/03/bold-shell-command-like-rails-books.html">Bold Shell Command like the Rails Books</a><br />
+      
+        <a href="http://mikelward.com/news/2008/02/australian-soccer-world-cup-stadiums.html">Australian Soccer World Cup Stadiums</a><br />
+      
+        <a href="http://mikelward.com/news/2008/01/australian-open.html">Australian Open</a><br />
+      
+        <a href="http://mikelward.com/news/2007/12/motorola-razr-v6-on-next-g.html">MOTORAZR V6 on Telstra Next G</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/new-job.html">New Job</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/finally-internet-without-paying-line.html">Finally!  Internet Without Line Rental!</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/ldp-tipped-to-win-nsw-senate-seat.html">LDP Tipped To Win NSW Senate Seat</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/changing-your-name-in-australia.html">Changing Your Name in Australia</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/name-change.html">Name Change</a><br />
+      
+    </div>
+
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">All</a><br />
+        <a href="http://mikelward.com/news/labels/Books">Books</a><br />
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Enviroment">Enviroment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Frends">Frends</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="4733134014518450244"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2006/12/christmas-with-grandma.html">Christmas with Grandma</a>
+          
+        </h2>
+        <p class="post-date">Saturday, December 30, 2006</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>This year we had Christmas in Melbourne at my Aunty's place in Surrey Hills.<br /><br />We were planning to go to <a href="http://www.dinnerplain.com/">Dinner Plain</a> near Mount Hotham where my family own a chalet, but the bushfires near Harrietville made it too risky.  The last <a href="http://www.dse.vic.gov.au/DSE/nrenfoe.nsf/LinkView/E20ACF3A4A127CB04A25679300155B04358FFCDA5CA1F43FCA256DA6000942C9">major fires in 2003</a> did some big damage.<br /><br />Instead, my Mum, Dad and Grandma came over to Melbourne to have Christmas with us.  It was the first time I'd seen Grandma in ages.  My brother Chris couldn't make it, since he was visiting his girlfrend in Boston.<br /><br />We had a roast turkey, a few glasses of wine, and ended up watching March of the Penguins, a present Mum gave me.  It was actually quite a pleasant and relaxing day.<br /><br />The next day, we went to the <a href="http://www.visityarravalley.com.au/">Yarra Valley</a> to go wine tasting.  By the time we got there, it was about 2pm, so we were all fairly hungry.  We ended up going to <a href="http://www.yering.com/cpa/htm/htm_home.asp?siteClass=yering">Yering Station</a>, which was the first place we found advertising food!<br /><br />They have a big homestead turned into accommdation and dining.  Had to go thru a waiting room to get a table.  Once we sat down, the waitress tried to put a serviette on my lap.  I looked at her funny as if to say "I am perfectly capable of doing this myself!", then looked a little sheepish and apologised.  It'd obviously been far too long since I'd been to a silver service restaurant!<br /><br />I had a steak with mustard and chips arranged in a box shape.  Presentation obviously counts!  It didn't taste too bad either. :-)<br /><br /><div><br /><a href="http://mikelward.com/news/uploaded_images/DSC00061-706361.JPG"><img class="photo" src="http://mikelward.com/news/uploaded_images/DSC00061-798756.JPG" alt="Mum and Dad at Yering Station" /></a><p class="caption">Mum and Dad at Yering Station</p><br /></div><br /><br />We then spent the rest of the day driving around looking for wine to taste.  The main one we went to was <a href="http://www.debortoli.com.au/">De Bortolli</a>, which seems to be quite famous in Melbourne.  I was the designated driver (just to be sure!), so I didn't end up trying anything.  Entered a TAC designated driver competition.  (With my luck lately, you never know!)  Dad didn't have any interest for the wine, so ended up trying cheeses.  He's become quite a wine snob since taking a more keen interest in the Coonawarra, McLaren Vale and Barossa Valley!  Instead he found an old Italian style of cheese made from raw (unpasteurised) milk for about $60/kg!<br /><br /><div><br /><a href="http://mikelward.com/news/uploaded_images/DSC00067-733263.JPG"><img class="photo" src="http://mikelward.com/news/uploaded_images/DSC00067-725496.JPG" alt="Grandma at De Bortoli" /></a><p class="caption">Grandma at De Bortoli</p><br /></div><br /><br />We then came back via Healesville.  The trip was quite scenic.  Reminded me of driving thru the Victorian alps.  It was quite windy.  Apparently there's a well-known motorbike run nearby called the <a href="http://www.visitvictoria.com/displayObject.cfm/objectid.00064EAD-739A-1EF6-9E6080C476A90000/vvt.vhtml">Black Spur</a> that a frend Nag told me about.<br /><br />The next day, we went to the National Gallery, had lunch at a really modest (but delicious) Thai restaurant on Southbank called Jasmine, saw Casino Royale (which was really good), then Mum and Dad went home.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2006.html">2006</a>, <a rel='tag' href="http://mikelward.com/news/labels/Family.html">Family</a>, <a rel='tag' href="http://mikelward.com/news/labels/Food.html">Food</a>, <a rel='tag' href="http://mikelward.com/news/labels/Holidays.html">Holidays</a>, <a rel='tag' href="http://mikelward.com/news/labels/Wine.html">Wine</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=4733134014518450244">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=4733134014518450244" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="116687662288141884"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2006/12/year-of-lucky-dog.html">Year of the (Lucky) Monkey</a>
+          
+        </h2>
+        <p class="post-date">Saturday, December 23, 2006</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>2006 has turned out to be my luckiest year ever.<br /><br />After winning world cup tickets in May, I've just found out that I've won a season double pass to the <a href="http://www.moonlight.com.au/">Moonlight Cinema</a>.<br /><br />There seems to be a bit of a theme developing, as I won the competition at Bear Brass on Southbank by buying a James Boag's beer.<br /><br />It's a shame the year's about to end, because 2006 will be a hard year to beat!<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2006.html">2006</a>, <a rel='tag' href="http://mikelward.com/news/labels/Competitions.html">Competitions</a>, <a rel='tag' href="http://mikelward.com/news/labels/Entertainment.html">Entertainment</a>, <a rel='tag' href="http://mikelward.com/news/labels/Fun.html">Fun</a>, <a rel='tag' href="http://mikelward.com/news/labels/Movies.html">Movies</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=116687662288141884">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=116687662288141884" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="116687632096944976"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2006/12/melbourne-house-no-more.html">Melbourne House No More</a>
+          
+        </h2>
+        <p class="post-date">Saturday, December 23, 2006</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div><a href="http://en.wikipedia.org/wiki/Melbourne_House">Melbourne House</a> closed yesterday.  It was one of the longest running Australian games development companies.<br /><br />They were involved in the production of <a href="http://en.wikipedia.org/wiki/Xenon_%28computer_game%29">Xenon</a> by the Bitmap Brothers.  I have fond memories of it, as it is one of the first games I played on my family's Atari ST.<br /><br />Some of the employees will be moving on to Krome, while others including my frend Sud will be looking for a new job!<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2006.html">2006</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Frends.html">Frends</a>, <a rel='tag' href="http://mikelward.com/news/labels/Games.html">Games</a>, <a rel='tag' href="http://mikelward.com/news/labels/Melbourne.html">Melbourne</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=116687632096944976">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=116687632096944976" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="116687704036214342"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2006/12/comedy-at-spiegeltent.html">Comedy at the Spiegeltent</a>
+          
+        </h2>
+        <p class="post-date">Sunday, December 10, 2006</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>Last night I went out to see a comedian called <a href="http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=93459383">Sammy J</a> at the <a href="http://www.spiegeltent.com.au/">Spiegeltent</a> with Katie, a girl I met at speed dating the other night.<br /><br />The show was really good.  Actually much better than the two comedians I saw at this year's <a href="http://www.comedyfestival.com.au/">comedy festival</a>, Wil Anderson and Rod Quantock, who seem to be a bit out of form lately.<br /><br />Most memorable moments include stealing a joke from Seinfeld and singing a song about the Melbourne train network, mentioning every station in order!<br /><br />I think he's coming to the comedy festival next year, so I recommend you go and see him!<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2006.html">2006</a>, <a rel='tag' href="http://mikelward.com/news/labels/Comedy.html">Comedy</a>, <a rel='tag' href="http://mikelward.com/news/labels/Dating.html">Dating</a>, <a rel='tag' href="http://mikelward.com/news/labels/Entertainment.html">Entertainment</a>, <a rel='tag' href="http://mikelward.com/news/labels/Fun.html">Fun</a>, <a rel='tag' href="http://mikelward.com/news/labels/Melbourne.html">Melbourne</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=116687704036214342">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=116687704036214342" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

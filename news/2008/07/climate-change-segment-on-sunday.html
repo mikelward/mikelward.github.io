@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Climate Change Segment on Sunday";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/6861843254896261636/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>Channel 9 had a <a href="http://sunday.ninemsn.com.au/sunday/cover_stories/article_2493.asp">segment about climate change on the Sunday show</a>.<br /><br />It featured <a href="http://en.wikipedia.org/wiki/Tim_Flannery">Tim Flannery</a>, author of "The Weather Makers", <a href="http://en.wikipedia.org/wiki/William_Kininmonth_(meteorologist)">William Kininmonth</a>, author of "Climate Change: A Natural Hazard", and <a href="http://www.ipa.org.au/people/jennifer-marohasy">Jennifer Marohasy</a> from the Institute of Public Affairs.<br /><br />I actually read "The Weather Makers" about two years ago on recommendation from an environmentally-inclined friend.  As I didn't have a good grounding in the science, I was quite disappointed that it glossed over the theories and facts.  Instead, it gave some examples of species going extinct, hypothesizing that it was caused by climate change.  (Omitting any proof that such change was caused by humans.)<br /><br />In this show, he stays true to form, and relies on a "consensus", rather than using any facts.<br /><br />He says that his predictions are like predicting whether January is likely to be warmer than June.  This is clearly absurd, as long-term temperature records show that earth's temperature has been rising and falling (e.g. ice ages, rising and falling sea levels), while we know that summer is predictably warmer than winter due to the earth's tilt exposing the respective hemispheres to the sun.  He's predicting that January in ten years (or even fifty years) will be so many degrees hotter than this January, which is quite a different thing.<br /><br />He also makes a ridiculous analogy about seeing a doctor who says he's 99% certain you have terminal cancer.  The most well known advocate of man-made climate change is the Intergovernmental Panel on Climate Change.  <a href="http://www.ipcc.ch/pdf/assessment-report/ar4/syr/ar4_syr.pdf">Their latest report</a> says there is a 9 out of 10 certainty that humans are at least partly responsible for global warming.  So it's really more like a doctor telling you there's a 90% chance you'll get cancer if you eat meat, without telling you what your chances are of getting cancer if you stop eating meat.  And 90% isn't 99%.  That's a blatant exaggeration.<br /><br />Maybe there's some proof out there, but the fact that Tim Flannery gets so much promotion suggests there's some definite bias in the media, and that a little more debate could be a good thing.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2008.html">2008</a>, <a rel='tag' href="http://mikelward.com/news/labels/Environment.html">Environment</a>, <a rel='tag' href="http://mikelward.com/news/labels/Media.html">Media</a>, <a rel='tag' href="http://mikelward.com/news/labels/Politics.html">Politics</a>, <a rel='tag' href="http://mikelward.com/news/labels/Science.html">Science</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+              <dt class="comment-poster" id="c8290482213923086053"><a name="c8290482213923086053"></a>
+              <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="http://www.blogger.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<a href="http://prodos.thinkertothinker.com" rel="nofollow">PRODOS</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Furthermore, Tim Flannery's claims about the <B>effects</B> of Anthropogenic Global Warming <B>far </B> exceed even those of the IPCC's 90% scenarios.<BR/><BR/>As noted in these two items by Andrew Bolt:<BR/><BR/>http://tinyurl.com/4znfgm<BR/><BR/>http://tinyurl.com/4fotsu<BR/><BR/>And here's one from The Age:<BR/><BR/>http://tinyurl.com/3hchmr</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-1161183804"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=8290482213923086053" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=6861843254896261636">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

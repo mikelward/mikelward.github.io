@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Hong Kong - Day 6 Part 2";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/8642533898789154745/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>After lunch, I met Jim from our Hong Kong office and his girlfriend Aggie at the Tsuen Wan MTR station.<br /><br />While waiting, I took a photo of this ad.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2245-772228.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2245-771781.jpg" border="0" alt="" /></a><p class="caption">A common billboard at train stations</p></div><br /><br />At first I thought it was for something else, but then I noticed it was actually for gym membership!<br /><br />Jim arrived by bus, then we headed in to Tsim Sha Tsui.<br /><br /><a href="http://en.wikipedia.org/wiki/Tsim_Sha_Tsui">Tsim Sha Tsui</a> is a very built-up, touristy area on the Kowloon side of the harbour.  Lots more Westerners here than in Tsuen Wan, and lots of fashion shops too.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2246-737703.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2246-737195.jpg" border="0" alt="" /></a><p class="caption">Me in front of one of the most famous hotels, The Peninsula</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2250-760458.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2250-759927.jpg" border="0" alt="" /></a><p class="caption">Jim and Aggie with Victoria Harbour in the background</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2253-798868.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2253-798437.jpg" border="0" alt="" /></a><p class="caption">Another angle of the harbour</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2252-753205.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2252-752511.jpg" border="0" alt="" /></a><p class="caption">The 420 metre-tall <a href="http://www.ifc.com.hk/english/onetwo.aspx">IFC 2</a> on the right</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2254-739157.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2254-738699.jpg" border="0" alt="" /></a><p class="caption">The Tsim Sha Tsui clock tower</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2256-726753.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2256-726145.jpg" border="0" alt="" /></a><p class="caption">A large passenger ferry</p></div><br /><br />We then went into the Harbour City, a very large shopping centre.  Much more Western than anything I'd seen in Tsuen Wan.  A big supermarket, again lots of fashion and boutique stores, and a huge bookstore with Chinese and English books.<br /><br />Hummed and hahed, and ended up buying a Collins Cantonese phrase book.  When I showed it to Jim, he said it wasn't very good.  It uses Yale Romanization rather than the Standard Cantonese Romanization seen on all the signs, and it doesn't even have the correct way of saying no!<br /><br />Next was Jordan, and then a walk to <a href="http://en.wikipedia.org/wiki/Mong_Kok">Mong Kok</a>, which Wikipedia says is the most densely populated place in the world.<br /><br />In Jordan, we went to a small cafe called the Australian Dairy Company and had thick toast with condensed milk, bad coffee, and a dairy desert that I'd never tried before (it was probably custard, but it didn't taste like the custard I know).  Certainly interesting, but I don't think the name was very accurate!<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2260-713927.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2260-713474.jpg" border="0" alt="" /></a><p class="caption">Food at the Australian Dairy Company in Jordan</p></div><br /><br />On the walk to Mong Kok, we went thru the Temple Street market.  Got some small souvenirs.  Lots of places selling presumably fake jeans and t-shirts (e.g. Diesel and Billabong), lots selling jade, and lots selling replica old Chinese coins.  Also lots of Mahjong and Chinese chess (not checkers) sets.<br /><br />In Mong Kok, we started by trying some spicy fish balls.  Not very pleasant, and a very rubbery, hard to eat texture, but still edible.  Was worried that it might upset my stomach, but I survived. :-)<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2261-745003.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2261-744163.jpg" border="0" alt="" /></a><p class="caption">Mong Kok</p></div><br /><br />Mong Kok had a huge shopping strip.  In particular, there were lots of electronics and sporting goods stores.<br /><br />The electonics were a bit more expensive than in Australia (if I didn't already say), but I ended up getting a couple of Nike shirts for a bit less that they would have costed in Australia.<br /><br />Couldn't find some cables I wanted to get, so we ended up going to Sham Shui Po again, and back to the same store as last time.  Spent another 700 HKD!<br /><br />Then we took a bus to Tsuen Wan for dinner.  The bus was much smoother than in Melbourne.<br /><br />We had to scan on with the Octopus card, but not scan off.  The full fee is charged, regardless of whether you get off half way or at the end.<br /><br />I said I liked Sushi, and so did Jim, so we ended up going to a really nice Japanese restaurant high up in the shopping centre at Tsuen Wan station.  (It was in a nicer, new shopping centre to the East of the station that I hadn't been to before.)<br /><br />Tried a heap of new things, including binchou tuna (raw tuna partially cured with vinegar), scallops, shark, and a weird, but very delicious inside-out beef roll.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2267-763055.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2267-762634.jpg" border="0" alt="" /></a><p class="caption">Waiting for a table at the popular Japanese restaurant</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2268-793194.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2268-792745.jpg" border="0" alt="" /></a><p class="caption">Some of the more interesting items we had for dinner</p></div><br /><br />Jim originally grew up in Tsuen Wan, but hadn't been back for years, so we went for a bit of a walk, then I took him up to the observation deck at the hotel for a decent view.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2269-704941.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2269-704513.jpg" border="0" alt="" /></a><p class="caption">A funny ad for learning English</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2271-721855.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2271-721428.jpg" border="0" alt="" /></a><p class="caption">A view of the Tsing Long bridge to the West of the hotel</p></div><br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/img_2277-794079.jpg"><img src="http://mikelward.com/news/uploaded_images/img_2277-792716.jpg" border="0" alt="" /></a><p class="caption">Another shot to the South - it's light 24 hours a day here!</p></div><br /><br />Said goodbye, and fell into bed, very tired. :-)<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Hong%20Kong.html">Hong Kong</a>, <a rel='tag' href="http://mikelward.com/news/labels/Travel.html">Travel</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=8642533898789154745">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

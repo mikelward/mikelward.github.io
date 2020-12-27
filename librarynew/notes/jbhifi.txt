@@ -1,0 +1,52 @@
+SEARCH
+method=GET
+action=http://www.jbhifionline.com.au/search
+searchstring=(urlencoded search term)
+stype=/music/search/title|/music/search/artist|/dvds/search/all|games/search/all
+(will use /dvds/search/all)
+bnSearch=Go!
+
+action=action+stype
+
+e.g.
+http://www.jbhifionline.com.au/dvds/search/all?searchstring=six+feet+under
+
+SEARCH RESULTS
+table#ContCentre
+  tr
+    td
+      table.boxGrayLineTop (for each item)
+        tr
+          td
+            p
+              a link=href
+                img thumbnail=src
+          td
+            table
+              tr
+                td
+                  span.browseTitleHeading
+                    a.browseTitleHeading link=href
+                      title=innerText
+                td
+                  div
+                    img
+            p
+              span.body11pxBlack (may change?)
+                price=innerText (e.g. $109.00 -)
+                span
+                  currency=innerText
+ 
+
+ITEM PAGE
+http://www.jbhifionline.com.au/dvds/id/(id)
+
+ITEM ON SPECIAL
+http://www.jbhifionline.com.au/dvds/id/84536
+<a href="/help/availability.htm" class="body11pxBlack" style="font-weight: normal">In stock. Last updated 2:15 am.</a>
+<span class="itemHotPrice">Usually </span><span class="itemHotPriceLineThrough">$57.99</span><br><span class="itemPriceRed">HOT PRICE</span><span class="itemPriceRed"><strong> $29.98</strong><span style="color:green;"> AUD</span></span>
+
+ITEM AT REGULAR PRICE
+http://www.jbhifionline.com.au/dvds/id/81810
+<span class="itemPrice"><strong>$28.99</strong><span style="color:green;"> AUD</span></span>
+<a href="/help/availability.htm" class="body11pxBlack" style="font-weight: normal">Currently NOT in stock.<br/><b>Order Item Now</b><br/>Usually ships within 4 - 6 business days.</a>

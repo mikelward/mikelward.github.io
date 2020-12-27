@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<config>
+ <log>
+  <type>file</type>
+  <name>/home/mward/library/logs/propel.log</name>
+  <ident>library</ident>
+  <level>7</level>
+ </log>
+
+ <propel>
+  <datasources default="library">
+   <datasource id="library">
+	<adapter>mysql</adapter>
+	<connection>
+	 <phptype>mysql</phptype>
+	 <database>library</database>
+	 <hostspec>localhost</hostspec>
+	 <username>library</username>
+	 <password>Mei8onoo</password>
+	</connection>
+   </datasource>
+  </datasources>
+ </propel>
+</config>

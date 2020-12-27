@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Free Fonts";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/6832856681389842356/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=33057956-3bba-4455-a8cd-dda2d72bc264"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>My interest in fonts began a few years ago when I discovered <a href="http://en.wikipedia.org/wiki/Lucida_Sans"><strong>Lucida Sans</strong></a>.  It was embedded in a paper about <a href="http://plan9.bell-labs.com/plan9/">Plan 9</a>, an operating system by the creators of UNIX.  It's a nice, easy-to-read font without serifs (the ornaments on fonts like Times New Roman) that isn't as boring as Arial or Helvetica.<br /><br />I was trying to find out how I could get the font on my computer, when I discovered that the <a href="http://www.java.com/en/download/manual.jsp">Sun Java package</a> includes the original Lucida Sans fonts.  I now make a point of installing Java on all of my computers, then copying the fonts from the lib/fonts folder into my system fonts folder.<br /><br /><a href="http://mikelward.com/news/uploaded_images/Lucida-Grande-774887.png"><img src="http://mikelward.com/news/uploaded_images/Lucida-Grande-774885.png" border="0" alt="" /></a><p class="caption">Lucida Grande</p><br /><br />There's a similar font that comes with Mac OS X called <a href="http://en.wikipedia.org/wiki/Lucida_Grande"><strong>Lucida Grande</strong></a>.  <ins>If you're running Windows, you can get it by installing the <a href="http://www.apple.com/safari/download/">Safari web browser</a> public beta and copying the TTF files from the Safari.resources folder.</ins><br /><br />Microsoft Windows also comes with a version of Lucida Sans called <strong>Lucida Sans Unicode</strong>.  On some systems (e.g. Windows 2000 without ClearType) this doesn't look very good and it doesn't differentiate between normal and bold, so I only use this as a fall back if the other two aren't available.<br /><br />I use these three fonts as the default fonts on my web site.  Since at least one of these is included in recent Windows and Mac systems, most peeple should see a Lucida Sans variant.<br /><br />It also turns out there's a number of other good fonts available for free download, starting with the Microsoft Windows Core Fonts, including <strong>Andale Mono, Arial, MS Comic Sans, Courier New, Georgia, Impact, Tahoma, Times New Roman, Trebuchet MS, Webdings, and Verdana</strong>.  Most people will be familiar with these fonts, but I'd like to point out <a href="http://en.wikipedia.org/wiki/Andale_Mono">Andale Mono</a> as it's a really good font for programming and much better looking than Courier New.  They can be downloaded from the <a href="http://corefonts.sourceforge.net/">SourceForge Core Fonts Project Page</a>.<br /><br /><a href="http://mikelward.com/news/uploaded_images/Andale-Mono-773013.png"><img src="http://mikelward.com/news/uploaded_images/Andale-Mono-773010.png" border="0" alt="" /></a><p class="caption">Andale Mono</p><br /><br />Other worthwhile downloads are the <a href="http://www.microsoft.com/typography/ClearTypeFonts.mspx">Windows ClearType Fonts</a>, including <strong>Calibri, Cambria, Candara, Consolas, Constantia, and Corbel</strong>.  They are all included in a standard install of Windows Vista or Microsoft Office 2007, but you can also get them in the <a href="http://www.microsoft.com/downloads/details.aspx?familyid=048DC840-14E1-467D-8DCA-19D2A8FD7485&displaylang=en">Microsoft PowerPoint 2007 Viewer</a> package.  <a href="http://en.wikipedia.org/wiki/Calibri">Calibri</a> is the definite highlight. It's the default font in Word 2007, so you're certain to see it more in future.<br /><br />The Microsoft Office Fonts includes some classics, particularly <strong>Century Schoolbook, Gill Sans MT, and Lucida Sans</strong>.  You can get them with most versions of Microsoft Office, but you can also get them in the freely available <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=697a2c2b-9eff-4d4c-8655-4da3acd8aa16&DisplayLang=en">Microsoft Publisher 98 Euro Fonts Update</a>.  Run PubUpd.exe /c /t:c:\temp, then copy the TTF files from c:\temp into c:\windows\fonts.<br /><br />I discovered today that Adobe Reader version 8 includes <a href="http://en.wikipedia.org/wiki/Myriad_Pro"><strong>Myriad Pro</strong></a>.  It's an attractive humanist font similar to Lucida Sans.  It's the font used in Apple ads.  You can <a  href="http://www.adobe.com/products/acrobat/readstep2.html" title="Download Adobe Reader">download it here</a>.  Install it and then copy the OTF files from the Resource/Font folder into the system fonts folder.<br /><br /><a href="http://mikelward.com/news/uploaded_images/Myriad-770101.png"><img src="http://mikelward.com/news/uploaded_images/Myriad-770097.png" border="0" alt="" /></a><p class="caption">Myriad Pro</p><br /><br />Another set of good fonts that deserve more attention is the <strong>Bitstream Vera</strong> family.  They are included as the default fonts in many recent Linux distributions, and can be downloaded from the <a href="http://www.gnome.org/fonts/">GNOME Fonts web page</a>.  They can be used as pretty good replacements for Verdana, Georgia, and Andale Mono.<br /><br />Thanks to <a href="http://en.wikipedia.org/wiki/User:GearedBull">GearedBull</a> for releasing his excellent Wikipedia font previews into the public domain.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Design.html">Design</a>, <a rel='tag' href="http://mikelward.com/news/labels/Download.html">Download</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+              <dt class="comment-poster" id="c5826558053401511662"><a name="c5826558053401511662"></a>
+              <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="http://www.blogger.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<a href="www.javipas.com" rel="nofollow">javipas</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Thank you so much for this post, I was looking for a way to install certain fonts without installing Office, and you've given the link to MS Publisher 98 update that contains those ones I needed :D<BR/><BR/>Thanx again!</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-920784378"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=5826558053401511662" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=6832856681389842356">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

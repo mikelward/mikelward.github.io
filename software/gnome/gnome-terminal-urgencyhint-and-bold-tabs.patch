@@ -1,0 +1,238 @@
+Index: terminal-widget.h
+===================================================================
+--- terminal-widget.h	(revision 3194)
++++ terminal-widget.h	(working copy)
+@@ -140,6 +140,9 @@
+ void terminal_widget_disconnect_encoding_changed   (GtkWidget *widget,
+                                                     GCallback  callback,
+                                                     void      *data);
++void terminal_widget_connect_focus_in_received     (GtkWidget *widget,
++                                                    GCallback  callback,
++                                                    void      *data);
+ 
+ const char* terminal_widget_get_title         (GtkWidget *widget);
+ const char* terminal_widget_get_icon_title    (GtkWidget *widget);
+Index: terminal-window.c
+===================================================================
+--- terminal-window.c	(revision 3194)
++++ terminal-window.c	(working copy)
+@@ -1301,7 +1301,55 @@
+     gdk_window_set_icon_name (GTK_WIDGET (window)->window, terminal_screen_get_icon_title (screen));
+ }
+ 
++/*
++ * XXX it would be nice to pass in the screen, get its parent (which should be a notebook),
++ * and from there get the screen's label (as the child of the notebook), but in g-t 2.22,
++ * it's just a GtkBin with a separate GtkLabel, so for now we have to handle it at the
++ * window level (since that's the only thing that can see the label) and explicitly pass
++ * in the label created by contruct_tab_label (sic)
++ */
++static gboolean
++highlight_tab_callback (TerminalScreen *screen,
++                        GtkLabel *label)
++{
++  GtkWidget *toplevel;
++  gboolean has_toplevel_focus;
++  PangoAttrList *attrs;
++  PangoAttribute *weight;
+ 
++  toplevel = gtk_widget_get_toplevel (GTK_WIDGET (screen));
++  g_object_get (toplevel, "has-toplevel-focus", &has_toplevel_focus, NULL);
++  if (!has_toplevel_focus)
++    gtk_window_set_urgency_hint (GTK_WINDOW (toplevel), TRUE);
++
++  attrs = gtk_label_get_attributes (label);
++  if (!attrs)
++    attrs = pango_attr_list_new ();
++  weight = pango_attr_weight_new (PANGO_WEIGHT_BOLD);
++  pango_attr_list_change (attrs, weight);
++  gtk_label_set_attributes (label, attrs);
++}
++
++static gboolean
++unhighlight_tab_callback (TerminalScreen *screen,
++                          GtkLabel *label)
++{
++  GtkWidget *toplevel;
++  PangoAttrList *attrs;
++  PangoAttrList *weight;
++
++  /* Focusing any tab clears the urgency hint on the whole window */
++  toplevel = gtk_widget_get_toplevel (GTK_WIDGET (screen));
++  gtk_window_set_urgency_hint (GTK_WINDOW (toplevel), FALSE);
++
++  attrs = gtk_label_get_attributes (label);
++  if (!attrs)
++    attrs = pango_attr_list_new ();
++  weight = pango_attr_weight_new (PANGO_WEIGHT_NORMAL);
++  pango_attr_list_change (attrs, weight);
++  gtk_label_set_attributes (label, attrs);
++}
++
+ static void
+ update_copy_sensitivity (TerminalWindow *window)
+ {
+@@ -1437,6 +1485,16 @@
+                     G_CALLBACK (sync_tab_label),
+                     label);
+ 
++  g_signal_connect (G_OBJECT (screen),
++                    "highlight-tab",
++                    G_CALLBACK (highlight_tab_callback),
++                    label);
++
++  g_signal_connect (G_OBJECT (screen),
++                    "unhighlight-tab",
++                    G_CALLBACK (unhighlight_tab_callback),
++                    label);
++
+   g_signal_connect (G_OBJECT (hbox), "style-set",
+                     G_CALLBACK (tab_label_style_set_cb), close_button);
+ 
+Index: terminal-screen.c
+===================================================================
+--- terminal-screen.c	(revision 3194)
++++ terminal-screen.c	(working copy)
+@@ -78,6 +78,8 @@
+   ICON_TITLE_CHANGED,
+   SELECTION_CHANGED,
+   ENCODING_CHANGED,
++  HIGHLIGHT_TAB,
++  UNHIGHLIGHT_TAB,
+   LAST_SIGNAL
+ };
+ 
+@@ -120,6 +122,10 @@
+ static void terminal_screen_widget_encoding_changed  (GtkWidget      *term,
+                                                       TerminalScreen *screen);
+ 
++static void terminal_screen_widget_focus_in_received (GtkWidget       *term,
++                                                      GtkDirectionType unused,
++                                                      TerminalScreen  *screen);
++
+ static void terminal_screen_setup_dnd                (TerminalScreen *screen);
+ 
+ static void update_color_scheme                      (TerminalScreen *screen);
+@@ -291,6 +297,22 @@
+   gtk_widget_grab_focus (screen->priv->term);
+ }
+ 
++static gboolean
++terminal_screen_beep (GtkWidget *widget,
++                      TerminalScreen *screen)
++{
++  if (!GTK_WIDGET_HAS_FOCUS (widget))
++    g_signal_emit_by_name (screen, "highlight-tab");
++}
++
++static gboolean
++terminal_screen_focus (GtkWidget       *widget,
++                       GtkDirectionType unused,
++                       TerminalScreen  *screen)
++{
++  g_signal_emit_by_name (screen, "unhighlight-tab");
++}
++
+ static void
+ terminal_screen_init (TerminalScreen *screen)
+ {
+@@ -359,6 +381,16 @@
+                     G_CALLBACK (terminal_screen_button_press_event),
+                     screen);
+ 
++  g_signal_connect (G_OBJECT (screen->priv->term),
++                    "beep",
++                    G_CALLBACK (terminal_screen_beep),
++                    screen);
++                    
++  g_signal_connect (G_OBJECT (screen->priv->term),
++                    "focus",
++                    G_CALLBACK (terminal_screen_focus),
++                    screen);
++
+   screen->priv->title_from_arg = NULL;
+   screen->priv->user_title = FALSE;
+   terminal_widget_connect_title_changed (screen->priv->term,
+@@ -381,6 +413,9 @@
+                                             G_CALLBACK (terminal_screen_widget_encoding_changed),
+                                             screen);
+ 
++  terminal_widget_connect_focus_in_received (screen->priv->term,
++                                             G_CALLBACK (terminal_screen_widget_focus_in_received),
++                                             screen);
+   connect_monospace_font_change (screen);
+ 
+   screen->priv->scrollbar = gtk_vscrollbar_new (NULL);
+@@ -462,6 +497,24 @@
+                   g_cclosure_marshal_VOID__VOID,
+                   G_TYPE_NONE, 0);
+ 
++  signals[HIGHLIGHT_TAB] =
++    g_signal_new ("highlight_tab",
++                  G_OBJECT_CLASS_TYPE (object_class),
++                  G_SIGNAL_RUN_LAST,
++                  G_STRUCT_OFFSET (TerminalScreenClass, highlight_tab),
++                  NULL, NULL,
++                  g_cclosure_marshal_VOID__VOID,
++                  G_TYPE_NONE, 0);
++
++  signals[UNHIGHLIGHT_TAB] =
++    g_signal_new ("unhighlight_tab",
++                  G_OBJECT_CLASS_TYPE (object_class),
++                  G_SIGNAL_RUN_LAST,
++                  G_STRUCT_OFFSET (TerminalScreenClass, unhighlight_tab),
++                  NULL, NULL,
++                  g_cclosure_marshal_VOID__VOID,
++                  G_TYPE_NONE, 0);
++
+   g_type_class_add_private (object_class, sizeof (TerminalScreenPrivate));
+ }
+ 
+@@ -2142,6 +2195,14 @@
+ }
+ 
+ static void
++terminal_screen_widget_focus_in_received (GtkWidget       *term,
++                                          GtkDirectionType unused,
++                                          TerminalScreen  *screen)
++{
++  g_signal_emit (G_OBJECT (screen), signals[UNHIGHLIGHT_TAB], 0);
++}
++
++static void
+ title_entry_changed (GtkWidget      *entry,
+                      TerminalScreen *screen)
+ {
+Index: terminal-widget-vte.c
+===================================================================
+--- terminal-widget-vte.c	(revision 3194)
++++ terminal-widget-vte.c	(working copy)
+@@ -530,6 +530,15 @@
+   g_signal_handlers_disconnect_by_func (widget, callback, data);
+ }
+ 
++void
++terminal_widget_connect_focus_in_received     (GtkWidget *widget,
++                                               GCallback  callback,
++                                               void      *data)
++{
++  g_signal_connect (widget, "focus-in-event",
++                    G_CALLBACK (callback), data);
++}
++
+ const char*
+ terminal_widget_get_title (GtkWidget *widget)
+ {
+Index: terminal-screen.h
+===================================================================
+--- terminal-screen.h	(revision 3194)
++++ terminal-screen.h	(working copy)
+@@ -58,6 +58,8 @@
+   void (* icon_title_changed) (TerminalScreen *screen);
+   void (* selection_changed)  (TerminalScreen *screen);
+   void (* encoding_changed)   (TerminalScreen *screen);
++  void (* highlight_tab)      (TerminalScreen *screen);
++  void (* unhighlight_tab)    (TerminalScreen *screen);
+ };
+ 
+ GType terminal_screen_get_type (void) G_GNUC_CONST;

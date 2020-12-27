@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Changing Your Name in Australia";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/2440917081589724622/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I changed my legal name late last year.  This explains how I did it and how much it cost.<br /><br /><table><theader><tr><th>What</th><th>Who</th><th>How</th><th>How much</th></tr></theader><tbody><tr><td>State Government</td><td><a href="http://online.justice.vic.gov.au/bdm/home">Births, Deaths and Marriages</a></td><td>by mail</td><td>$84.60</td></tr><tr><td>Driver Licence</td><td><a href="http://www.vicroads.vic.gov.au/Home/Licensing/ChangePersonalDetails/">VicRoads</a></td><td>in person</td><td>free</td></tr><tr><td>Bank</td><td>(confidential)</td><td>in person</td><td>free</td></tr><tr><td>University</td><td>Monash University</td><td>in person</td><td>$60.00</td></tr><tr><td>Voting</td><td>Australian Electoral Commission</td><td>by mail</td><td>free</td></tr><tr><td>Mobile Phone</td><td>3 Mobile</td><td>in person</td><td>free</td></tr><tr><td>Internet</td><td>iiNet</td><td>internet</td><td>free</td></tr><tr><td>Phone</td><td>Telstra</td><td>by mail</td><td>free</td></tr><tr><td>Roadside Assistance</td><td>RACV</td><td>in person</td><td>free</td></tr><tr><td>Car Insurance</td><td>AAMI</td><td>in person</td><td>free</td></tr><tr><td>House Insurance</td><td>RACV</td><td>in person</td><td>free</td></tr><tr><td>Health Insurance</td><td>Australian Unity</td><td>by fax</td><td>free</td></tr><tr><td>Passport</td><td><a href="https://www.passports.gov.au/Web/Forms/EntryPoint.aspx" title="New Passport Application">Passports Australia</a></td><td>in person</td><td>$200.00 (passport) + $12.00 (photos)</td><tr><td><tr><td>Superannuation</td><td>Colonial First State</td><td>by mail</td><td>free</td></tr></tbody><tfooter><tr><td colspan="3">Total</td><td>$356.60</td></tr></tfooter></table><br /><br />It was great that VicRoads, the banks, and RACV let me change my details and issued new cards free of charge.<br /><br />This was more than countered by needing a new passport, and by uni charging a ridiculous fee of $60 for a "replacement card", which I needed to attend exams.<br /><br />Of course, I also had to update my details with my magazines, charities, political organizations, and various web sites.<br /><br />PayPal in particular was annoying.  Despite faxing my change of name form three times, and calling them and emailing them several times over the course of six months, they did not update my account.  An email to their complaints department also went unanswered.  I ended up signing up for a new account.  My previous donations are shown under my old name.<br /><br />Also note that most companies require a certified copy of a change of name certificate, even those who never required proof of identity when first signing up!  (Logically, those were things like phone accounts where a change of name without proof of identity could be used to transfer debt to another person.)<br /><br />Most automatic credit card payments continued to work under my old name.  I've updated them just in case.<br /><br />So if memory serves correctly, it cost $356 and lots of time.<br /><br />All in all, it's only worth it if you really care enuff to change your name!<br /><br />(It's probably not fair to include the full $200 for the passport, since my new passport is valid for the next ten years, but my old one was only valid for about three, so the effective cost was about $60, bringing the total down to about $210.)<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Government.html">Government</a>, <a rel='tag' href="http://mikelward.com/news/labels/Name.html">Name</a>, <a rel='tag' href="http://mikelward.com/news/labels/University.html">University</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+              <dt class="comment-poster" id="c3851945288427689743"><a name="c3851945288427689743"></a>
+              <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="http://www.blogger.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+              </dt>
+              <dd class="comment-body">
+              <p>hey mikel,<br /><br />how long did it take for the department of Births, Deaths and Marriages to get back to you and give u a copy of the new birth certificate in the mail?<br /><br />Zeke</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-912335668"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=3851945288427689743" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c3014322952514119800"><a name="c3014322952514119800"></a>
+              <span style="line-height:16px" class="comment-icon blogger-comment-icon"><img src="http://www.blogger.com/img/b16-rounded.gif" alt="Blogger" style="display:inline;" /></span>&nbsp;<a href="http://www.blogger.com/profile/03335511856506143551" rel="nofollow">Mikel Ward</a> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Sorry, Zeke, I don't remember, but things like that usually take 2-4 weeks.<br /><br />I think they also offer an in-person service in the city that might be quicker?<br /><br />Why not call them and ask?</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=3014322952514119800" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+              <dt class="comment-poster" id="c118255201139876907"><a name="c118255201139876907"></a>
+              <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="http://www.blogger.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+              </dt>
+              <dd class="comment-body">
+              <p>cheers mate.<br /><br />zeke</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-912335668"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=118255201139876907" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=2440917081589724622">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

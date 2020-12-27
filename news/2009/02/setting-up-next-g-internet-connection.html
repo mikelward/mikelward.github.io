@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Setting up a Next G Connection on Linux";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/3519149974492113406/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I have a laptop for work and need to be able to connect to the internet at any time from anywhere.<br /><br />I was previously using a Motorola MAXX V6 Next G mobile phone with a work SIM card, but the connection would drop out every half an hour or so, and I didn't like the phone.<br /><br />I figured I'd rather have my laptop connecting to the internet using dedicated hardware, so I went and bought a BigPond Next G card for my laptop.<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/bigpond-next-g-card-745724.jpg"><img src="http://mikelward.com/news/uploaded_images/bigpond-next-g-card-745593.jpg" border="0" alt="" /></a><p class="caption">BigPond Next G card - PC Card version</p></div><br /><br />This is what I had to do to get it working under Ubuntu 8.10 and Network Manager.<br /><br /><ol><br /><li>Put your SIM card in your phone and remove any PIN on the card</li><br /><li>Put your SIM card in your Next G card</li><br /><li>Plug in your Next G card and wait until the power light is blue and the 3G light is orange</li><br /><li>Run dmesg from a terminal window to ensure that Linux has detected it<br/><br />Apparently the card is a re-branded Sierra AirCard 875, so we're looking for lines matching Sierra</li><br /><pre><br />user@host:~$ dmesg | grep Sierra<br />[ 2719.089254] usbserial: USB Serial support registered for Sierra USB modem<br />[ 2719.089807] sierra 8-1:1.0: Sierra USB modem converter detected<br />[ 2719.091428] usb 8-1: Sierra USB modem converter now attached to ttyUSB0<br />[ 2719.092217] usb 8-1: Sierra USB modem converter now attached to ttyUSB1<br />[ 2719.092930] usb 8-1: Sierra USB modem converter now attached to ttyUSB2<br />[ 2719.093678] usbcore: registered new interface driver sierra<br />[ 2719.093683] sierra: USB Driver for Sierra Wireless USB modems: v.1.3.2<br /></pre><br /><li>Figure out which connection identifier you need<br/><br />On my modem, there are four connection identifiers that correspond to different phone and data plans.  As far as I understand it, they are as follows.<br /><table><br /><tr><th>Connection Id</th><th>Access Point Name</th><th>Plan Type</th></tr><tr><td>1</td><td>telstra.pcpack</td><td>Data plan with time limit</td></tr><tr><td>2</td><td>telstra.datapack</td><td>Data plan with download limit</td></tr><tr><td>3</td><td>telstra.internet</td><td>Phone plan</td></tr><tr><td>4</td><td>telstra.internet</td><td>Unknown</td></tr></table><br/>Connection number 3 worked for me with my work phone.<br/><br />Remember the one corresponding to your plan for later.</li><br /><li>Right click on the network icon in the notification area then click on Edit Connections</li><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/next-g---no-network-780248.png"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 193px; height: 62px;" src="http://mikelward.com/news/uploaded_images/next-g---no-network-780160.png" border="0" alt="Network status icon" /></a><p class="caption">Network status icon</p></div><br /><li>Click on the Mobile Broadband tab</li><br /><li>Click Add</li><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/next-g---mobile-broadband-connections-792506.png"><img src="http://mikelward.com/news/uploaded_images/next-g---mobile-broadband-connections-792503.png" border="0" alt="" /></a><p class="caption">Mobile broadband connections</p></div><br /><li>Click Forward</li><br /><li>Click Telstra then click Forward</li><br /><li>Type a name in the box (I used Next G) and click Apply</li><br /><li>Click on your connection in the list and click Edit</li><br /><li>Change the number from *99# to *99***<i>connection id</i>#, e.g. *99***3#</li><br /><li>Clear the APN field</li><br /><li>Click OK</li><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/next-g---final-settings-799041.png"><img src="http://mikelward.com/news/uploaded_images/next-g---final-settings-799023.png" border="0" alt="" /></a><p class="caption">Final settings</p></div><br /><li>Click on the network icon, scroll down and click on the name you gave it, e.g. Next G</li><br /><li>Wait a few seconds for it to connect</li><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/next-g---connected-703608.png"><img src="http://mikelward.com/news/uploaded_images/next-g---connected-703606.png" border="0" alt="" /></a><p class="caption">Connected to Next G</p></div><br /></ol><br /><br />I'm now getting internet speeds of around 1.2 to 2.0 Mbps, which is the best mobile broadband speed I've seen.<br /><br /><div class="figure"><a href="http://mikelward.com/news/uploaded_images/next-g---speed-test-788413.png"><img src="http://mikelward.com/news/uploaded_images/next-g---speed-test-788409.png" border="0" alt="" /></a><p class="caption">ZDNet's download speed test with my new Next G card</p></div><br /><br />If you try these steps but needed to do anything differently, please <a href="/contact">let me know</a>.<br /><br /><h3>Notes for other modems and cards</h3><br /><br />For most mobile phones, try an APN of telstra.internet and *99# as the phone number.<br /><br /><h3>Notes for BigPond users</h3><br /><br />I think you need to explicitly specify an APN of telstra.bigpond and provide your username and password.<br /><br />Can you try and <a href="/contact">let me know</a>?<br /><br /><h3>Listing your modem's APNs</h3><br /><br />In case your modem has different connection ids, install minicom, then run it...<br /><pre><br />user@host:~$ cd /dev<br />user@host:~$ sudo ln -sf ttyUSB0 modem<br />user@host:~$ sudo apt-get install minicom<br />[and answer the prompts to install it if necessary]<br />user@host:~$ sudo minicom<br /><br />Welcome to minicom 2.3<br /><br />OPTIONS: I18n <br />Compiled on Oct 24 2008, 06:37:44.<br />Port /dev/ttyUSB0<br /><br />                 Press CTRL-A Z for help on special keys                                             <br />                                                                                                     <br />                                                                                                     <br />OK<br /></pre><br /><br />...then type <tt>AT+CGDCONT?[ENTER]</tt><br /><br /><pre><br />AT+CGDCONT?<br />+CGDCONT: 1,"IP","telstra.pcpack","",0,0<br />+CGDCONT: 2,"IP","telstra.datapack","",0,0<br />+CGDCONT: 3,"IP","telstra.internet","",0,0<br />+CGDCONT: 4,"IP","telstra.internet","",0,0<br /></pre><br /><br />The first number is the connection id.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2009.html">2009</a>, <a rel='tag' href="http://mikelward.com/news/labels/Communications.html">Communications</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+              <dt class="comment-poster" id="c4438995630647880651"><a name="c4438995630647880651"></a>
+              <span style="line-height:16px" class="comment-icon anon-comment-icon"><img src="http://www.blogger.com/img/anon16-rounded.gif" alt="Anonymous" style="display:inline;" /></span>&nbsp;<span class="anon-comment-author">Anonymous</span> said...
+              </dt>
+              <dd class="comment-body">
+              <p>Hello Mike,<br />Your tips put me on the right track to solve a &#39;No Connection&#39; on Ubuntu 9.04 for the: Maxon BP3-EXT on a Bigpond Mobile Broadband plan. (NextG)<br /><br />Number: *99#<br /><br />Username: example@bigpond.com<br /><br />Password: solved1234<br /><br />APN: telstra.bigpond<br /><br />All other settings left to the defaults.<br /><br />Thanks,<br />Alan</p>
+              </dd>
+              <dd class="comment-timestamp">
+              <span class="item-control blog-admin pid-1051185488"><a style="border:none;" href="http://www.blogger.com/delete-comment.g?blogID=20640875&postID=4438995630647880651" title="Delete Comment" ><span class="delete-comment-icon">&nbsp;</span></a></span>
+              </dd>
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=3519149974492113406">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

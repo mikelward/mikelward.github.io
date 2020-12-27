@@ -1,0 +1,34 @@
+LESSIONS
+
+Regular expression syntax is weird and poorly documented in PHP (use the PCRE or Perl documentation)
+Some web servers (this one was ASP) require HTTP 1.1 and a Host header, which PHP's fopen don't support
+ORM is harder than it seems for non-trivial class hierarchies
+
+
+1.
+This didn't work:
+GET /dvds/id/855245 HTTP/1.0
+
+This did:
+GET /dvds/id/855245 HTTP/1.0
+User-Agent: Wget/1.10.2 (Red Hat modified)
+Accept: */*
+Host: www.jbhifionline.com.au
+Connection: Keep-Alive
+
+Site isn't serving any content for the default virtual host?
+
+Different sites also return different content depending on the User-Agent string.
+
+sudo yum install php-devel
+sudo yum install pecl_http
+
+	$request = new HttpRequest();
+	$request->setUrl($url);
+	$request->setMethod("GET");
+	$host = preg_replace("#^.*?://(.*?)/.*#", "$1", $url);
+	$headers = array("Host" => $host);
+	$request->addHeaders($headers);
+	$request->send();
+
+

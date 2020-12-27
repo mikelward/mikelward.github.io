@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875");
+</style>
+
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="previous">
+      <h3>Previous Items</h3>
+      
+        <a href="http://mikelward.com/news/2008/04/better-windows-keyboard-shortcuts.html">Better Windows Keyboard Shortcuts</a><br />
+      
+        <a href="http://mikelward.com/news/2008/03/bold-shell-command-like-rails-books.html">Bold Shell Command like the Rails Books</a><br />
+      
+        <a href="http://mikelward.com/news/2008/02/australian-soccer-world-cup-stadiums.html">Australian Soccer World Cup Stadiums</a><br />
+      
+        <a href="http://mikelward.com/news/2008/01/australian-open.html">Australian Open</a><br />
+      
+        <a href="http://mikelward.com/news/2007/12/motorola-razr-v6-on-next-g.html">MOTORAZR V6 on Telstra Next G</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/new-job.html">New Job</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/finally-internet-without-paying-line.html">Finally!  Internet Without Line Rental!</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/ldp-tipped-to-win-nsw-senate-seat.html">LDP Tipped To Win NSW Senate Seat</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/changing-your-name-in-australia.html">Changing Your Name in Australia</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/name-change.html">Name Change</a><br />
+      
+    </div>
+
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">All</a><br />
+        <a href="http://mikelward.com/news/labels/Books">Books</a><br />
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Enviroment">Enviroment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Frends">Frends</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="7392219803502341990"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/09/new-pc.html">Noisy New PC</a>
+          
+        </h2>
+        <p class="post-date">Saturday, September 01, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I finally "bit the bullet" and bought a new PC last month.<br /><br />I had been planning to buy a new home computer for the past two or so years, but I had never been able to justify it to myself.  The last computer I bought was the Athlon XP system that I bought in late 2003, and it was still running fine, but my parents said they wanted me to have a new computer for my last semester of uni.  How could I say no!?<br /><br />About a year ago I had decided my system would be based on an Athlon 64 3600+.  It was dual-core, much newer so presumably faster than my current system, and was supposed to have a very low power consumption (I think it was 45 watts, which is less than most light bulbs!).<br /><br />The other question was Windows XP or Windows Vista.  I had read several articles about Windows Vista, particularly on <a href="http://www.winsupersite.com/vista/">Paul Thurrot's SuperSite</a>, and the general agreement was that Vista was OK, but that you should get the 32-bit version rather than the 64-bit version to ensure driver compatibility.  (Some peeple had also   advised waiting until service pack 1.  I would have done that and put off my purchase until about November, but I was cashed up and wanted a computer now!)<br /><br />When I went to buy the computer, the Athlon 3600 was practically impossible to get, and the 3800 was under $100.  I also discovered that the current Athlons all consumed at least 65 watts, so I went for the 4000 as the best value for money option at $79.  (More info about Athlon power consumption at the <a href="http://en.wikipedia.org/wiki/List_of_AMD_Athlon_64_microprocessors">Athlon 64 Wikipedia entry</a>)<br /><br />I bought the computer from <a href="http://www.cpl.net.au/">CPL</a> in Melbourne, who had very good prices and had assured me that all the parts I wanted were in stock.  On arriving there, I was told my preferred case, the <a href="http://www.antec.com/us/productDetails.php?ProdID=96500">Antec NSK 6500</a> was out of stock.  I had wanted this model as it was the cheapest good-looking case that also had front audio and USB ports.  As well as this, Antec are known for making good quality low-noise cases.  The salesman advised that I should get an <a href="http://au.asus.com/products.aspx?l1=7&l2=37&l3=94&l4=0&model=1116&modelmenu=1">ASUS TA 88</a> instead.<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/610_images_products_1116_1116_m-764935.jpg"><img src="http://mikelward.com/news/uploaded_images/610_images_products_1116_1116_m-764934.jpg" border="0" alt="" /></a><p class="caption">ASUS TA 88</p></div><br /><br />This turned out to be a bad choice.  The system was terribly noisy.  I traced it to three things: the extra rear fan, the power supply, and the disk drive bays.<br /><br />As the first obvious things to do, I removed any unnecessary clamps and ensured the drive screws were firm, and unplugged the rear fan.  This helped a little, but the system was still quite noisy.  I decided to tolerate it until it was clear what to do.<br /><br />Otherwise, the system ran well, and Vista turned out to be fine on balance (no issues with drivers or software compatibility), but it's not much faster than my four-year-old computer.  I guess each core runs about as fast as my old computer, so my new computer will only shine when running two intensive applications at the same time, or when more applications are multi-threaded (Firefox is the worst culprit).  It gets 4.8 on the Windows Vista performance tool, with the processor being the slowest component.  Given my time again, I would buy a faster processor, perhaps something like an Athlon 64 4800 after checking out the benchmarks.<br /><br />Today, I thought I had discovered a solution to my noise issues.  I found out Antec had released a new affordable, quiet, energy efficient power supply in Australia called the <a href="http://www.antec.com/us/productDetails.php?ProdID=27380">Antec EarthWatts 380</a>.  After reading some favorable reviews at <a href="http://www.silentpcreview.com/article684-page1.html">Silent PC Review</a> and <a href="http://www.overclockers.com.au/wiki/Power_Supply_Unit">Overclockers Australia</a>, I decided to go out and buy one.<br /><br />My system is now barely audible, except for the minor rattle of the disk drives.  The Antec NSK 6500 also had rubber drive grommets, so ideally I would have waited and bought that one instead, but oh well.<br /><br /><table><tr><th>Item</th><th>Price</th></tr><tr><td>Athlon 64 X2 4000+ CPU</td><td>$89</td></tr><tr><td>ASUS M2A-VM mainboard</td><td>$99</td></tr><tr><td>Corsair 2 GB PC 5300 DDR 2 RAM</td><td>$128</td></tr><tr><td>Seagate 80 GB SATA hard disk</td><td>N/A</td></tr><tr><td>Lite-On DVD reader/writer</td><td>N/A</td></tr><tr><td>ASUS TA 881 case</td><td>$69</td></tr><tr><td>Antec EarthWatts 380 power supply</td><td>$79</td></tr><tr><td>ASUS GeForce 8600 GT SILENT video card</td><td>$187</td></tr><tr><td>Microsoft Windows Vista Home Premium 32-bit</td><td>$159</td></tr><tr><td>Total</td><td>$810</td></tr></table><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Enviroment.html">Enviroment</a>, <a rel='tag' href="http://mikelward.com/news/labels/Hardware.html">Hardware</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=7392219803502341990">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=7392219803502341990" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875");
+</style>
+
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="previous">
+      <h3>Previous Items</h3>
+      
+        <a href="http://mikelward.com/news/2008/04/better-windows-keyboard-shortcuts.html">Better Windows Keyboard Shortcuts</a><br />
+      
+        <a href="http://mikelward.com/news/2008/03/bold-shell-command-like-rails-books.html">Bold Shell Command like the Rails Books</a><br />
+      
+        <a href="http://mikelward.com/news/2008/02/australian-soccer-world-cup-stadiums.html">Australian Soccer World Cup Stadiums</a><br />
+      
+        <a href="http://mikelward.com/news/2008/01/australian-open.html">Australian Open</a><br />
+      
+        <a href="http://mikelward.com/news/2007/12/motorola-razr-v6-on-next-g.html">MOTORAZR V6 on Telstra Next G</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/new-job.html">New Job</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/finally-internet-without-paying-line.html">Finally!  Internet Without Line Rental!</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/ldp-tipped-to-win-nsw-senate-seat.html">LDP Tipped To Win NSW Senate Seat</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/changing-your-name-in-australia.html">Changing Your Name in Australia</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/name-change.html">Name Change</a><br />
+      
+    </div>
+
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">All</a><br />
+        <a href="http://mikelward.com/news/labels/Books">Books</a><br />
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Enviroment">Enviroment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Frends">Frends</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="6832856681389842356"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/04/free-fonts.html">Free Fonts</a>
+          
+        </h2>
+        <p class="post-date">Monday, April 23, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>My interest in fonts began a few years ago when I discovered <a href="http://en.wikipedia.org/wiki/Lucida_Sans">Lucida Sans</a>.  It was embedded in a paper about <a href="http://plan9.bell-labs.com/plan9/">Plan 9</a>, an operating system by the creators of UNIX.  It's a nice, easy-to-read font without serifs (the ornaments on fonts like Times New Roman) that isn't as boring as Arial or Helvetica.<br /><br />I was trying to find out how I could get the font on my computer, when I discovered that the <a href="http://www.java.com/en/download/manual.jsp">Sun Java package</a> includes the original Lucida Sans fonts.  I now make a point of installing Java on all of my computers, then copying the fonts from the lib/fonts folder into my system fonts folder.<br /><br /><a href="http://mikelward.com/news/uploaded_images/Lucida-Grande-774887.png"><img src="http://mikelward.com/news/uploaded_images/Lucida-Grande-774885.png" border="0" alt="" /></a><p class="caption">Lucida Grande</p><br /><br />There's a similar font that comes with Mac OS X called <a href="http://en.wikipedia.org/wiki/Lucida_Grande">Lucida Grande</a>.  <ins>If you're running Windows, you can get it by installing the <a href="http://www.apple.com/safari/download/">Safari web browser</a> public beta and copying the TTF files from the Safari.resources folder.</ins><br /><br />Microsoft Windows also comes with a version of Lucida Sans called Lucida Sans Unicode.  On some systems (e.g. Windows 2000 without ClearType) this doesn't look very good and it doesn't differentiate between normal and bold, so I only use this as a fall back if the other two aren't available.<br /><br />I use these three fonts as the default fonts on my web site.  Since at least one of these is included in recent Windows and Mac systems, most peeple should see a Lucida Sans variant.<br /><br />It also turns out there's a number of other good fonts available for free download, starting with the Microsoft Windows Core Fonts, including Andale Mono, Arial, MS Comic Sans, Courier New, Georgia, Impact, Tahoma, Times New Roman, Trebuchet MS, Webdings, and Verdana.  Most peeple will be familiar with these fonts, but I'd like to point out <a href="http://en.wikipedia.org/wiki/Andale_Mono">Andale Mono</a> as it's a really good font for programming and much better looking than Courier New.  They can be downloaded from the <a href="http://corefonts.sourceforge.net/">SourceForge Core Fonts Project Page</a>.<br /><br /><a href="http://mikelward.com/news/uploaded_images/Andale-Mono-773013.png"><img src="http://mikelward.com/news/uploaded_images/Andale-Mono-773010.png" border="0" alt="" /></a><p class="caption">Andale Mono</p><br /><br />Other worthwhile downloads are the <a href="http://www.microsoft.com/typography/ClearTypeFonts.mspx">Windows ClearType Fonts</a>, including Calibri, Cambria, Candara, Consolas, Constantia, and Corbel.  They are all included in a standard install of Windows Vista or Microsoft Office 2007, but you can also get them in the <a href="http://www.microsoft.com/downloads/details.aspx?familyid=048DC840-14E1-467D-8DCA-19D2A8FD7485&displaylang=en">Microsoft PowerPoint 2007 Viewer</a> package.  <a href="http://en.wikipedia.org/wiki/Calibri">Calibri</a> is the definite highlight. It's the default font in Word 2007, so you're certain to see it more in future.<br /><br />The Microsoft Office Fonts includes some classics, particularly Century Schoolbook, Gill Sans MT, and Lucida Sans.  You can get them with most versions of Microsoft Office, but you can also get them in the freely available <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=697a2c2b-9eff-4d4c-8655-4da3acd8aa16&DisplayLang=en">Microsoft Publisher 98 Euro Fonts Update</a>.  Run PubUpd.exe /c /t:c:\temp, then copy the TTF files from c:\temp into c:\windows\fonts.<br /><br />I discovered today that Adobe Reader version 8 includes <a href="http://en.wikipedia.org/wiki/Myriad_Pro">Myriad Pro</a>.  It's an attractive humanist font similar to Lucida Sans.  It's the font used in Apple ads.  You can <a  href="http://www.adobe.com/products/acrobat/readstep2.html" title="Download Adobe Reader">download it here</a>.  Install it and then copy the OTF files from the Resource/Font folder into the system fonts folder.<br /><br /><a href="http://mikelward.com/news/uploaded_images/Myriad-770101.png"><img src="http://mikelward.com/news/uploaded_images/Myriad-770097.png" border="0" alt="" /></a><p class="caption">Myriad Pro</p><br /><br />Another set of good fonts that deserve more attention is the Bitstream Vera family.  They are included as the default fonts in many recent Linux distributions, and can be downloaded from the <a href="http://www.gnome.org/fonts/">GNOME Fonts web page</a>.  They can be used as pretty good replacements for Verdana, Georgia, and Andale Mono.<br /><br />Thanks to <a href="http://en.wikipedia.org/wiki/User:GearedBull">GearedBull</a> for releasing his excellent Wikipedia font previews into the public domain.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Design.html">Design</a>, <a rel='tag' href="http://mikelward.com/news/labels/Download.html">Download</a>, <a rel='tag' href="http://mikelward.com/news/labels/Linux.html">Linux</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=6832856681389842356">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=6832856681389842356" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="1501042183487470347"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/04/new-web-site-design.html">New Web Site Design</a>
+          
+        </h2>
+        <p class="post-date">Sunday, April 15, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>A number of peeple told me that my site looked boring.<br /><br />I had been wanting to come up with a radical new style, having been inspired by sites like <a href="http://www.modernlifeisrubbish.co.uk/">Modern Life</a> and an excellent <a href="http://www.smashingmagazine.com/2006/12/19/50-beautiful-css-based-web-designs-in-2006">list of 50 beautiful sites</a> on Smashing Magazine.<br /><br />After many battles with CSS to get exactly the right results in all browsers, and realizing that it would take forever if I wanted something unusual, I decided to try something simple yesterday.  The result is now the default theme on my web site.<br /><br /><a href="http://mikelward.com/news/uploaded_images/newstyle-792639.png"><img class="picture" src="http://mikelward.com/news/uploaded_images/newstyle-792629.png" border="0" alt="" /></a><br /><p class="caption">New Home Page</p><br /><br />The main focus is the new banner, which is a bright "cornflower" blue (probably my favorite color, even if it does remind me of Fight Club).  At the bottom of the banner are simple white all caps words that are links to each section of the site.<br /><br /><del>I decided to remove the page titles and the crumbs.  I'm going to leave them out to reduce any clutter until I'm sure they're necessary.</del><br /><br /><a href="http://mikelward.com/news/uploaded_images/newstyle4-740788.png"><img class="picture" src="http://mikelward.com/news/uploaded_images/newstyle4-740770.png" border="0" alt="" /></a><br /><p class="caption">New-Look Blog</p><br /><br />The other major change is to specify a font size.  In the past, all my sites have respected the browsers's preferred font size.  Unfortunately, the default font size on Windows systems is quite large, and a lot of peeple don't know how to change it.  The new theme specifies a default size of <del>10 points</del> <ins>small</ins>, which should make fonts somewhat smaller than in the past, matching most peeple's expectations, making the site look better with default browser settings, <ins>while allowing peeple to make the fonts smaller or larger using their browser's text size or zoom feature</ins>.<br /><br />There's also an improved "page not found" page.  If you mistype an address, you are shown a list of similar pages if there are any, and a list of popular pages if there aren't any.<br /><br />As always, the site should work on all platforms.<br /><br /><a href="/contact">Let me know what you think!</a><div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Design.html">Design</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=1501042183487470347">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=1501042183487470347" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="8646862161548779298"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/04/easter-in-adelaide.html">Easter in Adelaide</a>
+          
+        </h2>
+        <p class="post-date">Sunday, April 15, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I went to Adelaide for Easter this year.  Flew out Friday lunch time with Virgin Blue.  Was able to offset my carbon emissions for about $1.50 for the return trip, which sounded suspiciously low.<br /><br />The flight was great.  Nan came to pick me up at the airport in her new Kia.  Her Pulsar had been recently stolen, and she bought a Kia Cerato with the insurance payout.<br /><br />We went back to her place in Parafield Gardens, had a bit of a chat, caut up with my cousin Jamie and Nan's boyfrend Tony.  Rod, an old workmate and frend from Wodonga came around for dinner.<br /><br />On Saturday, I went to see Linda and her boyfrend Okke for lunch at Sushi Train near the Adelaide Central Markets.  After lunch, we went shopping.  I bought some Lindt dark chocolates and Coopers Extra Dark Stout.<br /><br /><a href="http://mikelward.com/news/uploaded_images/image1787.jpg"><img class="photo" src="http://mikelward.com/news/uploaded_images/image1787-small.jpg" border=0 alt='' /></a><br /><p class="caption">Linda and Okke</p><br /><br />We went back to Linda's place in Gilberton (just to the North of North Adelaide), met Okke properly, then discussed past events, relationships, and the meaning of life.  :-)<br /><br />That night, Linda and Okke took me to a frend's party in the East End of Adelaide.  Drank too much, stayed up too late!  Had a great time!  It was revealed that Okke and his mates were card-carrying Adelaide United members, so we arranged to travel to each other's home matches.  Apparently they've got a blow-up doll of Kevin Muscat, but I'm sure it's all in good sport... :-/<br /><br /><a href="http://mikelward.com/news/uploaded_images/image1788.jpg"><img class="photo" src="http://mikelward.com/news/uploaded_images/image1788-small.jpg" border=0 alt='' /></a><br /><p class="caption">Beehive Corner, Rundle Mall</p><br /><br />On Sunday, we went to see the Egyptian exhibit from the Louvre at the Art Gallery.  It was a little bit interesting, but I always find myself wanting to know more than the signs tell.  They also used some weird terminology, possibly due to the translation from French, and called the Sun God "Re" rather than the familiar "Ra".<br /><br />We went back to Linda's place.  I saw the first half of the Western Bulldogs getting convincingly beaten (again!), then we went out for dinner to an Indian restaurant on Melbourne Street.<br /><br />After dinner, we went to see The Host at Palace Cinema.  Kinda fortunately for me, it wasn't on.  I had been really wanting to see The Lives of Others, and that was on in about 15 minutes, so we did that instead.<br /><br />The movie turned out to be really good.  A bit of a Schindler's List type of movie in that the circumstances are those of oppression and control of a war-like regime, and that it focussed on a small group of peeple to show its effects.  The story was great and was made very emotive by the direction and cinematography.  I felt really worried and concerned for the characters.  The ending was good, and really helped show that it's the peeple of the regime that make up the regime.  It was also rather ironic, considering one of the main undertones of the movie was suicide.  It lead to some interesting discussions afterwards.<br /><br />Got back to Nan's place a bit after midnight, and flew out the next morning.<br /><br />Felt quite sick by the Monday night.  Ended up in bed for most of the week with tonsillitis.<br /><br />(I didn't kiss anyone Katie, honest!) ;-)<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Adelaide.html">Adelaide</a>, <a rel='tag' href="http://mikelward.com/news/labels/Entertainment.html">Entertainment</a>, <a rel='tag' href="http://mikelward.com/news/labels/Family.html">Family</a>, <a rel='tag' href="http://mikelward.com/news/labels/Food.html">Food</a>, <a rel='tag' href="http://mikelward.com/news/labels/Frends.html">Frends</a>, <a rel='tag' href="http://mikelward.com/news/labels/Holidays.html">Holidays</a>, <a rel='tag' href="http://mikelward.com/news/labels/Movies.html">Movies</a>, <a rel='tag' href="http://mikelward.com/news/labels/Sport.html">Sport</a>, <a rel='tag' href="http://mikelward.com/news/labels/Travel.html">Travel</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=8646862161548779298">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=8646862161548779298" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

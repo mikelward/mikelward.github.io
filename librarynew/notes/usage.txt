@@ -1,0 +1,31 @@
+GETTING PRICE FOR ITEM 2 FROM STORE 1
+
+$itemId = 2;
+$storeId = 1;
+
+$store = StorePeer::retrieveByPK($storeId);
+
+$storeItemCriteria = new Criteria();
+$storeItemCriteria->add(StoreItemsPeer::ITEM_ID, $itemId, Criteria::EQUAL);
+$storeItemCriteria->add(StoreItemsPeer::STORE_ID, $storeId, Criteria::EQUAL);
+
+$storeItemIds = StoreItemsPeer::doSelect($storeItemCriteria);
+if (count($storeItemIds) == 1) {
+	// OK
+	$storeItem = $storeItemIds[0];
+}
+elseif (count($storeItemIds) == 0) {
+	// Not found
+	throw new Exception("No entry for item $itemId at store $storeId");
+}
+else {
+	// Multiple matches, shouldn't happen
+	throw new Exception("Multiple entries for item $itemId at store $storeId");
+}
+
+$oldPrice = $storeItem->getPrice();
+$store->update($storeItem);
+$newPrice = $storeItem->getPrice();
+if ($newPrice != $oldPrice) {
+	// add to specials list, update price and price change time
+}

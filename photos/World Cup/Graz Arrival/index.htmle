@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>World Cup 2006 - Graz</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<span class="textbg">World Cup 2006 - Graz (3 images)</span><br>
+<span class="textsm">First Night in Graz</span>
+<p class="desc"><p><span class="textreg">Click a picture to see a larger view.</span><br>
+<hr size="1">
+<a href="target0.html"><img align="center" src="thumbnails/img_1253.jpg" width="122" height="94" title="Graz Central Station" border="0"></a>
+<a href="target1.html"><img align="center" src="thumbnails/img_1254.jpg" width="122" height="94" title="Mical At Graz Central Station" border="0"></a>
+<a href="target2.html"><img align="center" src="thumbnails/img_1255.jpg" width="122" height="94" title="Watching the 3rd Place Playoff in Graz" border="0"></a>
+<map name="Map">
+  <area shape="rect" coords="95,1,129,44" href="frameset.htm">
+</map>
+</body>
+</html>

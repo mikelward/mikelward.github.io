@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<style type="text/css">
+@import url("http://www.blogger.com/css/blog_controls.css");
+@import url("http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875");
+</style>
+
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="previous">
+      <h3>Previous Items</h3>
+      
+        <a href="http://mikelward.com/news/2008/04/better-windows-keyboard-shortcuts.html">Better Windows Keyboard Shortcuts</a><br />
+      
+        <a href="http://mikelward.com/news/2008/03/bold-shell-command-like-rails-books.html">Bold Shell Command like the Rails Books</a><br />
+      
+        <a href="http://mikelward.com/news/2008/02/australian-soccer-world-cup-stadiums.html">Australian Soccer World Cup Stadiums</a><br />
+      
+        <a href="http://mikelward.com/news/2008/01/australian-open.html">Australian Open</a><br />
+      
+        <a href="http://mikelward.com/news/2007/12/motorola-razr-v6-on-next-g.html">MOTORAZR V6 on Telstra Next G</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/new-job.html">New Job</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/finally-internet-without-paying-line.html">Finally!  Internet Without Line Rental!</a><br />
+      
+        <a href="http://mikelward.com/news/2007/11/ldp-tipped-to-win-nsw-senate-seat.html">LDP Tipped To Win NSW Senate Seat</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/changing-your-name-in-australia.html">Changing Your Name in Australia</a><br />
+      
+        <a href="http://mikelward.com/news/2007/10/name-change.html">Name Change</a><br />
+      
+    </div>
+
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">All</a><br />
+        <a href="http://mikelward.com/news/labels/Books">Books</a><br />
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Enviroment">Enviroment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Frends">Frends</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="2440917081589724622"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/10/changing-your-name-in-australia.html">Changing Your Name in Australia</a>
+          
+        </h2>
+        <p class="post-date">Wednesday, October 10, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I changed my legal name late last year.  This explains how I did it and how much it cost.<br /><br /><table><theader><tr><th>What</th><th>Who</th><th>How</th><th>How much</th></tr></theader><tbody><tr><td>State Government</td><td><a href="http://online.justice.vic.gov.au/bdm/home">Births, Deaths and Marriages</a></td><td>by mail</td><td>$84.60</td></tr><tr><td>Driver Licence</td><td><a href="http://www.vicroads.vic.gov.au/Home/Licensing/ChangePersonalDetails/">VicRoads</a></td><td>in person</td><td>free</td></tr><tr><td>Bank</td><td>(confidential)</td><td>in person</td><td>free</td></tr><tr><td>University</td><td>Monash University</td><td>in person</td><td>$60.00</td></tr><tr><td>Voting</td><td>Australian Electoral Commission</td><td>by mail</td><td>free</td></tr><tr><td>Mobile Phone</td><td>3 Mobile</td><td>in person</td><td>free</td></tr><tr><td>Internet</td><td>iiNet</td><td>internet</td><td>free</td></tr><tr><td>Phone</td><td>Telstra</td><td>by mail</td><td>free</td></tr><tr><td>Roadside Assistance</td><td>RACV</td><td>in person</td><td>free</td></tr><tr><td>Car Insurance</td><td>AAMI</td><td>in person</td><td>free</td></tr><tr><td>House Insurance</td><td>RACV</td><td>in person</td><td>free</td></tr><tr><td>Health Insurance</td><td>Australian Unity</td><td>by fax</td><td>free</td></tr><tr><td>Passport</td><td><a href="https://www.passports.gov.au/Web/Forms/EntryPoint.aspx" title="New Passport Application">Passports Australia</a></td><td>in person</td><td>$200.00 (passport) + $12.00 (photos)</td><tr><td><tr><td>Superannuation</td><td>Colonial First State</td><td>by mail</td><td>free</td></tr></tbody><tfooter><tr><td colspan="3">Total</td><td>$356.60</td></tr></tfooter></table><br /><br />It was great that VicRoads, the banks, and RACV let me change my details and issued new cards free of charge.<br /><br />This was more than countered by needing a new passport, and by uni charging a ridiculous fee of $60 for a "replacement card", which I needed to attend exams.<br /><br />Of course, I also had to update my details with my magazines, charities, political organizations, and various web sites.<br /><br />PayPal in particular was annoying.  Despite faxing my change of name form three times, and calling them and emailing them several times over the course of six months, they did not update my account.  An email to their complaints department also went unanswered.  I ended up signing up for a new account.  My previous donations are shown under my old name.<br /><br />Also note that most companies require a certified copy of a change of name certificate, even those who never required proof of identity when first signing up!  (Logically, those were things like phone accounts where a change of name without proof of identity could be used to transfer debt to another person.)<br /><br />Most automatic credit card payments continued to work under my old name.  I've updated them just in case.<br /><br />So if memory serves correctly, it cost $356 and lots of time.<br /><br />All in all, it's only worth it if you really care enuff to change your name!<br /><br />(It's probably not fair to include the full $200 for the passport, since my new passport is valid for the next ten years, but my old one was only valid for about three, so the effective cost was about $60, bringing the total down to about $210.)<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Government.html">Government</a>, <a rel='tag' href="http://mikelward.com/news/labels/Name.html">Name</a>, <a rel='tag' href="http://mikelward.com/news/labels/University.html">University</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=2440917081589724622">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=2440917081589724622" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+      <!-- Begin .post -->
+      <div class="post">
+
+        <a name="1800027761072200509"></a>
+
+        <h2 class="post-title">
+          
+            <a href="http://mikelward.com/news/2007/10/name-change.html">Name Change</a>
+          
+        </h2>
+        <p class="post-date">Wednesday, October 10, 2007</p>
+
+
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I changed my name legally from Michael Wardle to Mikel Ward late last year.  This blog tells you why.<br /><br />I've long had an interest in spelling.<br /><br />At primary school, there were three Michaels in my class.  Two were spelled the conventional way, and the other was spelled Micheal.  Often peeple would spell my name Micheal, indeed it happened just today!  I used to be angry, but I realized the spelling was strange, and it's understandable for peeple to get it wrong.<br /><br />When I was 14, I went to Austria on a student exchange.  I learned German, and was enamored by the spelling, which seemed much easier and more logical than English spelling.<br /><br />In German you can read a word and know how it's said.  To understand English spelling, you either need to learn English, French, German, and a heap of exceptions, or you just learn the pronunciation and spelling of each word as a symbol in isolation, more like Chinese.  Words like Wednesday, comb, indict, friend, tongue, through, and business aren't said the way they're spelled.  Proper names are even worse.  Leicester, Edinburgh, Thames, and indeed Michael are totally confusing!<br /><br />When I came back, I started experimenting with different spellings of my name in private.  The one spelling I was particularly fond of was Mīkl (the bar, properly called a macron, above the i means it's a long "igh", rather than a short "i").  Since that letter doesn't appear on most computers, I wrote it Miikl or Mykl.  I tried this on my name badge when helping mum and dad out in their first Subway store.  It didn't go down too well!  They thought customers wouldn't know how to pronounce it, so I should just write "Michael".<br /><br />In my current job, I spend a considerable amount of time on the phone.  When I spelt my name and email address over the phone, most people knew how to spell Michael, but most peeple couldn't figure out Wardle.<br /><br />This is also understandable, since a literal spelling would be Wordl.  Indeed, my ex-girlfrend's mum Pam spelled it something like that (I think she spelled it Wordle).<br /><br />First, the "ar" in "war" should rhyme with "car", but it doesn't.  There's a rule nobody knows about that the sound of an "a" changes if it follows a "w".<br /><br />Second, the "le" has a silent "e" on the end, since words ending in an "l" sound used to be spelled with a silent "e" (like in candle).<br /><br />(Did you know that no word ends in "v"?  The same thing happened: historically the Norman English added an "e" because they didn't like the look of a word ending in "v", which is the reason for "love" and "live" rather than "luv" and "liv".)<br /><br />I discussed this with my auntie Christine who said she often gives her surname as "Ward" over the phone to avoid having to spell it.<br /><br />I discussed it with my family, who said some other family members had changed the spelling of the family name, but usually to "Wardell".<br /><br />I read up on our family history, and apparently the name "Wardle" came from either "Wardhill" in Lancashire in England's North West, meaning person who looks after the hill, or "Weardale" from Tyneside and Wearside in England's North East, meaning [from the] valley of the river Wear.  I reasoned that since "Wardle" was a contraction of either of those, and essentially a corruption by those too lazy to spell their name in full, and since "Wardell" was still likely to be confused and misspelled, I would go one step further and make it "Ward", which surely most peeple knew how to spell!<br /><br />I read several books on spelling reform.  The one that made most sense was Valerie Yule's paper called <a href="http://home.vicnet.net.au/~ozideas/DOWNLOADS%20pdfs%20for%20ozideas/spellrepairinternatlconfpr.pdf">"International English Spelling"</a>, that showed that English spelling could be made shorter and simpler, yet still quite familiar, by using accented vowels, for instance "indict" would become "indìt", unambiguously showing the "i" is long.  That would make the spelling of my name "Mìkl".  The main problem with this proposal was the accented letters were hard to type.  (I've since developed a <a href="http://mikelward.com/software/keyboard/">keyboard layout for Windows</a> that lets you press right Alt and a vowel to get an accute accent, e.g. í.  I find this very handy.)<br /><br />Another idea is the cut spelling proposal, which basically says you just drop silent letters.  I tossed up the idea "Mical", and started using it informally.  I used that spelling when entering a competition to win tickets to the soccer World Cup and <a href="http://mikelward.com/news/2006/05/world-cup-tickets.html">ended up winning</a>!  Not a bad omen if you believe in that sort of thing. :-)<br /><br />In Germany, I stayed with several distant relatives (second uncles and third cousins).  The first family I stayed with was the Lepple family.  They were great hosts.   One night, I asked them to draw a family tree for me.  They wrote my name as "Mikel".  I loved the idea.<br /><br />When I got back, I discussed the idea with frends, who also mostly suggested "Mikel", the logic being it's like "Mike" with an "l" at the end.  (Ben suggested "Mycal"!)  I tried a few different computer tools to figure out how peeple thought it would be pronounced, and most programs thought "Mikel" would be said "Mike-l", but "Mical" would be said "Mick-l".  Another point in favor of Mikel.<br /><br />I was also somewhat vain.  I wanted my own .com address, and both michaelwardle.com and michaelward.com were taken.  A whois search showed that mikelward.com was available, so I thought "why not!?".<br /><br />I bought mikelward.com, and lodged a change of name application with the Victorian births, deaths, and marriages registrar.<br /><br />My next post will explain the steps I had to take to change my name.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Government.html">Government</a>, <a rel='tag' href="http://mikelward.com/news/labels/Name.html">Name</a>, <a rel='tag' href="http://mikelward.com/news/labels/University.html">University</a></p>
+          </div>
+        </div>
+  
+        <p class="post-footer">
+        
+          
+            <a class="comment-link" href="http://www.blogger.com/comment.g?blogID=20640875&postID=1800027761072200509">Comments</a>
+          
+          
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        
+        <span class="item-control blog-admin pid-2095822550"><a style="border:none;" href="http://www.blogger.com/post-edit.g?blogID=20640875&postID=1800027761072200509" title="Edit Post"><img class="icon-action" alt="" src="http://www.blogger.com:80/img/icon18_edit_allbkg.gif"></a></span>
+        </p>
+ 
+        <!-- Begin #comments -->
+        
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

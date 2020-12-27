@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Software Engineering Exam";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/7350385136976790149/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>I had my Software Engineering (<a href="http://www.monash.edu.au/pubs/handbooks/units/CSE3308.html">CSE3308</a>) exam this morning.<br /><br />I left around 8.30am to ensure I got there on time.  Ended up parking a few blocks away from the racecourse on <a href="http://maps.google.com.au/maps?f=q&hl=en&q=balaclava+road,+caulfield+north&sll=-37.894244,145.031054&sspn=0.008992,0.01457&ie=UTF8&ll=-37.871127,145.023565&spn=0.035977,0.058279&z=14&iwloc=addr&om=1">Balaclava Road</a> as I figured a walk would be a good idea to relax and clear my mind.  It also helped that parking there was free, while the uni were charging $6 to park at the exam venue.<br /><br />The exam was easier than expected.  There was a fairly standard question on object-oriented design, one on data-flow diagrams, one on entity-relationship diagrams, one on process specifications, and a few on various aspects quality.  The only thing that surprised me was there was no question about user interfaces.  Still, that was fine, since that part of the course focussed too much on regurgitating words from lecture slides (e.g. <a href="http://www.mit.edu/~jtidwell/language/sovereign_posture.html">sovereign versus transient versus parisitic</a>) rather than designing a good user interface (a la <a href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">Joel Spolsky</a> and <a href="http://www.useit.com/">Jakob Nielsen</a>).<br /><br />I finished all the questions in about two hours, so I had an hour to spare.  I went over my answers, but decided I couldn't add any more, so I left early.<br /><br />I decided to treat myself and get the keyboard I had been wanting for a while.  A <a href="http://www.yamaha-europe.com/yamaha_europe/uk/10_musical_instruments/60_portable_keyboards/10_keyboards/10_portatone_psr_series/20_e_series/20_PSR-E303/index.html">Yamaha PSR-E303</a>.  It's a fairly cheap portable electronic piano keyboard ($280 Australian) that's touch sensitive (i.e. the harder you press, the louder the notes are) and sounds like a piano.<br /><br />When I go shopping for music (which isn't nearly as often as I'd like), I usually go to <a href="http://www.allans.com.au/">Allan's Music</a> in Kew.  Since my brother Chris lives nearby in Hawthorn, I decided to drop in on him first.<br /><br />We had a chat about life, love, the universe, and everything, and went to get lunch at <a href="http://www.grilld.com.au/cpa/">Grill'd</a>, a gourmet hamburger shop on Glenferrie Road.  I had the Garden Vegetable burger, which tasted great.  Chris had the Hot Mama!  Mmm...<br /><br />Ended up at Allan's around 4.30pm.  Had a quick look at a Casio for the same price, but decided to get the Yamaha because it sounded more like a piano.  Including a stand and a power adapter, it cost $350.<br /><br />I got home around 5.15 and had a bit of a play.  The main music I'd been wanting to play was some <a href="http://www.thewhitlams.com/">Whitlams</a> song books I bought at their gig a few months back at the Corner Hotel.  Most peeple know their songs from Eternal Nightcap, such as No Aphrodisiac, but I think their stuff off Torch the Moon (Royal in the Afternoon, I Will Not Go Quietly, Ease of the Midnight Visit) is even better piano music.  Had a bit of a play and realized I desperately needed practice!<br /><br />Jodie noticed the keyboard and decided she needed to lend me her headphones.  Don't think I was playing too loudly, but she's studying for her pilot's license, and it's only fair to try not to bother her.<br /><br />Megan also noticed the keyboard.  I expect it won't be too long until we're fighting over who gets to play it! :-)<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Family.html">Family</a>, <a rel='tag' href="http://mikelward.com/news/labels/Food.html">Food</a>, <a rel='tag' href="http://mikelward.com/news/labels/House.html">House</a>, <a rel='tag' href="http://mikelward.com/news/labels/Music.html">Music</a>, <a rel='tag' href="http://mikelward.com/news/labels/Transport.html">Transport</a>, <a rel='tag' href="http://mikelward.com/news/labels/University.html">University</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=7350385136976790149">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

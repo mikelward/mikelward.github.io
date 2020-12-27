@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\..*?/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+  if (preg_match("/\/labels\b/", $path))
+  {
+    $heading = "$name News";
+    $title = "Mikel Ward's $heading";
+  }
+  elseif (preg_match("/<$BlogTitle$>: (.*)/", "<$BlogPageTitle$>", $matches))
+  {
+    $heading = $matches[1];
+    $title = "Mikel Ward's News: $heading";
+  }
+  else
+  {
+    $heading = "News";
+    $title = "Mikel Ward's News";
+  }
+?>
+  <title><?php print $title?></title>
+
+  <$BlogMetaData$>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="previous">
+      <h3>Previous Items</h3>
+      <BloggerPreviousItems>
+        <a href="<$BlogItemPermalinkURL$>"><$BlogPreviousItemTitle$></a><br />
+      </BloggerPreviousItems>
+    </div>
+
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/labels/Books">Books</a><br />
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Enviroment">Enviroment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Frends">Frends</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+<!--
+    <div id="archives">
+      <h3>Archives</h3>
+      <BloggerArchives>
+        <a href='<$BlogArchiveURL$>'><$BlogArchiveName$></a>
+      </BloggerArchives>
+    </div>
+-->
+
+<!--
+    <div id="blogroll">
+      <h3>Other Blogs</h3>
+      <a href="http://www.alistapart.com/">A List Apart</a><br />
+      <a href="http://www.codinghorror.com/blog/">Coding Horror</a><br />
+      <a href="http://googlesystem.blogspot.com/">Google Operating System</a><br />
+      <a href="http://www.joelonsoftware.com/">Joel on Software</a><br />
+      <a href="http://www.loudthinking.com/">Loud Thinking</a><br />
+      <a href="http://blogs.theage.com.au/managementline/atom.xml">Management Line</a><br />
+      <a href="http://www.modernlifeisrubbish.co.uk/" title="Modern Life is Rubbish">Modern Life</a><br />
+      <a href="http://rss.sitepoint.com/f/sitepoint_blogs_category_webtech_feed">SitePoint Blogs</a><br />
+      <a href="http://positivesharing.com/">The Chief Happiness Officer</a><br />
+      <a href="http://thedailywtf.com/">The Daily WTF</a><br />
+      <a href="http://dilbertblog.typepad.com/the_dilbert_blog/">The Dilbert Blog</a>
+      <a href="http://www.tfot.info/">The Future of Things</a><br />
+    </div>
+-->
+
+  </div>
+
+  <div id="main">
+    <Blogger>
+      <!-- Begin .post -->
+      <div class="post">
+        <a name="<$BlogItemNumber$>"></a>
+
+        <h2 class="post-title">
+          <BlogItemTitle>
+            <a href="<$BlogItemPermalinkURL$>"><$BlogItemTitle$></a>
+          </BlogItemTitle>
+        </h2>
+        <p class="post-date"><$BlogItemDateTime$></p>
+
+        <div class="post-body">
+          <div>
+            <$BlogItemBody$>
+          </div>
+        </div>
+
+        <p class="post-footer">
+        <MainOrArchivePage>
+          <BlogItemCommentsEnabled>
+            <a class="comment-link" href="<$BlogItemCommentCreate$>">Comments</a>
+          </BlogItemCommentsEnabled>
+          <BlogItemBacklinksEnabled>
+            <a class="comment-link" href="<$BlogItemPermalinkUrl$>#links">Backlinks</a>
+          </BlogItemBacklinksEnabled>
+          <!--
+            <a href="http://mikelward.com/news/labels/">Categories</a>
+            <a href="http://mikelward.com/news/archives/">Archives</a>
+          -->
+        </MainOrArchivePage>
+        <$BlogItemControl$>
+        </p>
+      </div>
+      <!-- End .post -->
+
+      <!-- Begin #comments -->
+      <ItemPage>
+        <div id="comments">
+          <BlogItemCommentsEnabled>
+            <a name="comments"></a>
+            <h3><$BlogItemCommentCount$> Comments</h3>
+            <dl id="comments-block">
+            <BlogItemComments>
+              <dt class="comment-poster" id="c<$BlogCommentNumber$>"><a name="c<$BlogCommentNumber$>"></a>
+              <$BlogCommentAuthor$> said...
+              </dt>
+              <dd class="comment-body">
+              <p><$BlogCommentBody$></p>
+              </dd>
+              <dd class="comment-timestamp">
+              <$BlogCommentDeleteIcon$>
+              </dd>
+            </BlogItemComments>
+            </dl>
+            <p class="comment-timestamp">
+            <$BlogItemCreate$>
+            </p>
+          </BlogItemCommentsEnabled>
+
+          <BlogItemBacklinksEnabled>
+            <a name="links"></a><h3>Backlinks</h3>
+            <dl id="comments-block">
+            <BlogItemBacklinks>
+              <dt class="comment-title">
+              <$BlogBacklinkControl$>
+              <a href="<$BlogBacklinkURL$>" rel="nofollow"><$BlogBacklinkTitle$></a>
+              <$BlogBacklinkDeleteIcon$>
+              </dt>
+              <dd class="comment-body"><$BlogBacklinkSnippet$>
+              <br />
+              <span class="comment-poster">
+                <em>posted by <$BlogBacklinkAuthor$> @ <$BlogBacklinkDateTime$></em>
+              </span>
+              </dd>
+            </BlogItemBacklinks>
+            </dl>
+            <p class="comment-timestamp"><$BlogItemBacklinkCreate$></p>
+          </BlogItemBacklinksEnabled>
+
+        </div>
+      </ItemPage>
+      <!-- End #comments -->
+    </Blogger>
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+</div>
+<!-- End #footer -->
+
+</body>
+</html>

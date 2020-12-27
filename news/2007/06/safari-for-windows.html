@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<?php
+  $path = $_SERVER['REQUEST_URI'];
+  $file = preg_replace("/.*\//", "", $path);
+  $page = preg_replace("/\.(html|php)$/", "", $file);
+  $bits = preg_split("/[-_ ]/", $page);
+  $name = implode(" ", $bits);
+  $name = ucwords($name);
+
+  $heading = "Safari for Windows";
+  $title = "Mikel Ward's News: $heading";
+
+
+?>
+  <title><?php print $title?></title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<meta name="generator" content="Blogger" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="http://www.blogger.com/favicon.ico"/>
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://mikelward.com/news/atom.xml" />
+<link rel="alternate" type="application/rss+xml" title="Mikel Ward's News - RSS" href="http://mikelward.com/news/rss.xml" />
+<link rel="service.post" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=20640875" />
+<link rel="alternate" type="application/atom+xml" title="Mikel Ward's News - Atom" href="http://www.blogger.com/feeds/20640875/6376031255757165472/comments/default" />
+ <link rel="stylesheet" type="text/css" href="http://www.blogger.com/static/v1/v-css/3727950723-blog_controls.css"/> <link rel="stylesheet" type="text/css" href="http://www.blogger.com/dyn-css/authorization.css?targetBlogID=20640875&zx=8f6b2d31-d36f-4a62-80e8-50868c0aa547"/>
+
+<?php include "style.php" ?>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+</head>
+
+<body>
+<div id="banner">
+<?php include "news-banner.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="skip">
+<a href="#content">Skip to content</a>
+</div>
+
+<div id="menu">
+<?php include "menu.php" ?>
+</div>
+
+<hr class="hide" />
+
+<div id="header">
+  <div id="title">
+    <h1><?php print $heading?></h1>
+    <div id="crumb">
+    <?php include "crumb.php" ?>
+    </div>
+  </div>
+
+</div>
+
+<div id="content">
+  <div id="sidebar">
+    <div id="categories">
+      <h3>Categories</h3>
+        <a href="http://mikelward.com/news/">Latest</a><br />
+<!--        <a href="http://mikelward.com/news/labels/Books">Books</a><br />-->
+        <a href="http://mikelward.com/news/labels/Computing">Computing</a><br />
+        <a href="http://mikelward.com/news/labels/Entertainment">Entertainment</a><br />
+        <a href="http://mikelward.com/news/labels/Environment">Environment</a><br />
+        <a href="http://mikelward.com/news/labels/Family">Family</a><br />
+        <a href="http://mikelward.com/news/labels/Food">Food</a><br />
+        <a href="http://mikelward.com/news/labels/Friends">Friends</a><br />
+        <a href="http://mikelward.com/news/labels/Linux">Linux</a><br />
+        <a href="http://mikelward.com/news/labels/Hardware">Hardware</a><br />
+        <a href="http://mikelward.com/news/labels/Holidays">Holidays</a><br />
+        <a href="http://mikelward.com/news/labels/Melbourne">Melbourne</a><br />
+        <a href="http://mikelward.com/news/labels/Music">Music</a><br />
+        <a href="http://mikelward.com/news/labels/Movies">Movies</a><br />
+        <a href="http://mikelward.com/news/labels/Politics">Politics</a><br />
+        <a href="http://mikelward.com/news/labels/Shaving">Shaving</a><br />
+        <a href="http://mikelward.com/news/labels/Sport">Sport</a><br />
+        <a href="http://mikelward.com/news/labels/Transport">Transport</a><br />
+        <a href="http://mikelward.com/news/labels/Travel">Travel</a><br />
+        <a href="http://mikelward.com/news/labels/Uni">Uni</a><br />
+        <a href="http://mikelward.com/news/labels/Windows">Windows</a><br />
+        <a href="http://mikelward.com/news/labels/Work">Work</a><br />
+    </div>
+
+    <div class="ads" style="margin-top: 1em">
+<?php include "sidebarads.php" ?>
+    </div>
+
+  </div>
+
+  <div id="main">
+     
+
+    
+      <div class="post">
+        <div class="post-body">
+          <div>
+            <div style="clear:both;"></div>Apple have just released their famous <a href="http://www.apple.com/safari/">Safari web browser</a> for Windows.  Probably not everybody has heard of it, but it's famous in geek circles for being the first web browser to pass the <a href="http://www.sitepoint.com/blogs/2005/04/29/safari-passes-the-acid-test/">Acid test</a>, meaning it supports the latest web standards, and should be a good browser for web developers to test on.<br /><br />Of course, being from Apple, it should also provide a really good user experience.  I downloaded it this morning to take a look.<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/safari-website-785958.png"><img src="http://mikelward.com/news/uploaded_images/safari-website-785947.png" border="0" alt="" /></a><p class="caption">Safari on Windows</p><br /></div><br /><br />The first thing you notice is it uses the familiar Apple brushed metal look.  This is expected, but it doesn't fit in very well with the rest of the system.  That said, I tend to run my browser full screen, so it's not so important that it look identical to every other application, only that it behave like them.<br /><br />Unfortunately, this first release for Windows doesn't do that very well either.  I counted fifteen annoying differences.<br /><br />The worst ones:<br /><ul><br /><li><a href="http://www.codinghorror.com/blog/archives/000884.html">the default fonts are very dark</a><br /><li>the address gets messed up if you press Ctrl+L and try to type a new address while the home page is loading<br />   (the same thing happens in Internet Explorer and is the #1 reason I don't use it)<br /><li>the Windows task bar can't be accessed if it's in auto-hide mode<br />   (Safari doesn't leave a 1 or 2 pixel buffer at the bottom so you can move your mouse to the bottom of the screen and see what other programs are open)<br /><li><ins>new windows aren't the same size as the current one</ins><br /><li>many keyboard shortcuts don't work on Blogger<br />   (I couldn't use Ctrl+C, Left, Shift+Home, or my Alt Gr key)<br /><li>no shortcut to switch between two most recent tabs<br />   (like Ctrl+Tab in Firefox when using the <a href="https://addons.mozilla.org/en-US/firefox/addon/112">LastTab extension</a>)<br /><li>many menu items appear in the Edit menu (where they would be on Mac) rather than a Tools or Options menu (where they should be on Windows)<br /><li>you have to hold down the mouse button while selecting an item from a drop-down list<br /><li><del>no proxy support (meaning I can't use Safari at work)</del><br /><li>no way to fix any of this!  (I reported these as bugs, but who knows how long they'll take to fix; Safari isn't open source and isn't extensible like Firefox)<br /></ul><br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/safari-addressbar-786670.png"><img src="http://mikelward.com/news/uploaded_images/safari-addressbar-786667.png" border="0" alt="" /></a><p class="caption">Bug: Pressing Ctrl+L then typing too quickly</p></div><br /><br />Some of these are problems with the browser itself, some with particular web sites, and others with the user interface toolkit Apple use to make their Mac applications run on Windows.  It would also be nice if it offered to migrate my passwords from Firefox.  There's no way I'm typing in my passwords again for all the sites I go to.<br /><br />On the upside, it has some nice features such as highlighting the active text field on a form with a clearly visible blue border, and showing the page loading progress using a nifty blue bar that takes up the whole address bar (this feature inspired the <a href="https://addons.mozilla.org/en-US/firefox/addon/1951">Fission addon</a> for Firefox).  It's also nice that my web site looks fine!<br /><br /><div class="figure"><br /><a href="http://mikelward.com/news/uploaded_images/safari-mikelwarddotcom-767288.png"><img src="http://mikelward.com/news/uploaded_images/safari-mikelwarddotcom-767284.png" border="0" alt="" /></a><p class="caption">My web site in Safari</p></div><br /><br />On the whole, the browser is quite usable, and hasn't crashed on me yet, it's just lacking several features that I want before making it my default web browser.<br /><br /><h3>Update: June 28, 2007</h3><br />I just tried Safari 3.0.2 at work behind an authenticating proxy, and it works fine.  It's just the proxy settings button is grayed out.  Apparently it uses the operating system settings (Control Panel->Internet Options).<br /><br /><h3>Update: November 20, 2007</h3><br />Safari 3.0.4 was released today.  It seems to fix the taskbar hiding bug, and new windows are now the right size.  There's now a Ctrl+Tab shortcut.  It doesn't work the way I want, but at least it's there.  Blogger also seems to work, but it crashed the first time I tried.  The Ctrl+L bug isn't fixed, and sometimes Ctrl+L doesn't do anything.<div style="clear:both; padding-bottom:0.25em"></div><p class="blogger-labels">Labels: <a rel='tag' href="http://mikelward.com/news/labels/2007.html">2007</a>, <a rel='tag' href="http://mikelward.com/news/labels/Apple.html">Apple</a>, <a rel='tag' href="http://mikelward.com/news/labels/Computing.html">Computing</a>, <a rel='tag' href="http://mikelward.com/news/labels/Web.html">Web</a>, <a rel='tag' href="http://mikelward.com/news/labels/Windows.html">Windows</a></p>
+          </div>
+        </div>
+  
+        <div id="comments">
+          
+            <a name="comments"></a>
+            <!--<h3>Comments</h3>-->
+            <dl id="comments-block">
+            
+            </dl>
+            <p class="comment-timestamp">
+            <a class="comment-link" href="https://www.blogger.com/comment.g?blogID=20640875&postID=6376031255757165472">Post a Comment</a>
+            </p>
+          
+    
+          
+        </div>
+        <!-- End #comments -->
+      </div>
+      <!-- End .post -->
+    
+  </div>
+  <!-- End #main -->
+</div>
+<!-- End #content -->
+
+<hr class="hide" />
+
+<!-- Begin #footer -->
+<div id="footer">
+<?php include "footer.php"; ?>
+</div>
+<!-- End #footer -->
+
+</body>
+</html>
